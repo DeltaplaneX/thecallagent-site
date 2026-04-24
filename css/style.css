@@ -602,6 +602,10 @@ section { position: relative; z-index: 1; }
   background: var(--bg-card-h);
   box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px var(--border-h);
 }
+/* Fond opaque sur le wide card pour que le glow border ne transparaisse pas */
+.feature-card.wide:hover {
+  background: rgba(11,15,28,0.97);
+}
 .feature-card:hover::before { opacity: 1; }
 .feature-icon {
   width: 52px; height: 52px;
