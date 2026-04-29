@@ -434,4 +434,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, 100);
 
+  /* ── Solutions modals (Nos Solutions interactive) ────────
+     Pattern : un panel + un backdrop uniques, on injecte le
+     contenu cloné depuis #fiche-{slug} au clic. Accessible :
+     role=dialog, aria-modal, focus trap, fermeture Esc / clic
+     extérieur, focus restitué au déclencheur.
+     ───────────────────────────────────────────────────────── */
+  (function setupSolutionModals() {
+    const triggers = document.querySelectorAll('[data-modal]');
+    const backdrop = document.querySelector('[data-modal-backdrop]');
+    const panel    = document.querySelector('[data-modal-panel]');
+    const slot     = panel ? panel.querySelector('[data-modal-content]') : null;
+    const closeBtn = panel ? panel.querySelector('[data-modal-close]') : null;
+
+    if (!triggers.length || !backdrop || !panel || !slot || !closeBtn) return;
+
+    let lastTrigger = null;
+    const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    function openModal(slug, triggerEl) {
+      const source = document.getElementById('fiche-' + slug);
+      if (!source) return;
+
+      slot.innerHTML = '';
+      slot.appendChild(source.cloneNode(true));
+
+      const titleEl = slot.querySelector('.modal-title');
+      if (titleEl) {
+        if (!titleEl.id) titleEl.id = 'modalTitle-' + slug;
+        panel.setAttribute('aria-labelledby', titleEl.id);
+      }
+
+      backdrop.hidden = false;
+      panel.hidden = false;
+      void panel.offsetWidth;
+      backdrop.classList.add('is-open');
+      panel.classList.add('is-open');
+      document.body.classList.add('modal-open');
+      lastTrigger = triggerEl || null;
+
+      const firstFocus = slot.querySelector(FOCUSABLE) || closeBtn;
+      setTimeout(() => firstFocus.focus(), 50);
+    }
+
+    function closeModal() {
+      backdrop.classList.remove('is-open');
+      panel.classList.remove('is-open');
+      document.body.classList.remove('modal-open');
+
+      const onEnd = () => {
+        if (!panel.classList.contains('is-open')) {
+          backdrop.hidden = true;
+          panel.hidden = true;
+          slot.innerHTML = '';
+        }
+        panel.removeEventListener('transitionend', onEnd);
+      };
+      panel.addEventListener('transitionend', onEnd);
+
+      if (lastTrigger && typeof lastTrigger.focus === 'function') {
+        lastTrigger.focus();
+      }
+      lastTrigger = null;
+    }
+
+    triggers.forEach(t => {
+      t.addEventListener('click', (e) => {
+        e.preventDefault();
+        const slug = t.getAttribute('data-modal');
+        if (slug) openModal(slug, t);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', (e) => {
+      if (panel.hidden) return;
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeModal();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const items = Array.from(panel.querySelectorAll(FOCUSABLE)).filter(el => !el.hasAttribute('hidden'));
+        if (!items.length) return;
+        const first = items[0];
+        const last  = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+  })();
+
 });
