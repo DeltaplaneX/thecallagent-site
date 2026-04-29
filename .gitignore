@@ -1,0 +1,14 @@
+# Outils Claude Code
+.mcp.json
+.stitch/
+.paperclip/
+.playwright-mcp/
+.serena/
+
+# Rapports Lighthouse
+lh-*.json
+
+# Fichiers temporaires
+cached-bundle.js
+nul
+images/odilon-avatar.png
