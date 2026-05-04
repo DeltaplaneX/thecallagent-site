@@ -473,8 +473,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('modal-open');
       lastTrigger = triggerEl || null;
 
-      const firstFocus = slot.querySelector(FOCUSABLE) || closeBtn;
-      setTimeout(() => firstFocus.focus(), 50);
+      // Always start the fiche scrolled at the top, and focus the close
+      // button (top of the dialog) so users see the title first instead
+      // of the panel auto-scrolling to the only inner link (the CTA).
+      panel.scrollTop = 0;
+      setTimeout(() => closeBtn.focus({ preventScroll: true }), 50);
     }
 
     function closeModal() {
