@@ -138,7 +138,7 @@ Nodes (26): aD(), clamp(), Dj(), ee(), Ej(), formatHsl(), getObserversCount(), i
 
 ### Community 16 - "Community 16"
 Cohesion: 0.09
-Nodes (23): a3(), _ae(), bbe(), Cae(), eve(), F3(), Gme(), Gx() (+15 more)
+Nodes (25): aae(), bO(), bse(), DB(), DI(), eae(), FI(), gae() (+17 more)
 
 ### Community 17 - "Community 17"
 Cohesion: 0.09
@@ -146,43 +146,43 @@ Nodes (22): aP, BB(), cI(), Dce(), e5(), fb(), ffe(), Hce() (+14 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.09
-Nodes (22): aL(), bye(), c0e(), cye(), dye(), Ec(), gxe(), h0e() (+14 more)
+Nodes (22): a3(), bbe(), Cae(), cye(), dye(), eve(), Gme(), Gx() (+14 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.11
 Nodes (19): aV(), B7(), Bve(), F7(), fP(), ia(), iM(), jV() (+11 more)
 
 ### Community 20 - "Community 20"
-Cohesion: 0.12
-Nodes (19): bpe(), bse(), gpe(), hde(), Hge(), hL(), mde(), Oge() (+11 more)
+Cohesion: 0.11
+Nodes (19): aL(), bpe(), bye(), c0e(), gpe(), h0e(), Hge(), hL() (+11 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.12
 Nodes (18): cme(), dbe(), eme(), gye(), h1(), i3(), ibe(), Jpe() (+10 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.11
-Nodes (18): aae(), bO(), DB(), DI(), eae(), FI(), gae(), iae() (+10 more)
-
-### Community 23 - "Community 23"
 Cohesion: 0.12
 Nodes (17): aue(), bue(), cue(), Do(), due(), eue(), Fge(), fue() (+9 more)
 
-### Community 24 - "Community 24"
+### Community 23 - "Community 23"
 Cohesion: 0.13
 Nodes (16): bae(), cV(), gse(), hse(), iI(), kO(), mse(), q$() (+8 more)
 
+### Community 24 - "Community 24"
+Cohesion: 0.15
+Nodes (13): _ae(), Ec(), F3(), gxe(), hxe(), mB(), mxe(), Owe() (+5 more)
+
 ### Community 25 - "Community 25"
-Cohesion: 0.17
-Nodes (12): e1e(), Gwe(), KC(), kwe(), ky(), Ny(), qwe(), r1e() (+4 more)
+Cohesion: 0.19
+Nodes (13): Ase(), Cge(), dge(), dse(), Ese(), fse(), Kf(), kp() (+5 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.21
-Nodes (11): aye(), dae(), ed(), gF(), hae(), lye(), mae(), pae() (+3 more)
+Cohesion: 0.19
+Nodes (12): aye(), dae(), ed(), gF(), hae(), lye(), mae(), pae() (+4 more)
 
 ### Community 27 - "Community 27"
-Cohesion: 0.24
-Nodes (11): Ase(), Cge(), dge(), dse(), Ese(), fse(), kp(), lse() (+3 more)
+Cohesion: 0.17
+Nodes (12): e1e(), Gwe(), KC(), kwe(), ky(), Ny(), qwe(), r1e() (+4 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.2
@@ -210,19 +210,19 @@ Nodes (1): jq
 
 ### Community 34 - "Community 34"
 Cohesion: 1.0
-Nodes (1): cB()
+Nodes (1): lB()
 
 ### Community 35 - "Community 35"
 Cohesion: 1.0
-Nodes (1): Zm
+Nodes (1): sp()
 
 ### Community 36 - "Community 36"
 Cohesion: 1.0
-Nodes (1): m1
+Nodes (1): b1
 
 ### Community 37 - "Community 37"
 Cohesion: 1.0
-Nodes (1): eP
+Nodes (1): m1
 
 ### Community 38 - "Community 38"
 Cohesion: 1.0
@@ -230,40 +230,40 @@ Nodes (1): y1
 
 ### Community 39 - "Community 39"
 Cohesion: 1.0
-Nodes (1): Wf
+Nodes (1): Zm
 
 ### Community 40 - "Community 40"
 Cohesion: 1.0
-Nodes (1): b1
+Nodes (1): cB()
 
 ### Community 41 - "Community 41"
 Cohesion: 1.0
-Nodes (1): lB()
+Nodes (1): Wf
 
 ### Community 42 - "Community 42"
 Cohesion: 1.0
-Nodes (1): sp()
+Nodes (1): eP
 
 ## Knowledge Gaps
 - **Thin community `Community 33`** (3 nodes): `jq`, `.constructor()`, `.toJSON()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 34`** (2 nodes): `cB()`, `.constructor()`
+- **Thin community `Community 34`** (2 nodes): `lB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (2 nodes): `Zm`, `.constructor()`
+- **Thin community `Community 35`** (2 nodes): `sp()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (2 nodes): `m1`, `.constructor()`
+- **Thin community `Community 36`** (2 nodes): `b1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 37`** (2 nodes): `eP`, `.constructor()`
+- **Thin community `Community 37`** (2 nodes): `m1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 - **Thin community `Community 38`** (2 nodes): `y1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (2 nodes): `Wf`, `.constructor()`
+- **Thin community `Community 39`** (2 nodes): `Zm`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (2 nodes): `b1`, `.constructor()`
+- **Thin community `Community 40`** (2 nodes): `cB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (2 nodes): `lB()`, `.constructor()`
+- **Thin community `Community 41`** (2 nodes): `Wf`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 42`** (2 nodes): `sp()`, `.constructor()`
+- **Thin community `Community 42`** (2 nodes): `eP`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
@@ -273,7 +273,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.962) - this node is a cross-community bridge._
 - **Why does `sq` connect `Community 5` to `Community 0`, `Community 9`, `Community 10`?**
   _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `g1` connect `Community 5` to `Community 0`, `Community 16`, `Community 8`?**
+- **Why does `g1` connect `Community 5` to `Community 0`, `Community 8`, `Community 18`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.01 - nodes in this community are weakly interconnected._
