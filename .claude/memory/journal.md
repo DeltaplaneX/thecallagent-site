@@ -19,3 +19,17 @@ project: thecallagent-site
 - setup Stitch MCP config: add .gitignore entry for .stitch/ (THE-50)
 - fix politique-de-confidentialite: remove reveal from legal-content wrapper
 - enrich politique-de-confidentialite: add app platform content + CGU (THE-2)
+
+## 2026-05-05
+- chore: refresh graphify report
+- chore: session sync 2026-05-04
+- redesign index.html: add CTAs to all feature + sector cards (THE-50)
+- redesign nos-solutions: interactive modal cards + accessible fiches (THE-50)
+- setup Stitch MCP config: add .gitignore entry for .stitch/ (THE-50)
+
+## 2026-05-06
+- chore: refresh graphify report
+- chore: session sync 2026-05-04
+- redesign index.html: add CTAs to all feature + sector cards (THE-50)
+- redesign nos-solutions: interactive modal cards + accessible fiches (THE-50)
+- setup Stitch MCP config: add .gitignore entry for .stitch/ (THE-50)
