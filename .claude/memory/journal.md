@@ -33,3 +33,10 @@ project: thecallagent-site
 - redesign index.html: add CTAs to all feature + sector cards (THE-50)
 - redesign nos-solutions: interactive modal cards + accessible fiches (THE-50)
 - setup Stitch MCP config: add .gitignore entry for .stitch/ (THE-50)
+
+## 2026-05-07
+- chore: refresh graphify report
+- chore: refresh graphify report
+- chore: update config/docs
+- chore: refresh graphify report
+- chore: session sync 2026-05-04
