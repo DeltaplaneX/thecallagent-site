@@ -40,3 +40,10 @@ project: thecallagent-site
 - chore: update config/docs
 - chore: refresh graphify report
 - chore: session sync 2026-05-04
+
+## 2026-05-08
+- chore: update config/docs
+- chore: refresh graphify report
+- chore: refresh graphify report
+- chore: update config/docs
+- chore: refresh graphify report
