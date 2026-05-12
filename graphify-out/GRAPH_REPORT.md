@@ -1,4 +1,4 @@
-# Graph Report - thecallagent-site  (2026-05-11)
+# Graph Report - thecallagent-site  (2026-05-12)
 
 ## Corpus Check
 - 2 files · ~136,274 words
@@ -124,48 +124,48 @@ Cohesion: 0.05
 Nodes (54): ak(), Ao(), bl(), BS(), c0(), Dh(), f0(), fE() (+46 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.07
-Nodes (29): a3(), aae(), bbe(), bO(), Cae(), DI(), eae(), eve() (+21 more)
+Cohesion: 0.06
+Nodes (38): a0e(), displayable(), dP(), E0e(), e3(), fC(), gle(), Hbe() (+30 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.09
-Nodes (28): Ase(), Cge(), dge(), displayable(), dP(), dse(), Ese(), fse() (+20 more)
+Cohesion: 0.07
+Nodes (29): a3(), aae(), bbe(), bO(), Cae(), DI(), eae(), eve() (+21 more)
 
 ### Community 15 - "Community 15"
 Cohesion: 0.11
 Nodes (26): _3(), ah(), Are(), bA(), fxe(), gm(), ime(), io() (+18 more)
 
 ### Community 16 - "Community 16"
-Cohesion: 0.09
-Nodes (24): aV(), B7(), Bve(), ehe(), F7(), fP(), GE(), ia() (+16 more)
-
-### Community 17 - "Community 17"
 Cohesion: 0.1
 Nodes (26): aD(), clamp(), Dj(), ee(), Ej(), formatHsl(), getObserversCount(), isActive() (+18 more)
 
-### Community 18 - "Community 18"
-Cohesion: 0.09
-Nodes (24): abe(), cme(), dbe(), eme(), gye(), h1(), i3(), ibe() (+16 more)
-
-### Community 19 - "Community 19"
+### Community 17 - "Community 17"
 Cohesion: 0.09
 Nodes (22): aP, BB(), cI(), Dce(), e5(), fb(), ffe(), Hce() (+14 more)
 
-### Community 20 - "Community 20"
+### Community 18 - "Community 18"
+Cohesion: 0.09
+Nodes (22): _ae(), aL(), bye(), c0e(), Ec(), F3(), gxe(), h0e() (+14 more)
+
+### Community 19 - "Community 19"
 Cohesion: 0.1
-Nodes (23): a0e(), E0e(), e3(), fC(), Hbe(), HC(), Ic(), l3() (+15 more)
+Nodes (21): abe(), bpe(), ehe(), GE(), gpe(), Hge(), hL(), jge() (+13 more)
+
+### Community 20 - "Community 20"
+Cohesion: 0.11
+Nodes (19): aV(), B7(), Bve(), F7(), fP(), ia(), iM(), jV() (+11 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.11
-Nodes (19): aL(), bpe(), bye(), c0e(), gpe(), h0e(), Hge(), hL() (+11 more)
+Cohesion: 0.12
+Nodes (18): cme(), dbe(), eme(), gye(), h1(), i3(), ibe(), Jpe() (+10 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.14
-Nodes (16): aye(), cye(), dae(), dye(), ed(), gF(), hae(), lye() (+8 more)
-
-### Community 23 - "Community 23"
 Cohesion: 0.12
 Nodes (17): aue(), bue(), cue(), Do(), due(), eue(), Fge(), fue() (+9 more)
+
+### Community 23 - "Community 23"
+Cohesion: 0.14
+Nodes (16): aye(), cye(), dae(), dye(), ed(), gF(), hae(), lye() (+8 more)
 
 ### Community 24 - "Community 24"
 Cohesion: 0.13
@@ -176,8 +176,8 @@ Cohesion: 0.16
 Nodes (14): bse(), DB(), hde(), iB(), mde(), nae(), pde(), rd() (+6 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.15
-Nodes (13): _ae(), Ec(), F3(), gxe(), hxe(), mB(), mxe(), Owe() (+5 more)
+Cohesion: 0.19
+Nodes (13): Ase(), Cge(), dge(), dse(), Ese(), fse(), Kf(), kp() (+5 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.17
@@ -205,60 +205,60 @@ Nodes (1): jq
 
 ### Community 33 - "Community 33"
 Cohesion: 1.0
-Nodes (1): y1
+Nodes (1): Zm
 
 ### Community 34 - "Community 34"
 Cohesion: 1.0
-Nodes (1): eP
+Nodes (1): b1
 
 ### Community 35 - "Community 35"
 Cohesion: 1.0
-Nodes (1): Zm
+Nodes (1): lB()
 
 ### Community 36 - "Community 36"
 Cohesion: 1.0
-Nodes (1): Wf
+Nodes (1): eP
 
 ### Community 37 - "Community 37"
 Cohesion: 1.0
-Nodes (1): b1
+Nodes (1): y1
 
 ### Community 38 - "Community 38"
 Cohesion: 1.0
-Nodes (1): cB()
+Nodes (1): Wf
 
 ### Community 39 - "Community 39"
 Cohesion: 1.0
-Nodes (1): sp()
+Nodes (1): m1
 
 ### Community 40 - "Community 40"
 Cohesion: 1.0
-Nodes (1): m1
+Nodes (1): sp()
 
 ### Community 41 - "Community 41"
 Cohesion: 1.0
-Nodes (1): lB()
+Nodes (1): cB()
 
 ## Knowledge Gaps
 - **Thin community `Community 32`** (3 nodes): `jq`, `.constructor()`, `.toJSON()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 33`** (2 nodes): `y1`, `.constructor()`
+- **Thin community `Community 33`** (2 nodes): `Zm`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 34`** (2 nodes): `eP`, `.constructor()`
+- **Thin community `Community 34`** (2 nodes): `b1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (2 nodes): `Zm`, `.constructor()`
+- **Thin community `Community 35`** (2 nodes): `lB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (2 nodes): `Wf`, `.constructor()`
+- **Thin community `Community 36`** (2 nodes): `eP`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 37`** (2 nodes): `b1`, `.constructor()`
+- **Thin community `Community 37`** (2 nodes): `y1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 38`** (2 nodes): `cB()`, `.constructor()`
+- **Thin community `Community 38`** (2 nodes): `Wf`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (2 nodes): `sp()`, `.constructor()`
+- **Thin community `Community 39`** (2 nodes): `m1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (2 nodes): `m1`, `.constructor()`
+- **Thin community `Community 40`** (2 nodes): `sp()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (2 nodes): `lB()`, `.constructor()`
+- **Thin community `Community 41`** (2 nodes): `cB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
@@ -268,7 +268,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.962) - this node is a cross-community bridge._
 - **Why does `sq` connect `Community 5` to `Community 0`, `Community 9`, `Community 10`?**
   _High betweenness centrality (0.044) - this node is a cross-community bridge._
-- **Why does `g1` connect `Community 5` to `Community 0`, `Community 8`, `Community 13`?**
+- **Why does `g1` connect `Community 5` to `Community 0`, `Community 8`, `Community 14`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.01 - nodes in this community are weakly interconnected._
