@@ -128,8 +128,8 @@ Cohesion: 0.06
 Nodes (38): a0e(), displayable(), dP(), E0e(), e3(), fC(), gle(), Hbe() (+30 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.07
-Nodes (29): a3(), aae(), bbe(), bO(), Cae(), DI(), eae(), eve() (+21 more)
+Cohesion: 0.06
+Nodes (33): a3(), aae(), bbe(), bO(), Cae(), cye(), DI(), dye() (+25 more)
 
 ### Community 15 - "Community 15"
 Cohesion: 0.11
@@ -141,47 +141,47 @@ Nodes (26): aD(), clamp(), Dj(), ee(), Ej(), formatHsl(), getObserversCount(), i
 
 ### Community 17 - "Community 17"
 Cohesion: 0.09
-Nodes (22): aP, BB(), cI(), Dce(), e5(), fb(), ffe(), Hce() (+14 more)
+Nodes (24): abe(), cme(), dbe(), eme(), gye(), h1(), i3(), ibe() (+16 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.09
-Nodes (22): _ae(), aL(), bye(), c0e(), Ec(), F3(), gxe(), h0e() (+14 more)
+Nodes (22): aP, BB(), cI(), Dce(), e5(), fb(), ffe(), Hce() (+14 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.1
-Nodes (21): abe(), bpe(), ehe(), GE(), gpe(), Hge(), hL(), jge() (+13 more)
+Cohesion: 0.09
+Nodes (22): bae(), Bve(), cV(), ehe(), fP(), GE(), ia(), iI() (+14 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.11
-Nodes (19): aV(), B7(), Bve(), F7(), fP(), ia(), iM(), jV() (+11 more)
+Nodes (22): Ase(), Cge(), dge(), dse(), Ese(), fse(), gse(), hse() (+14 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.12
-Nodes (18): cme(), dbe(), eme(), gye(), h1(), i3(), ibe(), Jpe() (+10 more)
+Cohesion: 0.11
+Nodes (20): aL(), bpe(), bye(), c0e(), gpe(), h0e(), Hge(), hL() (+12 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.12
 Nodes (17): aue(), bue(), cue(), Do(), due(), eue(), Fge(), fue() (+9 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.14
-Nodes (16): aye(), cye(), dae(), dye(), ed(), gF(), hae(), lye() (+8 more)
-
-### Community 24 - "Community 24"
-Cohesion: 0.13
-Nodes (16): bae(), cV(), gse(), hse(), iI(), kO(), mse(), q$() (+8 more)
-
-### Community 25 - "Community 25"
 Cohesion: 0.16
 Nodes (14): bse(), DB(), hde(), iB(), mde(), nae(), pde(), rd() (+6 more)
 
-### Community 26 - "Community 26"
-Cohesion: 0.19
-Nodes (13): Ase(), Cge(), dge(), dse(), Ese(), fse(), Kf(), kp() (+5 more)
+### Community 24 - "Community 24"
+Cohesion: 0.15
+Nodes (13): _ae(), Ec(), F3(), gxe(), hxe(), mB(), mxe(), Owe() (+5 more)
 
-### Community 27 - "Community 27"
+### Community 25 - "Community 25"
+Cohesion: 0.21
+Nodes (11): aye(), dae(), ed(), gF(), hae(), lye(), mae(), pae() (+3 more)
+
+### Community 26 - "Community 26"
 Cohesion: 0.17
 Nodes (12): e1e(), Gwe(), KC(), kwe(), ky(), Ny(), qwe(), r1e() (+4 more)
+
+### Community 27 - "Community 27"
+Cohesion: 0.22
+Nodes (9): aV(), B7(), F7(), K7(), L7(), q7(), sV(), uV() (+1 more)
 
 ### Community 28 - "Community 28"
 Cohesion: 0.33
@@ -193,11 +193,11 @@ Nodes (5): ixe(), kD(), nh(), nxe(), rxe()
 
 ### Community 30 - "Community 30"
 Cohesion: 0.5
-Nodes (4): gue(), Kue(), mce(), mue()
+Nodes (4): Dy(), moe(), Uoe(), vF()
 
 ### Community 31 - "Community 31"
 Cohesion: 0.5
-Nodes (4): Dy(), moe(), Uoe(), vF()
+Nodes (4): gue(), Kue(), mce(), mue()
 
 ### Community 32 - "Community 32"
 Cohesion: 0.67
@@ -205,60 +205,60 @@ Nodes (1): jq
 
 ### Community 33 - "Community 33"
 Cohesion: 1.0
-Nodes (1): Zm
+Nodes (1): sp()
 
 ### Community 34 - "Community 34"
 Cohesion: 1.0
-Nodes (1): b1
+Nodes (1): y1
 
 ### Community 35 - "Community 35"
 Cohesion: 1.0
-Nodes (1): lB()
+Nodes (1): b1
 
 ### Community 36 - "Community 36"
 Cohesion: 1.0
-Nodes (1): eP
+Nodes (1): cB()
 
 ### Community 37 - "Community 37"
 Cohesion: 1.0
-Nodes (1): y1
+Nodes (1): lB()
 
 ### Community 38 - "Community 38"
 Cohesion: 1.0
-Nodes (1): Wf
+Nodes (1): eP
 
 ### Community 39 - "Community 39"
 Cohesion: 1.0
-Nodes (1): m1
+Nodes (1): Wf
 
 ### Community 40 - "Community 40"
 Cohesion: 1.0
-Nodes (1): sp()
+Nodes (1): Zm
 
 ### Community 41 - "Community 41"
 Cohesion: 1.0
-Nodes (1): cB()
+Nodes (1): m1
 
 ## Knowledge Gaps
 - **Thin community `Community 32`** (3 nodes): `jq`, `.constructor()`, `.toJSON()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 33`** (2 nodes): `Zm`, `.constructor()`
+- **Thin community `Community 33`** (2 nodes): `sp()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 34`** (2 nodes): `b1`, `.constructor()`
+- **Thin community `Community 34`** (2 nodes): `y1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (2 nodes): `lB()`, `.constructor()`
+- **Thin community `Community 35`** (2 nodes): `b1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (2 nodes): `eP`, `.constructor()`
+- **Thin community `Community 36`** (2 nodes): `cB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 37`** (2 nodes): `y1`, `.constructor()`
+- **Thin community `Community 37`** (2 nodes): `lB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 38`** (2 nodes): `Wf`, `.constructor()`
+- **Thin community `Community 38`** (2 nodes): `eP`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (2 nodes): `m1`, `.constructor()`
+- **Thin community `Community 39`** (2 nodes): `Wf`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (2 nodes): `sp()`, `.constructor()`
+- **Thin community `Community 40`** (2 nodes): `Zm`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (2 nodes): `cB()`, `.constructor()`
+- **Thin community `Community 41`** (2 nodes): `m1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
