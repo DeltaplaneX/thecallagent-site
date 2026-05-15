@@ -103,3 +103,10 @@ project: thecallagent-site
 - chore: update journal and graph artifacts
 - chore: update config/docs
 - chore: update config/docs
+
+## 2026-05-15
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs
+- chore: update journal and graph artifacts
+- chore: update config/docs
