@@ -180,3 +180,10 @@ project: thecallagent-site
 - chore: update config/docs
 - chore: update config/docs
 - chore: update config/docs
+
+## 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs
+- chore: update graphify report
+- chore: update config/docs
