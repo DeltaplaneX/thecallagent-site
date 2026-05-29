@@ -187,3 +187,24 @@ project: thecallagent-site
 - chore: update config/docs
 - chore: update graphify report
 - chore: update config/docs
+
+## 2026-05-27
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs
+- chore: update graphify report
+
+## 2026-05-28
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs
+- chore: update graphify report
+
+## 2026-05-29
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs
+- chore: update graphify report
