@@ -130,9 +130,11 @@ nav.scrolled {
 }
 .nav-logo span { font-weight: 400; }
 .nav-logo-img {
-  height: 36px;
+  height: 50px;
   width: auto;
   display: block;
+  /* Le logo source est noir : on l'inverse en blanc pour le thème sombre */
+  filter: brightness(0) invert(1);
 }
 .nav-links {
   display: flex;

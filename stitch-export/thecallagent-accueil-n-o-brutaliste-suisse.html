@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>THE CALL AGENT | L'IA Qui Agit</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700;800;900&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Space+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-tint": "#6c5e00",
+                "on-tertiary-container": "#006e72",
+                "inverse-on-surface": "#f3f0ef",
+                "on-surface-variant": "#4c4732",
+                "on-tertiary-fixed-variant": "#004f52",
+                "inverse-primary": "#e2c600",
+                "on-primary-fixed-variant": "#524700",
+                "secondary-fixed-dim": "#ffb4aa",
+                "inverse-surface": "#313030",
+                "on-error-container": "#93000a",
+                "on-primary-fixed": "#211b00",
+                "on-tertiary-fixed": "#002021",
+                "error-container": "#ffdad6",
+                "outline": "#7d775f",
+                "on-error": "#ffffff",
+                "surface-variant": "#e5e2e1",
+                "tertiary-fixed": "#4bf9ff",
+                "tertiary-container": "#13f8ff",
+                "primary": "#6c5e00",
+                "surface-container": "#f0edec",
+                "primary-fixed": "#ffe33b",
+                "on-primary": "#ffffff",
+                "error": "#ba1a1a",
+                "tertiary": "#00696c",
+                "primary-container": "#ffe000",
+                "on-surface": "#1c1b1b",
+                "surface-container-highest": "#e5e2e1",
+                "secondary-fixed": "#ffdad5",
+                "on-secondary-fixed-variant": "#930005",
+                "surface-container-high": "#ebe7e7",
+                "tertiary-fixed-dim": "#00dce2",
+                "on-primary-container": "#716300",
+                "surface-bright": "#fcf9f8",
+                "on-secondary-fixed": "#410001",
+                "outline-variant": "#cec6ab",
+                "surface-container-low": "#f6f3f2",
+                "primary-fixed-dim": "#e2c600",
+                "on-secondary-container": "#fffbff",
+                "secondary": "#bc000a",
+                "secondary-container": "#e2241f",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "background": "#fcf9f8",
+                "on-background": "#1c1b1b",
+                "surface-dim": "#dcd9d9",
+                "surface": "#fcf9f8",
+                "surface-container-lowest": "#ffffff"
+            },
+            "spacing": {
+                "base": "8px",
+                "border-width": "3px",
+                "margin-desktop": "48px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "shadow-offset": "8px"
+            },
+            "fontFamily": {
+                "label-sm": ["Space Grotesk"],
+                "display-md": ["Archivo Narrow"],
+                "display-lg": ["Archivo Narrow"],
+                "headline-lg": ["Archivo Narrow"],
+                "label-bold": ["Space Grotesk"],
+                "body-lg": ["Space Grotesk"],
+                "body-md": ["Space Grotesk"],
+                "mono": ["Space Mono"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { background-color: #fcf9f8; color: #1c1b1b; }
+        .brutalist-border { border: 3px solid #1c1b1b; }
+        .brutalist-shadow { shadow: 8px 8px 0px 0px #1c1b1b; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .btn-active:active { transform: translate(4px, 4px); box-shadow: none; }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee { animation: marquee 20s linear infinite; }
+    </style>
+</head>
+<body class="font-body-md overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 sticky top-0 z-50 bg-background brutalist-border border-t-0 border-x-0 shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="flex items-center gap-4">
+<img alt="Logo" class="h-10 w-10 brutalist-border" src="https://lh3.googleusercontent.com/aida/ADBb0uj5BQKYde-3ImAQM5ClPsPhw07Kfx48Yim9QtDFigQGNHUnhgctO9CPuOyPPiY4qSF5nKGmNCeUa6M_a5RcKsQM99jvkc6sxjOQX3QboUXw350bG-KjKa7bsJ9A9veK9qM8qsSSxudpt_SApXDN9v6aKf9X8sPGYV7wHAlO6xhcLfurdkj35S79866TPNKkp25luzR7bYAU1vvS2QPpKJPHoYuJiya6BkWSuphAeW5Za2OO6YsC9ScEk1SU"/>
+<span class="font-display-md text-headline-lg font-black text-on-surface uppercase">THE CALL AGENT</span>
+</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-primary underline decoration-[3px] font-label-bold text-label-bold uppercase" href="#">Solutions</a>
+<a class="text-on-surface font-label-bold text-label-bold uppercase hover:bg-primary-container p-1 transition-colors" href="#">Études</a>
+<a class="text-on-surface font-label-bold text-label-bold uppercase hover:bg-primary-container p-1 transition-colors" href="#">Tarifs</a>
+<a class="text-on-surface font-label-bold text-label-bold uppercase hover:bg-primary-container p-1 transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="hidden lg:block brutalist-border bg-surface px-4 py-2 font-label-bold text-label-bold uppercase shadow-[4px_4px_0px_0px_#1c1b1b] hover:bg-primary-container active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">Connexion</button>
+<button class="brutalist-border bg-primary-container px-6 py-2 font-label-bold text-label-bold uppercase shadow-[4px_4px_0px_0px_#1c1b1b] active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all">Démo Live</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="px-margin-desktop py-20 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center min-h-[80vh]">
+<div class="lg:col-span-8">
+<h1 class="font-display-lg text-display-lg uppercase leading-none mb-10">
+                Un agent qui <span class="bg-primary-container px-4">décroche</span>,<br/>comprend et <span class="text-secondary underline decoration-[8px]">agit</span>.
+            </h1>
+<p class="font-body-lg text-body-lg max-w-2xl mb-12 border-l-4 border-on-surface pl-6">
+                L'intelligence artificielle qui ne se contente pas de parler. Elle gère vos réservations, envoie vos devis et qualifie vos leads 24h/24, sans jamais rater un appel.
+            </p>
+<div class="flex flex-wrap gap-6">
+<button class="brutalist-border bg-primary-container px-10 py-5 text-headline-lg font-black uppercase shadow-[8px_8px_0px_0px_#1c1b1b] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0px_0px_#1c1b1b] transition-all">Réserver une démo</button>
+<div class="flex items-center gap-2 font-label-bold uppercase">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                    Déploiement en 48h
+                </div>
+</div>
+</div>
+<!-- System Log UI Element -->
+<div class="lg:col-span-4 brutalist-border bg-surface-container-low p-6 shadow-[8px_8px_0px_0px_#1c1b1b] font-mono text-sm relative overflow-hidden">
+<div class="flex justify-between border-b-2 border-on-surface pb-2 mb-4">
+<span>SYSTEM_LOG_v4.0</span>
+<span class="text-secondary">LIVE_FEED</span>
+</div>
+<div class="space-y-2">
+<p class="text-on-surface-variant">21:42:01 <span class="text-primary font-bold">[CALL_IN]</span> ID: #8821</p>
+<p class="text-on-surface-variant">21:42:04 <span class="text-on-surface font-bold">[VOICE_RECOGNITION]</span> "Je voudrais un devis..."</p>
+<p class="text-on-surface-variant">21:42:10 <span class="text-tertiary font-bold">[INTENT_DETECTED]</span> REQUÊTE_MENUISERIE</p>
+<div class="bg-on-surface text-surface-container-lowest p-2 my-2">
+                    ACTION: SMS_SENT_WITH_UPLOAD_LINK
+                </div>
+<p class="text-on-surface-variant">21:42:15 <span class="text-on-surface font-bold">[CRM_UPDATE]</span> Lead créé : Jean M.</p>
+<p class="text-on-surface-variant">21:42:20 <span class="text-secondary font-bold">[STATUS]</span> RESOLVED_COMPLETED</p>
+</div>
+<div class="mt-8 border-t-2 border-on-surface pt-4 text-[10px] uppercase opacity-50">
+                The Call Agent v4.02 // No latency detected
+            </div>
+</div>
+</header>
+<!-- Multichannel Banner -->
+<section class="bg-on-surface py-6 overflow-hidden">
+<div class="flex whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-20 text-surface-container-lowest font-display-md text-headline-lg uppercase pr-20">
+<span>Téléphone</span> <span class="text-primary-fixed">/</span> <span>WhatsApp</span> <span class="text-primary-fixed">/</span> <span>SMS</span> <span class="text-primary-fixed">/</span> <span>API Integration</span>
+</div>
+<div class="flex items-center gap-20 text-surface-container-lowest font-display-md text-headline-lg uppercase pr-20">
+<span>Téléphone</span> <span class="text-primary-fixed">/</span> <span>WhatsApp</span> <span class="text-primary-fixed">/</span> <span>SMS</span> <span class="text-primary-fixed">/</span> <span>API Integration</span>
+</div>
+</div>
+</section>
+<!-- Case Studies Bento -->
+<section class="px-margin-desktop py-20 bg-surface">
+<div class="mb-16">
+<h2 class="font-display-md text-display-md uppercase mb-4">Études de cas</h2>
+<div class="h-1 w-32 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Restauration -->
+<div class="brutalist-border p-8 bg-surface-container-lowest shadow-[8px_8px_0px_0px_#1c1b1b] flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl mb-6">restaurant</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-4">Restauration</h3>
+<p class="font-body-md text-body-md mb-8 flex-grow">Gestion intelligente des réservations, modifications et annulations synchronisées en temps réel avec votre logiciel de caisse.</p>
+<div class="border-t-3 border-on-surface pt-4 font-label-bold uppercase text-secondary">
+                    Réservations &amp; Gestion
+                </div>
+</div>
+<!-- Menuiserie -->
+<div class="brutalist-border p-8 bg-primary-container shadow-[8px_8px_0px_0px_#1c1b1b] flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl mb-6">handyman</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-4">Menuiserie</h3>
+<p class="font-body-md text-body-md mb-8 flex-grow">L'IA reçoit la demande, envoie un lien SMS pour l'upload des photos et pré-remplit le devis technique automatiquement.</p>
+<div class="border-t-3 border-on-surface pt-4 font-label-bold uppercase">
+                    Devis via Photos
+                </div>
+</div>
+<!-- Conciergerie -->
+<div class="brutalist-border p-8 bg-on-surface text-surface-container-lowest shadow-[8px_8px_0px_0px_#1c1b1b] flex flex-col h-full">
+<span class="material-symbols-outlined text-4xl mb-6">star</span>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-4">Conciergerie VIP</h3>
+<p class="font-body-md text-body-md mb-8 flex-grow">Service haut de gamme avec reconnaissance client, ton adapté et priorisation des requêtes complexes en 24/7.</p>
+<div class="border-t-3 border-surface-container-lowest pt-4 font-label-bold uppercase text-primary-fixed">
+                    Service Premium
+                </div>
+</div>
+</div>
+</section>
+<!-- Dashboard/Call Analysis -->
+<section class="px-margin-desktop py-20 bg-surface-container-high border-y-[3px] border-on-surface">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display-md text-display-md uppercase mb-8">Analyse &amp; Performance</h2>
+<div class="space-y-6">
+<div class="brutalist-border bg-surface p-4 flex gap-4 items-center shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="w-12 h-12 brutalist-border bg-primary-container flex items-center justify-center font-bold">01</div>
+<div class="font-label-bold uppercase">Transcription instantanée mot pour mot</div>
+</div>
+<div class="brutalist-border bg-surface p-4 flex gap-4 items-center shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="w-12 h-12 brutalist-border bg-secondary text-surface flex items-center justify-center font-bold">02</div>
+<div class="font-label-bold uppercase">Détection automatique d'intentions</div>
+</div>
+<div class="brutalist-border bg-surface p-4 flex gap-4 items-center shadow-[4px_4px_0px_0px_#1c1b1b]">
+<div class="w-12 h-12 brutalist-border bg-on-surface text-surface flex items-center justify-center font-bold">03</div>
+<div class="font-label-bold uppercase">Synchronisation CRM (Hubspot, Salesforce...)</div>
+</div>
+</div>
+</div>
+<div class="brutalist-border bg-surface p-8 shadow-[12px_12px_0px_0px_#1c1b1b]">
+<div class="flex justify-between items-center mb-8">
+<div class="font-headline-lg uppercase">Score de Qualité</div>
+<div class="text-6xl font-black bg-primary-container px-4 brutalist-border">9.8</div>
+</div>
+<div class="space-y-4 mb-8">
+<div class="p-3 bg-surface-container brutalist-border border-dashed italic">
+                        "Bonjour, je souhaiterais prendre rendez-vous pour une installation de fenêtres ce jeudi à 14h."
+                    </div>
+<div class="flex gap-2">
+<span class="brutalist-border px-3 py-1 bg-on-surface text-surface text-xs uppercase font-bold">RDV Fixé</span>
+<span class="brutalist-border px-3 py-1 bg-surface-variant text-xs uppercase font-bold">Urgence: Haute</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="brutalist-border p-4 bg-tertiary-container">
+<div class="text-[10px] uppercase font-bold mb-1 opacity-70">CRM Status</div>
+<div class="font-label-bold uppercase">Updated</div>
+</div>
+<div class="brutalist-border p-4 bg-secondary-container text-on-secondary">
+<div class="text-[10px] uppercase font-bold mb-1 opacity-70">Calendar</div>
+<div class="font-label-bold uppercase">Scheduled</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats -->
+<section class="px-margin-desktop py-20 bg-on-surface text-surface">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter text-center">
+<div class="p-10">
+<div class="font-display-lg text-display-lg text-primary-fixed mb-2">24/7</div>
+<div class="font-headline-lg uppercase tracking-widest">Disponibilité Totale</div>
+</div>
+<div class="p-10 border-l-0 md:border-l-[3px] border-surface">
+<div class="font-display-lg text-display-lg text-primary-fixed mb-2">0</div>
+<div class="font-headline-lg uppercase tracking-widest">Appels Manqués</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="px-margin-desktop py-32 flex flex-col items-center text-center bg-background relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<h2 class="font-display-lg text-display-lg uppercase mb-12 max-w-4xl">
+            Prêt à ne plus jamais perdre un client ?
+        </h2>
+<button class="brutalist-border bg-primary-container px-16 py-8 text-headline-lg font-black uppercase shadow-[12px_12px_0px_0px_#1c1b1b] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-[6px_6px_0px_0px_#1c1b1b] transition-all">
+            Réserver une démo live
+        </button>
+<p class="mt-10 font-label-bold uppercase text-on-surface-variant">
+            Installation en moins de 48h. Sans engagement.
+        </p>
+</section>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-base gap-gutter bg-on-surface border-t-[3px] border-on-surface">
+<div class="flex items-center gap-4">
+<span class="font-display-md text-headline-lg text-primary-fixed uppercase">THE CALL AGENT</span>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-surface-container-lowest font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="#">Mentions Légales</a>
+<a class="text-surface-container-lowest font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="#">Confidentialité</a>
+<a class="text-surface-container-lowest font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="#">Status</a>
+<a class="text-surface-container-lowest font-label-bold text-label-bold uppercase hover:text-primary-fixed transition-colors" href="#">API</a>
+</div>
+<div class="text-surface-container-lowest font-label-bold text-label-bold uppercase">
+            © 2024 THE CALL AGENT. TOUS DROITS RÉSERVÉS.
+        </div>
+</footer>
+<script>
+        // Micro-interactions for brutalist buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.style.transform = 'translate(4px, 4px)';
+                button.style.boxShadow = 'none';
+            });
+            button.addEventListener('mouseup', () => {
+                button.style.transform = '';
+                button.style.boxShadow = '';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = '';
+                button.style.boxShadow = '';
+            });
+        });
+
+        // Atmospheric parallax on scroll for the system log
+        window.addEventListener('scroll', () => {
+            const log = document.querySelector('.lg\\:col-span-4');
+            const scrolled = window.pageYOffset;
+            if (log) {
+                log.style.transform = `translateY(${scrolled * 0.05}px)`;
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,2 @@
+
+[2026-06-03] | MCP Stitch generate_screen_from_text retournait zéro screen (socket timeout puis list_screens vide) | TOUJOURS passer un modelId explicite VALIDE (GEMINI_3_FLASH ou GEMINI_3_1_PRO). Sans modelId → MODEL_ID_UNSPECIFIED → route vers GEMINI_3_PRO (DÉPRÉCIÉ) → échec silencieux = 0 screen. Le MCP/connexion (.mcp.json HTTP + X-Goog-Api-Key AQ.*) est sain ; le bug était le modèle par défaut, pas l'auth.

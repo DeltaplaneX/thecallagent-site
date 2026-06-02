@@ -12,3 +12,14 @@ lh-*.json
 cached-bundle.js
 nul
 images/odilon-avatar.png
+
+# scratch QA / temp
+.stitch_*
+stitch-brutalist.png
+stitch-screen-response.json
+brutalist-full.jpeg
+final-fusion.jpeg
+hero-console.jpeg
+qa-*.jpeg
+cmp-*.jpeg
+baseline-*.jpeg

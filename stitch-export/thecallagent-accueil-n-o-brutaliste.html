@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#f5eeda",
+                      "outline": "#7d775f",
+                      "primary-container": "#ffe000",
+                      "on-secondary-container": "#fffbff",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-primary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#13f8ff",
+                      "surface-tint": "#6c5e00",
+                      "surface-container-highest": "#e9e2cf",
+                      "tertiary": "#00696c",
+                      "on-tertiary-fixed": "#002021",
+                      "surface": "#fff9ec",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#e2241f",
+                      "inverse-surface": "#343023",
+                      "secondary": "#bc000a",
+                      "surface-dim": "#e0dac7",
+                      "outline-variant": "#cec6ab",
+                      "surface-bright": "#fff9ec",
+                      "error": "#ba1a1a",
+                      "primary": "#6c5e00",
+                      "surface-container-high": "#efe8d4",
+                      "on-primary-fixed": "#211b00",
+                      "on-tertiary-fixed-variant": "#004f52",
+                      "on-tertiary-container": "#006e72",
+                      "surface-container-low": "#faf3e0",
+                      "on-tertiary": "#ffffff",
+                      "surface-variant": "#e9e2cf",
+                      "on-secondary-fixed": "#410001",
+                      "on-primary-container": "#716300",
+                      "on-secondary-fixed-variant": "#930005",
+                      "on-surface-variant": "#4c4732",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#e2c600",
+                      "primary-fixed": "#ffe33b",
+                      "on-surface": "#1e1c10",
+                      "tertiary-fixed-dim": "#00dce2",
+                      "background": "#fff9ec",
+                      "inverse-on-surface": "#f8f0dd",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed-variant": "#524700",
+                      "on-background": "#1e1c10",
+                      "primary-fixed-dim": "#e2c600",
+                      "secondary-fixed": "#ffdad5",
+                      "tertiary-fixed": "#4bf9ff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "border-width-thick": "3px",
+                      "border-width-standard": "2px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "48px",
+                      "unit": "4px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "mono-label": ["Inter"],
+                      "label-bold": ["Inter"],
+                      "body-md": ["Inter"],
+                      "headline-lg-mobile": ["Space Grotesk"],
+                      "headline-lg": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "display-xl": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "500"}],
+                      "mono-label": ["13px", {"lineHeight": "16px", "fontWeight": "400"}],
+                      "label-bold": ["14px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .neo-shadow {
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-shadow-sm {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-button-hover:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff9ec; /* Match variable surface */
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TOP NAVBAR -->
+<nav class="w-full top-0 sticky bg-background border-b-border-width-thick border-on-background z-50 flex justify-between items-center px-margin-desktop py-6 max-w-full">
+<div class="text-headline-md font-headline-md font-black text-on-surface uppercase">TheCallAgent</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-bold text-label-bold uppercase text-primary border-b-border-width-thick border-primary hover:bg-primary-container transition-transform duration-75 hover:-translate-y-1 hover:-translate-x-1" href="#">Solutions</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:bg-primary-container transition-transform duration-75 hover:-translate-y-1 hover:-translate-x-1" href="#">Agents</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:bg-primary-container transition-transform duration-75 hover:-translate-y-1 hover:-translate-x-1" href="#">Pricing</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:bg-primary-container transition-transform duration-75 hover:-translate-y-1 hover:-translate-x-1" href="#">Contact</a>
+</div>
+<button class="bg-primary-container border-border-width-thick border-on-background px-6 py-2 font-label-bold text-label-bold uppercase neo-shadow-sm neo-button-hover transition-all">
+            Get Started
+        </button>
+</nav>
+<!-- HERO SECTION -->
+<header class="grid grid-cols-12 gap-0 border-b-border-width-thick border-on-background">
+<div class="col-span-12 lg:col-span-8 p-margin-desktop border-r-0 lg:border-r-border-width-thick border-on-background flex flex-col justify-center">
+<h1 class="font-display-xl text-display-xl uppercase mb-12">
+                Un agent qui <span class="bg-primary-container px-2">décroche</span>, comprend et agit.
+            </h1>
+<p class="font-body-lg text-body-lg max-w-2xl">
+                L'IA vocale conçue pour les PME françaises. Fini les appels perdus, passez à l'automatisation intelligente du standard.
+            </p>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-primary-container p-12 flex flex-col justify-center relative overflow-hidden">
+<!-- Asymmetric block content -->
+<div class="bg-background border-border-width-thick border-on-background p-6 neo-shadow -rotate-2">
+<div class="font-label-bold text-label-bold uppercase mb-4 text-secondary">CALL_TRANSCRIPTION_v4.2</div>
+<div class="space-y-4 font-mono text-sm uppercase">
+<div><span class="font-bold">[CLIENT]:</span> "Je veux réserver une table pour 4 à 20h."</div>
+<div><span class="font-bold">[AGENT]:</span> "C'est noté. Une allergie à signaler ?"</div>
+<div><span class="font-bold">[CLIENT]:</span> "Non, merci."</div>
+<div><span class="font-bold">[AGENT]:</span> "Parfait. Table réservée pour 20h."</div>
+</div>
+<div class="mt-6 pt-4 border-t-2 border-on-background flex justify-between items-center">
+<span class="text-xs">STATUS: ACTION_TAKEN</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- MULTI-CHANNEL BAR -->
+<section class="border-b-border-width-thick border-on-background py-8 overflow-hidden bg-on-background text-background">
+<div class="flex whitespace-nowrap animate-marquee items-center gap-12 font-display-xl text-[48px] uppercase font-black">
+<span>Téléphone</span>
+<span class="text-primary-container">/</span>
+<span>WhatsApp</span>
+<span class="text-primary-container">/</span>
+<span>SMS</span>
+<span class="text-primary-container">/</span>
+<span>Téléphone</span>
+<span class="text-primary-container">/</span>
+<span>WhatsApp</span>
+<span class="text-primary-container">/</span>
+<span>SMS</span>
+<span class="text-primary-container">/</span>
+</div>
+</section>
+<!-- CASE STUDIES -->
+<section class="grid grid-cols-12 gap-0 border-b-border-width-thick border-on-background">
+<!-- Restaurant -->
+<div class="col-span-12 md:col-span-4 border-b-border-width-thick md:border-b-0 md:border-r-border-width-thick border-on-background p-12 flex flex-col group hover:bg-secondary transition-colors duration-200">
+<span class="font-label-bold text-label-bold uppercase mb-8 group-hover:text-background">01 / RESTAURATION</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-6 group-hover:text-background">Réservations &amp; Gestion</h3>
+<p class="font-body-md text-body-md mb-12 group-hover:text-background">L'agent gère les réservations en direct et met à jour votre plan de salle en temps réel.</p>
+<div class="mt-auto h-64 bg-surface-container border-border-width-thick border-on-background overflow-hidden relative">
+<img alt="Restaurant Interior" class="w-full h-full object-cover grayscale contrast-125" data-alt="A high-contrast, black and white editorial photograph of a busy modern French bistro interior. The lighting is sharp with deep shadows, emphasizing the architectural lines of the tables and the minimalist decor. The overall mood is professional, sophisticated, and bustling with business energy, perfectly aligned with a neo-brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkVTpdgwlRGkpLLq_GZxdXnSEgUhxVCngYprkwTwdNwf7sovup-T6D_dbpOUpzxICoicIdqgafLZpWPtbpl4LG3ZkckrZBYORLigZI5z17hlRoKgNfD7gwmv4GCqFNKZsp3q7S-cD4OwYtlWlBfjhdTVVgwCsTBNqBFidEdojqQhQGK1uLku-xzLNhhOmUowarWBivHfKcfgp7SB_sl8LIYclnTqC-kVQNE4mgNZjPrTfjizbS4a9GgK-JDwBy9Pdal0kLACugh6ft"/>
+</div>
+</div>
+<!-- Menuiserie -->
+<div class="col-span-12 md:col-span-4 border-b-border-width-thick md:border-b-0 md:border-r-border-width-thick border-on-background p-12 flex flex-col group hover:bg-primary-container transition-colors duration-200">
+<span class="font-label-bold text-label-bold uppercase mb-8">02 / MENUISERIE</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-6">Devis via Photos</h3>
+<p class="font-body-md text-body-md mb-12">Capturez les dimensions via WhatsApp. Notre IA génère un pré-devis technique instantanément.</p>
+<div class="mt-auto h-64 bg-surface-container border-border-width-thick border-on-background overflow-hidden relative">
+<img alt="Carpentry Tools" class="w-full h-full object-cover grayscale contrast-125" data-alt="A macro photograph of raw wood textures and industrial carpentry tools laying on a clean white blueprint. The lighting is stark and direct, creating bold black shadows that define the geometric shapes of the tools. The image has a raw, functional feel with high contrast and a monochromatic palette to match a Swiss modern design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbvjBfl-ypu3rOZsVv6K6sBpZjdaTxfG34ZbAZxacDtpFd5Q1vfpfLI3KgK8Exa5rUAzcXbZLVQStLEfKx5l2yRkJXf3RC4kN-Se38EQNjgcBMZpzUxH8s-gJinLnsE75WQ8Altfvb1QPv3vMEHNGefPxjKg_SkNfssaqPP634kL5zj5pRKn7Bm1z3-JOvToUh6eZu7EfERY8nOukQ0FktvaIvD5my-ROIxsDO5fUT25Tl5yJxGi37Q88Bav_5GnEdbuSwa02FxxLQ"/>
+</div>
+</div>
+<!-- Villa -->
+<div class="col-span-12 md:col-span-4 p-12 flex flex-col group hover:bg-tertiary-container transition-colors duration-200">
+<span class="font-label-bold text-label-bold uppercase mb-8">03 / CONCIERGERIE</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-6">Conciergerie VIP</h3>
+<p class="font-body-md text-body-md mb-12">Gestion des demandes clients via WhatsApp. Réponse ultra-rapide 24/7 pour un service premium.</p>
+<div class="mt-auto h-64 bg-surface-container border-border-width-thick border-on-background overflow-hidden relative">
+<img alt="Luxury Villa" class="w-full h-full object-cover grayscale contrast-125" data-alt="A minimalist architectural shot of a luxury villa's clean white concrete lines against a solid, saturated blue sky. The composition is highly geometric and asymmetrical, emphasizing functional luxury without unnecessary detail. The lighting is bright and flat, characteristic of high-end editorial photography in a modern minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcSe134TMLcsugNmgOQC8NN8t5ROkcTzxsAF2lkEVzyYtsICVGqZsAVTla3j23KK88raPDMeRQQdjFEWXOW6qfQx7sRBtE-hvj7VGUerEUPw1BQvYdBpLzIrYjlz4oVdA5sJoeBpHUI7cPqTrsfvdTrBfNhUtNg1s0BIAOwVK6hJvOI7LZbSWG3sLOm_WGmwmD0NYJLpP1rPs1GSkDE0lfc4lc7gAEWfpaupe_LBAYUjGL23qiFNT4u88DoqU5X7TP7wfwAz4eWs52"/>
+</div>
+</div>
+</section>
+<!-- CALL ANALYSIS DASHBOARD -->
+<section class="p-margin-desktop bg-surface-container-low border-b-border-width-thick border-on-background">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 lg:col-span-4">
+<h2 class="font-headline-lg text-headline-lg uppercase leading-none mb-8">L'ANALYSE <br/>EN DIRECT</h2>
+<div class="p-6 bg-background border-border-width-thick border-on-background neo-shadow">
+<div class="font-label-bold text-label-bold uppercase mb-4 border-b-2 border-on-background pb-2">Résumé Automatique</div>
+<p class="font-body-md italic text-on-surface-variant">"Le client souhaite un devis pour 12 fenêtres PVC. Urgent. Rappel souhaité demain 10h."</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="border-border-width-thick border-on-background p-8 bg-background flex flex-col justify-between">
+<div>
+<div class="font-label-bold text-label-bold uppercase mb-6">Actions Détectées</div>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">sync_alt</span>
+<span class="font-bold uppercase">CRM Mis à jour</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-bold uppercase">RDV Placé (Google Cal)</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-bold uppercase">Email de confirmation envoyé</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-border-width-thick border-on-background p-8 bg-primary-container flex flex-col items-center justify-center text-center">
+<div class="font-label-bold text-label-bold uppercase mb-4">Score de Qualité</div>
+<div class="text-[120px] font-black leading-none">98<span class="text-display-xl">%</span></div>
+<div class="mt-4 font-bold uppercase border-2 border-on-background px-4 py-1">Optimisé par CallAgent™</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DATA PROOFS -->
+<section class="grid grid-cols-1 md:grid-cols-2 border-b-border-width-thick border-on-background">
+<div class="p-margin-desktop bg-on-background text-background flex flex-col justify-center items-center text-center border-r-0 md:border-r-border-width-thick border-on-background">
+<div class="text-display-xl font-black mb-4">24/7</div>
+<div class="font-headline-md uppercase">Disponibilité Totale</div>
+<p class="mt-6 font-body-lg max-w-xs opacity-80">Votre entreprise ne dort jamais. Nous traitons les demandes même à 3h du matin.</p>
+</div>
+<div class="p-margin-desktop bg-primary-container text-on-background flex flex-col justify-center items-center text-center">
+<div class="text-display-xl font-black mb-4">0</div>
+<div class="font-headline-md uppercase">Appel Perdu</div>
+<p class="mt-6 font-body-lg max-w-xs opacity-80">Chaque prospect est écouté, compris et intégré dans votre workflow immédiatement.</p>
+</div>
+</section>
+<!-- CTA SECTION -->
+<section class="p-margin-desktop flex flex-col items-center justify-center text-center bg-background py-32 overflow-hidden relative">
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none opacity-5">
+<div class="grid grid-cols-12 w-full h-full">
+<div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div><div class="border-r border-on-background"></div>
+</div>
+</div>
+<h2 class="font-display-xl text-display-xl uppercase mb-12 z-10">PRÊT À <br/>AUTOMATISER ?</h2>
+<button class="bg-primary-container border-border-width-thick border-on-background px-16 py-8 text-headline-md font-headline-md uppercase neo-shadow neo-button-hover transition-all z-10">
+            RéSERVER UNE DéMO
+        </button>
+<p class="mt-12 font-label-bold text-label-bold uppercase opacity-60 z-10">SANS ENGAGEMENT — INSTALLATION EN 48H</p>
+</section>
+<!-- FOOTER -->
+<footer class="w-full mt-auto border-t-border-width-thick border-on-background bg-background flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 gap-gutter">
+<div class="text-headline-md font-headline-md font-black text-on-surface uppercase">TheCallAgent</div>
+<div class="flex gap-gutter">
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:text-secondary transition-colors duration-150" href="#">Terms</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:text-secondary transition-colors duration-150" href="#">Privacy</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:text-secondary transition-colors duration-150" href="#">Twitter</a>
+<a class="font-label-bold text-label-bold uppercase text-on-background hover:text-secondary transition-colors duration-150" href="#">LinkedIn</a>
+</div>
+<div class="font-label-bold text-label-bold uppercase text-on-background">© 2024 THECALLAGENT. ALL RIGHTS RESERVED.</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+<script>
+        // Micro-interaction for the marquee to pause on hover
+        const marquee = document.querySelector('.animate-marquee');
+        marquee.addEventListener('mouseenter', () => {
+            marquee.style.animationPlayState = 'paused';
+        });
+        marquee.addEventListener('mouseleave', () => {
+            marquee.style.animationPlayState = 'running';
+        });
+    </script>
+</body></html>
