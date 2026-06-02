@@ -215,3 +215,30 @@ project: thecallagent-site
 - chore: update config/docs
 - chore: update config/docs
 - chore: update config/docs
+
+## 2026-05-31
+- chore: update config/docs
+- chore: update config/docs 2026-05-30
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+
+> Session fermée à 05:56
+
+## 2026-06-01
+- chore: update config/docs
+- chore: update config/docs 2026-05-30
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+
+> Session fermée à 14:32
+
+## 2026-06-02
+- chore: update config/docs
+- chore: update config/docs 2026-05-30
+- chore: session sync 2026-05-26
+- chore: update config/docs
+- chore: update config/docs
+
+> Session fermée à 11:25
