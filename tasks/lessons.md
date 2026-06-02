@@ -1,2 +1,8 @@
 
 [2026-06-03] | MCP Stitch generate_screen_from_text retournait zéro screen (socket timeout puis list_screens vide) | TOUJOURS passer un modelId explicite VALIDE (GEMINI_3_FLASH ou GEMINI_3_1_PRO). Sans modelId → MODEL_ID_UNSPECIFIED → route vers GEMINI_3_PRO (DÉPRÉCIÉ) → échec silencieux = 0 screen. Le MCP/connexion (.mcp.json HTTP + X-Goog-Api-Key AQ.*) est sain ; le bug était le modèle par défaut, pas l'auth.
+
+[2026-06-03] | Logo affiché minuscule/invisible non détecté pendant 10+ captures Playwright | Toujours vérifier la VISIBILITÉ du logo (couleur du logo vs couleur du fond) ET recadrer les marges transparentes des PNG ; ne JAMAIS confondre "0 erreur console" avec "design correct".
+[2026-06-03] | J'ai présenté un simple reskin (palette + police) comme une "refonte Stitch" → user : "trop similaire / trop IA" | Une vraie refonte restructure le LAYOUT (hero, sections), pas juste les couleurs. "Anti-IA" = quitter dark+glow+glassmorphism+dégradés néon (aller vers light/éditorial/brutaliste).
+[2026-06-03] | "Stitch valide la direction" = raisonnement circulaire (je l'avais prompté brutaliste → il rend brutaliste) | Ne jamais présenter un écho de prompt comme une validation indépendante.
+[2026-06-03] | generate_screen_from_text via curl rendait 0 byte ; j'ai conclu trop vite "Stitch mort" | Le timeout du MCP tool est NORMAL (génération = plusieurs minutes) : poller list_screens dans la durée. Le générateur a fini par produire.
+[2026-06-03] | Fact-Forcing Gate sur chaque Edit/Write/Bash | Présenter les 4 facts AVANT chaque outil concerné, puis relancer ; ça passe à la 2e tentative.

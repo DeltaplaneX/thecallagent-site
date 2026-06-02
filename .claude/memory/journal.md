@@ -250,3 +250,15 @@ project: thecallagent-site
 > Session fermée à 00:57
 
 > Session fermée à 01:21
+
+
+## 2026-06-03 — Refonte : 2 directions complètes
+- Livré DEUX versions entières : **DARK "fusion"** (racine : reskin design-system Stitch via variant-a/b.css + hero "console d'appel" + sections preuves produit, 7 pages) et **BRUTALISTE** (clair ivoire/noir/jaune, Archivo, brutalist.css, 7 pages `*-brutalist.html`).
+- **Stitch MCP** : générateur d'écran réparé (5 écrans générés), projet exporté dans `stitch-export/`. Méthode qui marche = HTTP direct `X-Goog-Api-Key` (le proxy npx/STITCH_API_KEY OAuth échouait). Le générateur a validé la direction brutaliste.
+- Section **"Analyse d'appel"** ancrée sur **app-v3** (projet call-agent) : résumé auto, score priorité 1-10, actions détectées + confiance, ancrage RAG, exécution validée.
+- Verticales ancrées sur **vrais workflows n8n** (restaurant / menuiserie-devis / villa-conciergerie).
+- **Logo** recadré (`logo-trim.png`, marges transparentes retirées) + inversé blanc sur fond sombre (était noir-sur-noir = invisible).
+- **Intégrations préservées** sur les 2 versions : vidéo 0404, widget Retell (7 pages), webhook n8n du formulaire, iframe agenda Google.
+- Workflow ultracode : 6 pages brutalistes générées + vérifiées par 12 sous-agents (audit OK, fidélité légale 100%).
+- Commit checkpoint **66f8b3a**.
+- **EN ATTENTE (réveil user)** : choix dark vs brutaliste ; parité dark (ajouter section analyse d'appel) ; déploiement IONOS (NON touché, règle respectée).
