@@ -262,3 +262,17 @@ project: thecallagent-site
 - Workflow ultracode : 6 pages brutalistes générées + vérifiées par 12 sous-agents (audit OK, fidélité légale 100%).
 - Commit checkpoint **66f8b3a**.
 - **EN ATTENTE (réveil user)** : choix dark vs brutaliste ; parité dark (ajouter section analyse d'appel) ; déploiement IONOS (NON touché, règle respectée).
+
+> Session fermée à 01:43
+
+> Session fermée à 11:34
+
+> Session fermée à 12:39
+
+## 2026-06-03 (suite) — Cartes cliquables (détail au clic)
+- Problème : cartes brutalistes en surbrillance au survol mais clic mort (vs dark qui ouvre des fiches modales).
+- Plan /writing-plans + exécution /subagent-driven-development.
+- nos-solutions-brutalist : 17 cartes → data-modal, fiches + panel copiés du dark (main.js générique les pilote), hover scopé à .cell[data-modal], clavier Enter/Espace. CTA fiches → contact-brutalist.
+- index/a-propos brutalist : fausse surbrillance retirée (CSS scopé), CTA démo conservés.
+- Vérif structurelle : 17 slugs ↔ 17 fiches (0 clic mort), hooks main.js OK. QA visuelle Playwright NON faite (MCP down).
+- Commits : df48248, 89c0c2e + fix CTA.
