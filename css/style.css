@@ -22,8 +22,9 @@
   --glow-blue:   rgba(43,111,255,0.3);
   --glow-cyan:   rgba(6,214,160,0.25);
   --text:        #E8EDFF;
-  --text-muted:  #7080A0;
-  --text-dim:    #3A4A65;
+  /* === TOKENS v5 (contraste WCAG AA) === */
+  --text-muted:  #9AA8C8; /* 8.0:1 sur #0B0F1C — AAA */
+  --text-dim:    #7E8FB2; /* 5.9:1 sur #0B0F1C — AA */
   --gradient:    linear-gradient(135deg, #2B6FFF 0%, #06D6A0 100%);
   --gradient-r:  linear-gradient(135deg, #06D6A0 0%, #2B6FFF 100%);
   --font-h:      'Syne', sans-serif;
