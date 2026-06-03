@@ -6,9 +6,9 @@
 
 ---
 
-## ⚠️ Avertissement de lecture MCP IONOS
+## Lecture MCP IONOS
 
-L'étape de lecture via le MCP IONOS a **échoué** :
+État initial : l'étape de lecture via le MCP IONOS avait **échoué** :
 
 ```
 mcp__ionos__list_domains      → IONOS API error: Invalid API key format.
@@ -16,17 +16,18 @@ mcp__ionos__list_dns_zones    → IONOS API error: Invalid API key format.
 mcp__ionos__get_dns_zone      → IONOS API error: Invalid API key format.
 ```
 
-**Conséquence :** les identifiants internes IONOS (`domainId`, `zoneId`) et les détails complets
-de zone (IDs d'enregistrements, valeurs désactivées, commentaires internes) **n'ont pas pu être
-lus**. Les valeurs DNS publiques observables ont été relevées séparément ci-dessous via DNS-over-HTTPS
-Cloudflare + Google le **2026-06-03**. Elles servent de repère, mais le panneau IONOS reste la
-source à vérifier avant toute bascule.
+État corrigé le **2026-06-03** : `.mcp.json` a été mis à jour avec une clé IONOS au format
+`publicprefix.secret`. Le serveur MCP local `ionos` répond en stdio et les lectures
+`list_domains`, `list_dns_zones` et `get_dns_zone` fonctionnent.
 
-**Action préalable requise** (côté utilisateur, hors de ce document) :
-- Régénérer/corriger la clé API IONOS (format attendu : `<public-prefix>.<secret>`),
-  la fournir au MCP, puis relancer les 3 appels de lecture ; **ou**
-- Renseigner manuellement les valeurs ci-dessous depuis le panneau IONOS
+Les valeurs ci-dessous combinent :
+- lecture MCP IONOS pour `domainId`, `zoneId` et les enregistrements de zone ;
+- DNS-over-HTTPS Cloudflare + Google pour vérifier les valeurs publiques réellement résolues.
+
+**Action préalable encore requise avant toute bascule :**
+- Vérifier visuellement ces valeurs dans le panneau IONOS
   (`https://www.ionos.fr` → Domaines & SSL → `thecallagent.com` → DNS).
+- Valider explicitement la checklist avant toute action d'écriture.
 
 ---
 
@@ -35,8 +36,8 @@ source à vérifier avant toute bascule.
 | Élément | Valeur lue | Source |
 |---|---|---|
 | Domaine | `thecallagent.com` | confirmé via le repo (canonical / OG dans `index.html`) |
-| domainId | **[à lire dans le panneau IONOS]** | MCP indisponible (clé API invalide) |
-| zoneId | **[à lire dans le panneau IONOS]** | MCP indisponible (clé API invalide) |
+| domainId | `2a212729-da59-4407-9ca1-9c568dd0ad8a` | MCP IONOS `list_domains` |
+| zoneId | `da8ff3b7-52e9-11f0-847a-0a5864441a3f` | MCP IONOS `list_dns_zones` |
 | Enregistrement **racine** `thecallagent.com` | `A 217.160.0.145` · `AAAA 2001:8d8:100f:f000::200` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
 | Enregistrement **`www.thecallagent.com`** | `A 212.227.172.253` · `AAAA 2001:8d8:105:1:0:1:0:7` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
 | Enregistrement **`app.thecallagent.com`** (app technique clients → cible) | `A 185.158.133.1` · pas de CNAME/AAAA public observé · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google — **NE PAS TOUCHER** |
@@ -58,8 +59,8 @@ source à vérifier avant toute bascule.
 ### Tableau à compléter une fois le panneau IONOS ouvert
 
 ```
-domainId            : ______________________________
-zoneId              : ______________________________
+domainId            : 2a212729-da59-4407-9ca1-9c568dd0ad8a
+zoneId              : da8ff3b7-52e9-11f0-847a-0a5864441a3f
 
 @ (racine)          : type A     valeur 217.160.0.145                 TTL 3600 public
 @ (racine)          : type AAAA  valeur 2001:8d8:100f:f000::200       TTL 3600 public
@@ -287,11 +288,11 @@ tout le reste de la liste ci-dessus reste tel quel.
 ## 6. Décision
 
 **Rien n'a été exécuté.** Aucun DNS, aucun fichier en ligne, aucun cache n'a été modifié par
-cette préparation. La lecture MCP IONOS a échoué (clé API invalide) → les valeurs DNS réelles
-restent **à lire dans le panneau IONOS**.
+cette préparation. La lecture MCP IONOS fonctionne depuis la mise à jour de `.mcp.json`, mais
+ce document reste une checklist à valider avant toute action.
 
 ➡️ **Action attendue d'Odilon avant toute exécution :**
-1. Corriger l'accès IONOS (clé API ou lecture manuelle) et **renseigner les valeurs du §1**.
+1. Vérifier les valeurs du §1 dans le panneau IONOS.
 2. Confirmer la **variante d'hébergement** (A ou B).
 3. **Valider explicitement** cette checklist.
 4. Seulement ensuite : exécuter, en respectant l'encadré §4 (`app.` intouchable).
