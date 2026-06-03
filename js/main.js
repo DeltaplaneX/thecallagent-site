@@ -404,26 +404,53 @@ document.addEventListener('DOMContentLoaded', () => {
       requestAnimationFrame(rafLoop);
     }
 
-    window.addEventListener('scroll', () => {
-      scrollProgress = calcProgress();
-    }, { passive: true });
+    // Fallback : si le seeking est impossible (serveur sans support HTTP Range,
+    // ex. `python -m http.server`), on joue la vidéo en boucle au lieu de la figer.
+    function startScrubFallback() {
+      scrollVideoEl.loop = true;
+      scrollVideoEl.muted = true;
+      scrollVideoEl.play().catch(() => {});
+    }
 
-    function startVideo() {
+    function startScrub() {
       scrollProgress = calcProgress();
       displayProgress = scrollProgress;
-      if (scrollVideoEl.duration) {
-        scrollVideoEl.currentTime = scrollVideoEl.duration * scrollProgress;
-      }
+      window.addEventListener('scroll', () => {
+        scrollProgress = calcProgress();
+      }, { passive: true });
+      scrollVideoEl.currentTime = scrollVideoEl.duration * scrollProgress;
       if (!rafRunning) {
         rafRunning = true;
         requestAnimationFrame(rafLoop);
       }
     }
 
+    // Sonde de seekabilité : on tente un seek non nul. S'il « prend », on active
+    // le scrub piloté au scroll ; sinon le navigateur ne sait pas seeker la vidéo
+    // (pas de Range) → on bascule en lecture bouclée pour ne jamais figer l'image.
+    function initScrollVideo() {
+      if (!scrollVideoEl.duration) { startScrubFallback(); return; }
+      let settled = false;
+      const decide = () => {
+        if (settled) return;
+        settled = true;
+        scrollVideoEl.removeEventListener('seeked', decide);
+        if (scrollVideoEl.currentTime > 0.05) {
+          scrollVideoEl.currentTime = 0;
+          startScrub();
+        } else {
+          startScrubFallback();
+        }
+      };
+      scrollVideoEl.addEventListener('seeked', decide);
+      scrollVideoEl.currentTime = Math.min(0.2, scrollVideoEl.duration / 2);
+      setTimeout(decide, 800); // garde-fou si l'événement 'seeked' ne se déclenche pas
+    }
+
     if (scrollVideoEl.readyState >= 2) {
-      startVideo();
+      initScrollVideo();
     } else {
-      scrollVideoEl.addEventListener('canplay', startVideo, { once: true });
+      scrollVideoEl.addEventListener('canplay', initScrollVideo, { once: true });
     }
   }
 
