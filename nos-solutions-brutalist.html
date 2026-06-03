@@ -82,7 +82,7 @@
       <p class="section-sub reveal reveal-delay-2">Deux moitiés du même agent : il prend les appels qui rentrent et lance ceux qui sortent — qualification, RDV, CRM, confirmation, le tout sans intervention humaine.</p>
     </div>
     <div class="cards-grid reveal" style="grid-template-columns:1fr 1fr;">
-      <article class="cell">
+      <article class="cell" data-modal="entrants" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="kicker">Appels entrants</span>
         <h3>Il décroche à votre place et traite la demande.</h3>
         <p>L'agent répond instantanément, comprend la raison de l'appel et l'exécute jusqu'au bout — qualification, prise de RDV, mise à jour CRM, envoi d'email ou SMS de confirmation.</p>
@@ -93,9 +93,8 @@
           <li>Confirmation par email et SMS automatique</li>
           <li>Disponible 24h/24, 7j/7, jamais en ligne occupée</li>
         </ul>
-        <a class="more" href="contact-brutalist.html">Réserver une démo →</a>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="sortants" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="kicker alt">Appels sortants</span>
         <h3>Il lance vos campagnes de prospection sans effort.</h3>
         <p>L'agent appelle vos listes de prospects, se présente avec votre script, engage la conversation et qualifie les opportunités — par vagues, sans fatigue.</p>
@@ -106,7 +105,6 @@
           <li>Relances intelligentes programmées (rappel, email, SMS)</li>
           <li>Rapport d'activité détaillé après chaque vague</li>
         </ul>
-        <a class="more" href="contact-brutalist.html">Réserver une démo →</a>
       </article>
     </div>
   </div>
@@ -121,32 +119,32 @@
       <p class="section-sub reveal reveal-delay-2">L'agent lit, modifie et crée des données dans vos outils existants, sans aucune saisie manuelle. Votre pipeline reste synchronisé à la seconde près.</p>
     </div>
     <div class="cards-grid cards-3 reveal">
-      <article class="cell">
+      <article class="cell" data-modal="int-crm" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
         <h3>CRM</h3>
         <p>Lecture, création et mise à jour des contacts et opportunités. Votre pipeline toujours synchronisé après chaque appel.</p>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="int-email" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
         <h3>Email</h3>
         <p>Lecture et envoi d'emails avec pièces jointes. Confirmations, devis, relances — tout part automatiquement.</p>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="int-calendrier" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
         <h3>Calendrier</h3>
         <p>Consultation des disponibilités, création et modification d'événements en temps réel pendant l'appel.</p>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="int-linkedin" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
         <h3>LinkedIn</h3>
         <p>Création et publication de posts automatisés pour maintenir votre présence professionnelle sans effort.</p>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="int-sms" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
         <h3>SMS</h3>
         <p>Envoi de confirmations, rappels et notifications clients déclenchés automatiquement après chaque interaction.</p>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="int-documents" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
         <h3>Documents</h3>
         <p>Génération en quelques secondes de devis, factures et documents professionnels personnalisés.</p>
@@ -164,35 +162,35 @@
       <p class="section-sub reveal reveal-delay-2">L'agent déclenche et gère des workflows récurrents complexes, sans aucune intervention humaine. Voici cinq flux prêts à activer.</p>
     </div>
     <div class="cards-grid reveal" style="grid-template-columns:1fr;">
-      <article class="cell" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
+      <article class="cell" data-modal="wf-recrutement" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
         <span class="kicker" style="margin-bottom:0;">01</span>
         <div>
           <h3>Screening de recrutement</h3>
           <p>L'agent rappelle chaque candidat, pose les questions de pré-qualification, score les réponses et trie le pipeline avant qu'un humain n'y consacre une minute. Réponse standardisée à tous les candidats.</p>
         </div>
       </article>
-      <article class="cell" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
+      <article class="cell" data-modal="wf-prospection" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
         <span class="kicker alt" style="margin-bottom:0;">02</span>
         <div>
           <h3>Prospection continue</h3>
           <p>Une cadence permanente plutôt qu'une vague : appel, SMS, email, relance à J+3, J+7, J+14 avec des angles différents, jusqu'à conclusion ou disqualification claire.</p>
         </div>
       </article>
-      <article class="cell" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
+      <article class="cell" data-modal="wf-contenu" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
         <span class="kicker warn" style="margin-bottom:0;">03</span>
         <div>
           <h3>Production de contenu</h3>
           <p>Sélection du sujet, brief automatique, rédaction cohérente avec votre charte, validation humaine express, puis publication programmée et partage sur les canaux choisis.</p>
         </div>
       </article>
-      <article class="cell" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
+      <article class="cell" data-modal="wf-enrichissement" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
         <span class="kicker" style="margin-bottom:0;">04</span>
         <div>
           <h3>Enrichissement du CRM</h3>
           <p>Détection des contacts incomplets, doublons et inactifs, enrichissement des champs manquants, validation par appel court et rapport hebdomadaire au responsable commercial.</p>
         </div>
       </article>
-      <article class="cell" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;border-bottom:none;">
+      <article class="cell" data-modal="wf-campagnes" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;border-bottom:none;">
         <span class="kicker alt" style="margin-bottom:0;">05</span>
         <div>
           <h3>Campagnes SMS &amp; email</h3>
@@ -212,29 +210,25 @@
       <p class="section-sub reveal reveal-delay-2">Chaque secteur a ses propres enjeux. L'agent se configure précisément à vos flux métier.</p>
     </div>
     <div class="cards-grid cards-4 reveal">
-      <article class="cell">
+      <article class="cell" data-modal="sec-immobilier" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
         <h3>Immobilier</h3>
         <p>Qualification des acheteurs et vendeurs, prise de visite, relances et mise à jour du portefeuille.</p>
-        <a class="more" href="contact-brutalist.html">Voir une démo →</a>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="sec-sante" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
         <h3>Santé</h3>
         <p>Confirmation de RDV, rappels patients, gestion des annulations et planification intelligente.</p>
-        <a class="more" href="contact-brutalist.html">Voir une démo →</a>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="sec-b2b" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
         <h3>Services B2B</h3>
         <p>Prospection continue, suivi commercial, qualification de leads et nurturing automatisé.</p>
-        <a class="more" href="contact-brutalist.html">Voir une démo →</a>
       </article>
-      <article class="cell">
+      <article class="cell" data-modal="sec-ecommerce" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>
         <h3>E-commerce</h3>
         <p>SAV automatisé, suivi de commandes, récupération d'abandons de panier par appel ou SMS.</p>
-        <a class="more" href="contact-brutalist.html">Voir une démo →</a>
       </article>
     </div>
   </div>
@@ -298,6 +292,612 @@
   </div>
 </footer>
 
+<!-- ── Modale (panel + backdrop, contenu injecté en JS) ─────── -->
+<div class="modal-backdrop" data-modal-backdrop hidden></div>
+<div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1" data-modal-panel hidden>
+  <button type="button" class="modal-close" aria-label="Fermer la fiche" data-modal-close>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div data-modal-content></div>
+</div>
+
+<!-- ── Fiches : contenu indexable, masqué visuellement (clip) ── -->
+<div class="fiches-store" inert>
+
+  <!-- ===== ZONE A ============================================ -->
+  <article id="fiche-entrants" data-fiche>
+    <div class="modal-eyebrow">Appels entrants</div>
+    <h3 class="modal-title" id="modalTitle">Décrocher pour vous, qualifier, déclencher l'action</h3>
+    <p class="modal-pitch">Quand un client appelle, l'agent vocal répond instantanément, comprend la demande et la traite jusqu'au bout — sans qu'aucun humain n'ait à reprendre la conversation.</p>
+
+    <div class="modal-section">
+      <h4>Comment ça marche en 3 étapes</h4>
+      <ol class="modal-steps">
+        <li><strong>Détection &amp; compréhension.</strong> L'agent reconnaît la voix, identifie la raison de l'appel (RDV, devis, SAV, info) et le contact dans votre CRM s'il existe.</li>
+        <li><strong>Action en direct.</strong> Il ouvre votre calendrier, votre CRM, votre boîte mail — et exécute la tâche pendant la conversation : création d'opportunité, prise de RDV, envoi d'un devis.</li>
+        <li><strong>Trace &amp; suivi.</strong> Tout est consigné : transcription complète, fiche CRM mise à jour, email/SMS de confirmation envoyé au client, alerte à votre équipe si besoin.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Cas d'usage concrets</h4>
+      <ul class="modal-list">
+        <li>Prise de rendez-vous (visite, consultation, intervention) avec choix de créneau en direct.</li>
+        <li>Qualification d'une demande entrante avant transfert à la bonne personne.</li>
+        <li>Création d'un devis express pour un service standardisé, envoyé par email pendant l'appel.</li>
+        <li>Renseignement client (horaires, tarifs, FAQ) avec ton et style cohérents avec votre marque.</li>
+        <li>Suivi de commande ou de dossier depuis votre CRM et votre outil de gestion.</li>
+        <li>Enregistrement d'une réclamation, ouverture d'un ticket et notification de l'équipe SAV.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Promesses mesurables</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">100%</div><div class="modal-kpi-label">Appels décrochés</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">24/7</div><div class="modal-kpi-label">Disponibilité réelle</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">&lt; 5s</div><div class="modal-kpi-label">Temps de réponse</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">0</div><div class="modal-kpi-label">Saisie manuelle post-appel</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Réserver une démo</a></div>
+  </article>
+
+  <article id="fiche-sortants" data-fiche>
+    <div class="modal-eyebrow">Appels sortants</div>
+    <h3 class="modal-title">Prospection, relance et fidélisation à grande échelle</h3>
+    <p class="modal-pitch">L'agent appelle vos listes, se présente avec votre script, qualifie l'opportunité et déclenche la suite — un envoi de mail, un RDV ou une relance programmée.</p>
+
+    <div class="modal-section">
+      <h4>Comment ça marche en 3 étapes</h4>
+      <ol class="modal-steps">
+        <li><strong>Préparation.</strong> Vous chargez la liste de contacts (export CSV, CRM ou source enrichie) et choisissez le scénario : prospection, relance, ré-engagement, prise de RDV.</li>
+        <li><strong>Exécution.</strong> L'agent passe les appels par vagues, gère les objections de premier niveau, qualifie selon vos critères et marque chaque contact dans votre CRM.</li>
+        <li><strong>Boucle de relance.</strong> Les non-décrochés et indécis basculent dans une cadence multicanale (rappel, email, SMS) jusqu'à conclusion ou disqualification.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Cas d'usage concrets</h4>
+      <ul class="modal-list">
+        <li>Prospection à froid sur une liste sectorielle pour décrocher des RDV qualifiés.</li>
+        <li>Relance de leads dormants après X jours d'inactivité dans le CRM.</li>
+        <li>Confirmation de RDV la veille (visite, intervention, consultation).</li>
+        <li>Enquête de satisfaction post-service, avec scoring et alertes si avis négatif.</li>
+        <li>Réactivation d'anciens clients sur une nouvelle offre ou un changement tarifaire.</li>
+        <li>Vérification de coordonnées ou de besoin avant l'envoi d'un commercial humain.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Promesses mesurables</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">×10</div><div class="modal-kpi-label">Volume d'appels traités</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">0 €</div><div class="modal-kpi-label">Coût marginal par appel</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">100%</div><div class="modal-kpi-label">Contacts loggés au CRM</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">[à confirmer]</div><div class="modal-kpi-label">Taux de qualification cible</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Réserver une démo</a></div>
+  </article>
+
+  <!-- ===== ZONE B — Intégrations ============================== -->
+  <article id="fiche-int-crm" data-fiche>
+    <div class="modal-eyebrow">Intégration · CRM</div>
+    <h3 class="modal-title">Votre CRM piloté en temps réel par l'agent</h3>
+    <p class="modal-pitch">L'agent lit, crée et met à jour les contacts, opportunités et activités dans votre CRM pendant la conversation — pas après. Votre pipeline reflète la réalité à la seconde près.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait avec votre CRM</h4>
+      <ul class="modal-list">
+        <li>Identifie le contact entrant et ouvre sa fiche pour personnaliser la conversation.</li>
+        <li>Crée une nouvelle opportunité ou ticket et le rattache au bon contact / compte.</li>
+        <li>Met à jour les champs de qualification (budget, échéance, besoin, statut).</li>
+        <li>Consigne la transcription, le résumé et le verdict de l'appel comme activité datée.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">Un prospect rappelle après un email. L'agent reconnaît son numéro, ouvre l'opportunité existante, voit qu'elle est en stade « Découverte », pose les questions manquantes, fait passer le stade à « Qualifiée » et planifie une démo dans le calendrier du commercial.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : contact, compte, historique d'opportunités, dernière activité, statut pipeline.</li>
+        <li><strong>Écrit</strong> : nouveau contact / opportunité, mise à jour de stade, note d'appel, tâche de suivi.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <article id="fiche-int-email" data-fiche>
+    <div class="modal-eyebrow">Intégration · Email</div>
+    <h3 class="modal-title">Lecture, rédaction et envoi depuis votre boîte mail</h3>
+    <p class="modal-pitch">L'agent envoie depuis votre adresse, avec votre signature, et peut aussi lire les emails entrants pour déclencher une action vocale ou une mise à jour CRM.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait avec votre boîte mail</h4>
+      <ul class="modal-list">
+        <li>Envoie une confirmation immédiate à la fin d'un appel (RDV, devis, récap des points discutés).</li>
+        <li>Joint automatiquement le document généré (devis, contrat, fiche produit).</li>
+        <li>Lit les réponses entrantes et déclenche le bon scénario : rappel, mise à jour CRM, transfert humain.</li>
+        <li>Programme une séquence de relance si le destinataire ne répond pas.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">Après un appel sortant qualifié, l'agent envoie au prospect un email récap avec le devis en pièce jointe, programme une relance à J+2 si pas de réponse, et notifie le commercial une fois le PDF ouvert.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : objet, expéditeur, contenu, pièces jointes, date de réception.</li>
+        <li><strong>Écrit</strong> : email sortant personnalisé, suivi d'ouverture, classement dans le bon dossier.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <article id="fiche-int-calendrier" data-fiche>
+    <div class="modal-eyebrow">Intégration · Calendrier</div>
+    <h3 class="modal-title">Prise de RDV en direct, sans aller-retour</h3>
+    <p class="modal-pitch">Pendant l'appel, l'agent consulte les disponibilités réelles, propose des créneaux, fixe le RDV et envoie l'invitation — tout cela en une seule conversation.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait avec votre calendrier</h4>
+      <ul class="modal-list">
+        <li>Lit les disponibilités d'un ou plusieurs membres de l'équipe selon les règles que vous définissez.</li>
+        <li>Crée un événement avec lieu, lien visio, durée et note d'appel pré-remplie.</li>
+        <li>Modifie ou annule un RDV à la demande du client, avec notification à l'équipe.</li>
+        <li>Programme un rappel automatique 24 h avant le rendez-vous.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">Un client demande à reporter sa visite. L'agent consulte le planning, propose deux nouveaux créneaux, valide celui choisi par le client, met à jour le RDV et envoie un SMS de confirmation immédiat.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : créneaux libres, événements existants, fuseaux horaires.</li>
+        <li><strong>Écrit</strong> : nouveau RDV, modification, suppression, rappel programmé.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <article id="fiche-int-linkedin" data-fiche>
+    <div class="modal-eyebrow">Intégration · LinkedIn</div>
+    <h3 class="modal-title">Présence professionnelle entretenue automatiquement</h3>
+    <p class="modal-pitch">L'agent rédige et publie pour vous, à votre cadence, dans votre voix. Vous restez visible sans devoir bloquer du temps chaque semaine.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait sur votre profil pro</h4>
+      <ul class="modal-list">
+        <li>Génère des posts à partir de vos thèmes, retours clients ou actualités du secteur.</li>
+        <li>Publie selon un planning hebdomadaire que vous validez en un clic.</li>
+        <li>Recycle un appel marquant ou un retour client en post (avec votre accord).</li>
+        <li>Surveille les commentaires et vous alerte sur les interactions à fort potentiel commercial.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">Vous avez clos un dossier important. L'agent en propose un mini retour d'expérience, vous le présente le mardi matin, vous l'éditez en 30 secondes, il publie le jeudi à l'heure optimale et trace les vues / contacts générés.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : posts existants, commentaires, métriques d'engagement.</li>
+        <li><strong>Écrit</strong> : nouveau post, réponse à commentaire (sur validation), planification.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <article id="fiche-int-sms" data-fiche>
+    <div class="modal-eyebrow">Intégration · SMS</div>
+    <h3 class="modal-title">Notifications courtes, immédiates et lues</h3>
+    <p class="modal-pitch">Le canal SMS reste le plus ouvert. L'agent l'utilise pour confirmer, rappeler et débloquer — pas pour spammer.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait via SMS</h4>
+      <ul class="modal-list">
+        <li>Envoie une confirmation immédiate après un RDV pris ou un devis envoyé.</li>
+        <li>Programme un rappel 24 h ou 1 h avant un rendez-vous.</li>
+        <li>Notifie le client d'un changement de statut (commande prête, intervention en route).</li>
+        <li>Relance un prospect non joint par téléphone avec un message contextualisé.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">À la fin d'un appel entrant pour une intervention, l'agent envoie un SMS au client avec la date, le créneau et un lien pour modifier le RDV. La veille, un rappel automatique part — le taux d'absence chute mécaniquement.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : numéro vérifié, historique d'envois, statut de livraison.</li>
+        <li><strong>Écrit</strong> : SMS sortant personnalisé, log dans la fiche contact.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <article id="fiche-int-documents" data-fiche>
+    <div class="modal-eyebrow">Intégration · Documents</div>
+    <h3 class="modal-title">Devis, factures et contrats générés en quelques secondes</h3>
+    <p class="modal-pitch">Pendant ou juste après l'appel, l'agent assemble un document propre à partir de votre modèle, le personnalise avec les infos client et l'envoie au bon canal.</p>
+
+    <div class="modal-section">
+      <h4>Ce que l'agent fait avec vos documents</h4>
+      <ul class="modal-list">
+        <li>Génère un devis chiffré à partir d'un catalogue produit / service.</li>
+        <li>Émet une facture à partir d'une commande validée.</li>
+        <li>Pré-remplit un contrat type avec les coordonnées du client et les conditions négociées.</li>
+        <li>Stocke le document dans votre espace partagé et le rattache au CRM.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Scénario type</h4>
+      <p class="modal-scenario">Un client appelle pour confirmer une prestation. L'agent génère le devis chiffré, l'envoie par email pendant la conversation, et place une copie dans le dossier client de votre espace de stockage partagé.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Données lues / écrites</h4>
+      <ul class="modal-list">
+        <li><strong>Lit</strong> : modèle de document, catalogue, données client, historique de prix.</li>
+        <li><strong>Écrit</strong> : nouveau document PDF, lien stocké, ligne dans le suivi facturation.</li>
+      </ul>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
+  </article>
+
+  <!-- ===== ZONE C — Workflows ================================ -->
+  <article id="fiche-wf-recrutement" data-fiche>
+    <div class="modal-eyebrow">Workflow 01 · Recrutement</div>
+    <h3 class="modal-title">Screening de candidats automatisé</h3>
+    <p class="modal-pitch">L'agent appelle ou rappelle chaque candidat reçu, pose les questions de pré-qualification et trie le pipeline avant qu'un humain n'y consacre une minute.</p>
+
+    <div class="modal-section">
+      <h4>Étapes du flux</h4>
+      <ol class="modal-steps">
+        <li>Réception d'une candidature (formulaire, email, plateforme emploi) → contact créé.</li>
+        <li>Appel sortant ou prise de RDV pour un échange de pré-qualification de 5–10 min.</li>
+        <li>Questions sur expérience, disponibilité, prétentions, motivations — réponses scorées.</li>
+        <li>Tri automatique : à voir / en attente / rejet poli (avec email standardisé).</li>
+        <li>Synthèse envoyée au recruteur, RDV physique posé pour les profils retenus.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Bénéfice business</h4>
+      <ul class="modal-list">
+        <li>Le recruteur ne voit que des candidats déjà filtrés.</li>
+        <li>Chaque candidat reçoit une réponse, ce qui protège votre marque employeur.</li>
+        <li>Délai de premier contact divisé : de plusieurs jours à quelques heures.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>À qui c'est destiné</h4>
+      <p class="modal-scenario">PME et cabinets qui recrutent en continu sur des postes à fort volume de candidatures (terrain, support, commercial).</p>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Activer ce workflow</a></div>
+  </article>
+
+  <article id="fiche-wf-prospection" data-fiche>
+    <div class="modal-eyebrow">Workflow 02 · Prospection</div>
+    <h3 class="modal-title">Campagnes continues avec relances intelligentes</h3>
+    <p class="modal-pitch">Au lieu d'une vague de cold-calls qui s'éteint, vous avez une cadence permanente : appel, email, SMS, rappel, jusqu'à conclusion ou disqualification claire.</p>
+
+    <div class="modal-section">
+      <h4>Étapes du flux</h4>
+      <ol class="modal-steps">
+        <li>Liste de prospects chargée ou enrichie automatiquement selon vos critères.</li>
+        <li>Premier contact : appel sortant avec script adapté, qualification ou prise de RDV.</li>
+        <li>Si non joint : SMS court, puis email personnalisé sur sa problématique.</li>
+        <li>Relance programmée à J+3, J+7, J+14 avec angles différents.</li>
+        <li>Sortie de la cadence dès qu'un RDV est posé ou qu'une réponse négative arrive.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Bénéfice business</h4>
+      <ul class="modal-list">
+        <li>Plus aucun lead n'est oublié dans le tableur.</li>
+        <li>Pipeline alimenté de manière prévisible chaque semaine.</li>
+        <li>Le commercial humain n'intervient que sur les RDV qualifiés.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>À qui c'est destiné</h4>
+      <p class="modal-scenario">Équipes commerciales qui veulent industrialiser le haut de pipeline sans recruter ni multiplier les outils.</p>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Activer ce workflow</a></div>
+  </article>
+
+  <article id="fiche-wf-contenu" data-fiche>
+    <div class="modal-eyebrow">Workflow 03 · Contenu</div>
+    <h3 class="modal-title">Production et publication de contenu en pilote auto</h3>
+    <p class="modal-pitch">L'agent rédige, illustre et publie des articles ou pages produit selon un calendrier éditorial — vous validez avant mise en ligne.</p>
+
+    <div class="modal-section">
+      <h4>Étapes du flux</h4>
+      <ol class="modal-steps">
+        <li>Sélection d'un sujet à partir d'un backlog ou d'une recherche de tendances.</li>
+        <li>Brief auto : structure, mots-clés, angle, public visé.</li>
+        <li>Rédaction d'une première version cohérente avec votre charte éditoriale.</li>
+        <li>Validation humaine express (relecture, ajustements éventuels).</li>
+        <li>Publication programmée sur le site, partage automatique sur les canaux choisis.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Bénéfice business</h4>
+      <ul class="modal-list">
+        <li>Cadence de publication maintenue sans bloquer une demi-journée par semaine.</li>
+        <li>SEO renforcé par une production régulière sur des mots-clés ciblés.</li>
+        <li>Conservation du contrôle éditorial via une étape de validation rapide.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>À qui c'est destiné</h4>
+      <p class="modal-scenario">Dirigeants et marketing solo qui veulent une présence éditoriale crédible sans externaliser intégralement.</p>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Activer ce workflow</a></div>
+  </article>
+
+  <article id="fiche-wf-enrichissement" data-fiche>
+    <div class="modal-eyebrow">Workflow 04 · Données CRM</div>
+    <h3 class="modal-title">Enrichissement et hygiène continue du CRM</h3>
+    <p class="modal-pitch">Un CRM propre est rarement le reflet d'une discipline humaine — c'est le résultat d'un agent qui le nettoie en permanence.</p>
+
+    <div class="modal-section">
+      <h4>Étapes du flux</h4>
+      <ol class="modal-steps">
+        <li>Détection des contacts incomplets, doublons ou inactifs depuis X mois.</li>
+        <li>Enrichissement automatique des champs manquants (poste, secteur, taille).</li>
+        <li>Validation par appel court ou email court sur les contacts critiques.</li>
+        <li>Marquage clair : à jour / à vérifier / à archiver.</li>
+        <li>Rapport hebdomadaire envoyé au responsable commercial.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Bénéfice business</h4>
+      <ul class="modal-list">
+        <li>Segmentation et campagnes plus précises (taux de bounce email réduit).</li>
+        <li>Décisions commerciales prises sur des données fiables, pas sur un CRM flou.</li>
+        <li>Économie de temps commercial sur des contacts qui n'auraient jamais converti.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>À qui c'est destiné</h4>
+      <p class="modal-scenario">Toute équipe commerciale dont le CRM s'est dégradé avec le temps et qui n'a pas le luxe d'une journée de nettoyage manuel.</p>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Activer ce workflow</a></div>
+  </article>
+
+  <article id="fiche-wf-campagnes" data-fiche>
+    <div class="modal-eyebrow">Workflow 05 · Campagnes</div>
+    <h3 class="modal-title">Campagnes SMS et email planifiées et segmentées</h3>
+    <p class="modal-pitch">Vous décidez du message et de la cible. L'agent segmente, personnalise, envoie au bon moment et mesure.</p>
+
+    <div class="modal-section">
+      <h4>Étapes du flux</h4>
+      <ol class="modal-steps">
+        <li>Définition du segment (clients récents, dormants, par secteur, par panier moyen).</li>
+        <li>Personnalisation du message : prénom, dernière interaction, offre adaptée.</li>
+        <li>Envoi orchestré aux meilleures heures, en respectant la pression commerciale.</li>
+        <li>Suivi en direct : ouvertures, clics, réponses, opt-outs.</li>
+        <li>Bascule vers un appel de l'agent pour les contacts les plus engagés.</li>
+      </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Bénéfice business</h4>
+      <ul class="modal-list">
+        <li>Plus de campagnes envoyées sans suite : chaque ouverture peut déclencher une action.</li>
+        <li>Taux de désabonnement maîtrisé grâce au plafonnement du nombre d'envois.</li>
+        <li>Vision unifiée des canaux : appel + email + SMS dans la même séquence.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>À qui c'est destiné</h4>
+      <p class="modal-scenario">Entreprises B2C ou B2B avec une base d'au moins quelques centaines de contacts qui veulent ré-activer la valeur déjà acquise.</p>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Activer ce workflow</a></div>
+  </article>
+
+  <!-- ===== ZONE D — Secteurs ================================= -->
+  <article id="fiche-sec-immobilier" data-fiche>
+    <div class="modal-eyebrow">Secteur · Immobilier</div>
+    <h3 class="modal-title">L'agence qui ne rate aucun acquéreur ni vendeur</h3>
+    <p class="modal-pitch">Le téléphone reste le premier canal de l'immobilier — et le plus mal traité, faute de temps. Call Agent y répond toujours, qualifie et déclenche la suite.</p>
+
+    <div class="modal-section">
+      <h4>3 problèmes typiques du secteur</h4>
+      <ul class="modal-list">
+        <li>Appels manqués pendant les visites ou en dehors des horaires d'agence.</li>
+        <li>Acquéreurs qualifiés qui repartent vers un autre bien faute de réponse rapide.</li>
+        <li>Portefeuille mandats vendeurs incomplet : numéros incorrects, biens dépassés.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>3 façons dont l'agent les résout</h4>
+      <ul class="modal-list">
+        <li>Décroche 24/7, qualifie l'acquéreur (budget, zone, surface) et propose la visite la plus proche.</li>
+        <li>Crée la fiche prospect dans le CRM et notifie l'agent commercial du dossier le plus chaud.</li>
+        <li>Relance régulière des mandats vendeurs pour vérifier la pertinence du bien et la disponibilité.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Mini-scénario d'usage</h4>
+      <p class="modal-scenario">Un acheteur appelle un dimanche pour une annonce. L'agent qualifie son projet, propose deux créneaux de visite la semaine suivante, lui envoie un SMS récap avec l'adresse et notifie le négociateur dès le lundi matin.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Indicateur clé</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">[à confirmer]</div><div class="modal-kpi-label">% d'acquéreurs récupérés hors horaires</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Adapter à mon agence</a></div>
+  </article>
+
+  <article id="fiche-sec-sante" data-fiche>
+    <div class="modal-eyebrow">Secteur · Santé</div>
+    <h3 class="modal-title">Cabinets et centres : moins d'absences, plus de RDV utiles</h3>
+    <p class="modal-pitch">L'enjeu numéro un n'est pas de remplir l'agenda, c'est de garantir que les patients viennent — et de remplir les créneaux libérés au dernier moment.</p>
+
+    <div class="modal-section">
+      <h4>3 problèmes typiques du secteur</h4>
+      <ul class="modal-list">
+        <li>Taux d'absence patient élevé sur les premières consultations.</li>
+        <li>Standard saturé aux horaires d'ouverture, patients qui n'arrivent jamais à joindre.</li>
+        <li>Annulations de dernière minute qui laissent des créneaux vides non comblés.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>3 façons dont l'agent les résout</h4>
+      <ul class="modal-list">
+        <li>Rappel SMS et appel la veille du RDV avec confirmation orale ou option de report immédiat.</li>
+        <li>Décrochage 24/7 pour la prise et la modification de RDV, sans saturation aux pics.</li>
+        <li>Liste d'attente : appel automatique des patients en attente dès qu'un créneau se libère.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Mini-scénario d'usage</h4>
+      <p class="modal-scenario">Un patient annule à 9 h pour son RDV de 11 h. L'agent appelle dans la foulée la liste d'attente et propose le créneau à la première personne disponible, qui confirme par SMS — le créneau est sauvé.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Indicateur clé</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">[à confirmer]</div><div class="modal-kpi-label">Réduction du taux d'absence</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Adapter à mon cabinet</a></div>
+  </article>
+
+  <article id="fiche-sec-b2b" data-fiche>
+    <div class="modal-eyebrow">Secteur · Services B2B</div>
+    <h3 class="modal-title">Pipeline alimenté en continu, sans recruter</h3>
+    <p class="modal-pitch">Pour une PME B2B, le coût d'un commercial dédié à la prospection est élevé. L'agent s'occupe du haut de pipeline et laisse les humains conclure.</p>
+
+    <div class="modal-section">
+      <h4>3 problèmes typiques du secteur</h4>
+      <ul class="modal-list">
+        <li>Cycle de vente long avec relances qui s'étiolent au-delà de la deuxième tentative.</li>
+        <li>Difficulté à maintenir un volume de cold-call régulier sans démotiver l'équipe.</li>
+        <li>Données de prospection éparpillées entre tableurs, emails et CRM.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>3 façons dont l'agent les résout</h4>
+      <ul class="modal-list">
+        <li>Cadence de relance multicanale qui ne s'arrête qu'à la conclusion ou au refus explicite.</li>
+        <li>Volume d'appels constant, sans fatigue, avec scripts adaptables à chaque persona.</li>
+        <li>CRM mis à jour à chaque contact : note, statut, prochaine action — un seul endroit de vérité.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Mini-scénario d'usage</h4>
+      <p class="modal-scenario">Une liste de 500 décideurs sectoriels est confiée à l'agent. En deux semaines, il a joint 60 % de la liste, qualifié 12 % et posé une trentaine de RDV — pendant que les commerciaux humains travaillaient leurs comptes existants.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Indicateur clé</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">[à confirmer]</div><div class="modal-kpi-label">RDV qualifiés / mois</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Adapter à mon entreprise</a></div>
+  </article>
+
+  <article id="fiche-sec-ecommerce" data-fiche>
+    <div class="modal-eyebrow">Secteur · E-commerce</div>
+    <h3 class="modal-title">SAV, suivi de commande et récupération de panier</h3>
+    <p class="modal-pitch">Pour un e-commerçant, le téléphone n'est plus seulement un canal de vente : c'est un levier SAV et un outil de récupération de revenu.</p>
+
+    <div class="modal-section">
+      <h4>3 problèmes typiques du secteur</h4>
+      <ul class="modal-list">
+        <li>SAV sous l'eau pendant les pics, files d'attente qui dégradent l'image.</li>
+        <li>Taux d'abandon panier élevé, sans canal de relance personnalisé.</li>
+        <li>Demandes répétitives (suivi de commande, retours) qui mobilisent inutilement les équipes.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>3 façons dont l'agent les résout</h4>
+      <ul class="modal-list">
+        <li>Réponse instantanée aux demandes courantes : statut commande, retour, modification d'adresse.</li>
+        <li>Appel ou SMS sur les paniers abandonnés à fort montant, dans les heures qui suivent.</li>
+        <li>Filtrage des demandes complexes vers le bon humain, avec contexte déjà chargé.</li>
+      </ul>
+    </div>
+
+    <div class="modal-section">
+      <h4>Mini-scénario d'usage</h4>
+      <p class="modal-scenario">Un client abandonne un panier de 240 €. L'agent l'appelle 30 minutes plus tard pour comprendre le blocage, propose un mode de paiement alternatif et débloque la commande sans toucher au prix.</p>
+    </div>
+
+    <div class="modal-section">
+      <h4>Indicateur clé</h4>
+      <div class="modal-kpi-grid">
+        <div class="modal-kpi"><div class="modal-kpi-value">[à confirmer]</div><div class="modal-kpi-label">Paniers récupérés / mois</div></div>
+      </div>
+    </div>
+
+    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Adapter à ma boutique</a></div>
+  </article>
+
+</div>
+
+<script>
+  document.querySelectorAll('.cell[data-modal]').forEach(c => {
+    c.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); c.click(); }
+    });
+  });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
