@@ -160,6 +160,15 @@ section { border-bottom:var(--bw) solid var(--ink); }
   padding:30px 26px; border-right:var(--bw) solid var(--ink); border-bottom:var(--bw) solid var(--ink);
   background:var(--paper); transition:background .15s ease;
 }
+.cell-img {
+  width:calc(100% + 52px);
+  margin:-30px -26px 18px;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  border-bottom:var(--bw) solid var(--ink);
+  display:block;
+  background:#ddd;
+}
 .cell[data-modal] { cursor:pointer; }
 .cell[data-modal]:hover { background:#fff; }
 .cell[data-modal]:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
