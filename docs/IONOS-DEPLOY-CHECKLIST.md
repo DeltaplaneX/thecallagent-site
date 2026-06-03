@@ -16,9 +16,11 @@ mcp__ionos__list_dns_zones    → IONOS API error: Invalid API key format.
 mcp__ionos__get_dns_zone      → IONOS API error: Invalid API key format.
 ```
 
-**Conséquence :** les valeurs DNS réelles (domainId, zoneId, cible de l'enregistrement racine,
-cible de `app.`) **n'ont pas pu être lues**. Elles sont donc marquées ci-dessous
-**« [à lire dans le panneau IONOS] »**. **Aucune valeur DNS n'a été inventée.**
+**Conséquence :** les identifiants internes IONOS (`domainId`, `zoneId`) et les détails complets
+de zone (IDs d'enregistrements, valeurs désactivées, commentaires internes) **n'ont pas pu être
+lus**. Les valeurs DNS publiques observables ont été relevées séparément ci-dessous via DNS-over-HTTPS
+Cloudflare + Google le **2026-06-03**. Elles servent de repère, mais le panneau IONOS reste la
+source à vérifier avant toute bascule.
 
 **Action préalable requise** (côté utilisateur, hors de ce document) :
 - Régénérer/corriger la clé API IONOS (format attendu : `<public-prefix>.<secret>`),
@@ -35,9 +37,19 @@ cible de `app.`) **n'ont pas pu être lues**. Elles sont donc marquées ci-desso
 | Domaine | `thecallagent.com` | confirmé via le repo (canonical / OG dans `index.html`) |
 | domainId | **[à lire dans le panneau IONOS]** | MCP indisponible (clé API invalide) |
 | zoneId | **[à lire dans le panneau IONOS]** | MCP indisponible (clé API invalide) |
-| Enregistrement **racine** `thecallagent.com` (A / ALIAS / CNAME → cible site vitrine) | **[à lire dans le panneau IONOS]** | MCP indisponible |
-| Enregistrement **`app.thecallagent.com`** (app technique clients → cible) | **[à lire dans le panneau IONOS]** | MCP indisponible |
-| Enregistrements MX / TXT (SPF/DKIM/DMARC) | **[à lire dans le panneau IONOS]** | MCP indisponible |
+| Enregistrement **racine** `thecallagent.com` | `A 217.160.0.145` · `AAAA 2001:8d8:100f:f000::200` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
+| Enregistrement **`www.thecallagent.com`** | `A 212.227.172.253` · `AAAA 2001:8d8:105:1:0:1:0:7` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
+| Enregistrement **`app.thecallagent.com`** (app technique clients → cible) | `A 185.158.133.1` · pas de CNAME/AAAA public observé · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google — **NE PAS TOUCHER** |
+| NS | `ns1034.ui-dns.de`, `ns1065.ui-dns.com`, `ns1081.ui-dns.org`, `ns1104.ui-dns.biz` | DNS-over-HTTPS Cloudflare + Google |
+| MX | `10 mx00.ionos.fr`, `10 mx01.ionos.fr` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
+| TXT `@` | `v=spf1 include:_spf-eu.ionos.com ~all` · `google-site-verification=FWNteBd5IzvT4r8eIdTTSAk1AZlgHSWYhlFyfmSVy6M` · TTL public `3600` | DNS-over-HTTPS Cloudflare + Google |
+| DMARC | `_dmarc.thecallagent.com CNAME dmarc.ionos.fr` → `v=DMARC1; p=none;` | DNS-over-HTTPS Cloudflare + Google |
+| Hébergement observé `https://thecallagent.com/` / `www` | HTTP `200`, serveur `IONOS Webserver`, headers WordPress (`wp-json`) | sonde HEAD publique le 2026-06-03 |
+| Hébergement observé `https://app.thecallagent.com/` | HTTP `200`, serveur `cloudflare` | sonde HEAD publique le 2026-06-03 — **NE PAS TOUCHER** |
+
+> Note de vérification : `Resolve-DnsName` local a retourné des IP `198.18.1.x`, plage réservée aux tests.
+> Ces résultats ont été considérés comme pollués par l'environnement réseau local et **ignorés**. Les valeurs ci-dessus
+> proviennent de DNS-over-HTTPS Cloudflare + Google, cohérents entre eux.
 
 > Le code confirme l'existence de deux entités distinctes (`politique-de-confidentialite.html`) :
 > - **Site vitrine** = `thecallagent.com` (objet de ce déploiement)
@@ -49,12 +61,15 @@ cible de `app.`) **n'ont pas pu être lues**. Elles sont donc marquées ci-desso
 domainId            : ______________________________
 zoneId              : ______________________________
 
-@ (racine)          : type ____  valeur ______________________  TTL ______
-www                 : type ____  valeur ______________________  TTL ______
-app                 : type ____  valeur ______________________  TTL ______   ← NE PAS MODIFIER
-MX                  : ______________________________________________________
-TXT (SPF)           : ______________________________________________________
-TXT (DKIM/DMARC)    : ______________________________________________________
+@ (racine)          : type A     valeur 217.160.0.145                 TTL 3600 public
+@ (racine)          : type AAAA  valeur 2001:8d8:100f:f000::200       TTL 3600 public
+www                 : type A     valeur 212.227.172.253              TTL 3600 public
+www                 : type AAAA  valeur 2001:8d8:105:1:0:1:0:7       TTL 3600 public
+app                 : type A     valeur 185.158.133.1                TTL 3600 public   ← NE PAS MODIFIER
+MX                  : 10 mx00.ionos.fr ; 10 mx01.ionos.fr            TTL 3600 public
+TXT (SPF)           : v=spf1 include:_spf-eu.ionos.com ~all          TTL 3600 public
+TXT (verification)  : google-site-verification=FWNteBd5IzvT4r8eIdTTSAk1AZlgHSWYhlFyfmSVy6M
+TXT (DMARC)         : _dmarc CNAME dmarc.ionos.fr → v=DMARC1; p=none;
 ```
 
 ---
@@ -137,6 +152,11 @@ audit-log.md, shadow-dataset.md, CLAUDE.md, .git/                               
 ### Variante A — Hébergement IONOS (Web Hosting classique **ou** Deploy Now)
 
 **Cas A1 — IONOS Web Hosting (SFTP / gestionnaire de fichiers)**
+
+> État probable le 2026-06-03 : `thecallagent.com` et `www.thecallagent.com` répondent via
+> `IONOS Webserver` avec des headers WordPress. La bascule la plus probable est donc un
+> remplacement de contenu sur l'hébergement IONOS (ou une migration hors WordPress), **sans
+> toucher au DNS**, sauf décision explicite de passer par la Variante B.
 
 1. Récupérer les identifiants SFTP : panneau IONOS → Hébergement → Accès SFTP/SSH
    (hôte, utilisateur, mot de passe/clé, **chemin du webroot** — souvent `/` ou `/htdocs`).
@@ -229,7 +249,7 @@ audit-log.md, shadow-dataset.md, CLAUDE.md, .git/                               
 
 Enregistrements à **ne pas modifier / ne pas supprimer** lors de la bascule :
 
-- **`app` (CNAME/A) `app.thecallagent.com`** → cible **[à lire dans le panneau IONOS]** — **INTACT**.
+- **`app` (A) `app.thecallagent.com`** → `185.158.133.1` (TTL public `3600`) — **INTACT**.
 - **MX** (réception e-mail) → **INTACT**.
 - **TXT `@` SPF** (`v=spf1 ...`) → **INTACT**.
 - **TXT DKIM / DMARC** (`_dmarc`, sélecteurs DKIM) → **INTACT**.
