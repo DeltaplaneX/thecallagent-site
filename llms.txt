@@ -1,0 +1,14 @@
+# TheCallAgent
+> Agent telephonique IA pour PME : appels entrants, appels sortants, qualification, CRM et automatisations metier.
+
+## Pages principales
+- [Accueil](https://thecallagent.com/): presentation de TheCallAgent, cas d'usage et benefices pour PME.
+- [Nos solutions](https://thecallagent.com/nos-solutions.html): appels entrants, appels sortants, integrations CRM, SMS, email, calendrier et workflows.
+- [A propos](https://thecallagent.com/a-propos.html): mission, fondateur et approche produit.
+- [Contact](https://thecallagent.com/contact.html): demande de demonstration et coordonnees.
+
+## Informations utiles
+- Langue principale : francais.
+- Zone servie : France.
+- Contact : odilon.buisson@thecallagent.com.
+- Telephone : +33 6 64 33 63 80.

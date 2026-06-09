@@ -276,3 +276,34 @@ project: thecallagent-site
 - index/a-propos brutalist : fausse surbrillance retirée (CSS scopé), CTA démo conservés.
 - Vérif structurelle : 17 slugs ↔ 17 fiches (0 clic mort), hooks main.js OK. QA visuelle Playwright NON faite (MCP down).
 - Commits : df48248, 89c0c2e + fix CTA.
+
+> Session fermée à 15:37
+
+> Session fermée à 16:23
+
+> Session fermée à 18:33
+
+## 2026-06-04
+- docs: mark IONOS MCP read access restored
+- docs: record IONOS DNS observations
+- chore: align brutalist KPI labels
+- fix: add scroll video seek fallback
+- feat: integrate use case visuals on homepages
+
+## 2026-06-07
+- docs: mark IONOS MCP read access restored
+- docs: record IONOS DNS observations
+- chore: align brutalist KPI labels
+- fix: add scroll video seek fallback
+- feat: integrate use case visuals on homepages
+
+## 2026-06-09
+- docs: mark IONOS MCP read access restored
+- docs: record IONOS DNS observations
+- chore: align brutalist KPI labels
+- fix: add scroll video seek fallback
+- feat: integrate use case visuals on homepages
+
+> Session fermée à 19:47
+
+> Session fermée à 20:04
