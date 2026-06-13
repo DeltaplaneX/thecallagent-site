@@ -126,12 +126,12 @@ section { border-bottom:var(--bw) solid var(--ink); }
 
 /* ── Bandeau multicanal ────────────────────────────────────── */
 .multicanal { background:var(--ink); color:var(--paper); }
-.multicanal .container { display:flex; align-items:center; justify-content:center; gap:18px; flex-wrap:wrap; padding:20px 28px; }
-.mc-label { font-family:var(--mono); font-size:.8rem; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); }
-.mc-pill { display:inline-flex; align-items:center; gap:9px; border:var(--bw) solid var(--paper); padding:8px 16px; font-weight:800; text-transform:uppercase; font-size:.9rem; }
-.mc-pill svg { width:18px; height:18px; }
-.mc-arrow { font-weight:900; color:var(--accent); }
-.mc-out { background:var(--accent); color:var(--ink); border:var(--bw) solid var(--paper); padding:8px 16px; font-weight:800; text-transform:uppercase; font-size:.9rem; }
+.multicanal .container { display:grid; grid-template-columns:auto auto auto auto auto; align-items:center; justify-content:center; gap:12px; padding:18px 28px; }
+.mc-step,
+.mc-out { border:var(--bw) solid var(--paper); padding:9px 14px; font-weight:900; text-transform:uppercase; font-size:clamp(.76rem,1.05vw,.92rem); line-height:1.12; text-align:center; }
+.mc-step { color:var(--paper); }
+.mc-arrow { font-weight:900; color:var(--accent); font-size:1.15rem; line-height:1; }
+.mc-out { background:var(--accent); color:var(--ink); }
 
 /* ── Stats ─────────────────────────────────────────────────── */
 .stats { background:var(--accent); }
@@ -255,11 +255,12 @@ footer { background:var(--ink); color:var(--paper); border-bottom:none; }
   nav.menu-open .nav-links a{ display:block; padding:14px 28px; }
   nav.menu-open .nav-links .nav-cta{ box-shadow:none; }
   .stats-grid{ grid-template-columns:1fr; }
-  .stat-item{ border-right:none; border-bottom:var(--bw) solid var(--ink); }
+  .stat-item{ border-right:none; border-bottom:var(--bw) solid var(--ink); padding-left:34px; padding-right:88px; }
   .cards-3,.cards-4{ grid-template-columns:1fr; }
   .cards-3 .cell,.cards-4 .cell{ border-right:none !important; }
   .footer-inner{ grid-template-columns:1fr; }
-  .multicanal .container{ gap:10px; }
+  .multicanal .container{ grid-template-columns:1fr; gap:7px; padding:16px 28px; }
+  .mc-arrow{ transform:rotate(90deg); justify-self:center; }
 }
 
 /* ── Fiches / modale (parité dark, style brutaliste) ───────── */
