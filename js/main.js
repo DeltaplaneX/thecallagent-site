@@ -378,79 +378,96 @@ document.addEventListener('DOMContentLoaded', () => {
   const scrollSection = document.querySelector('#scroll-video');
   if (scrollVideoEl && scrollSection) {
     scrollVideoEl.pause();
+    scrollVideoEl.muted = true;
+    scrollVideoEl.playsInline = true;
+    scrollVideoEl.preload = 'auto';
 
     let scrollProgress = 0;
     let displayProgress = 0;
     let rafRunning = false;
+    let scrubStarted = false;
 
     function calcProgress() {
       const rect = scrollSection.getBoundingClientRect();
-      const sectionHeight = scrollSection.offsetHeight - window.innerHeight;
+      const sectionHeight = Math.max(1, scrollSection.offsetHeight - window.innerHeight);
       const scrolled = Math.max(0, -rect.top);
       return Math.min(scrolled / sectionHeight, 1);
+    }
+
+    function getTargetTime(progress) {
+      const duration = scrollVideoEl.duration || 0;
+      if (!duration) return 0;
+      const endGuard = duration > 0.08 ? duration - 0.04 : duration;
+      return Math.max(0, Math.min(endGuard, duration * progress));
+    }
+
+    function seekToProgress(progress) {
+      const targetTime = getTargetTime(progress);
+      if (!Number.isFinite(targetTime)) return;
+      if (Math.abs(targetTime - scrollVideoEl.currentTime) > 0.016) {
+        try {
+          scrollVideoEl.currentTime = targetTime;
+        } catch (_) {
+          // Ignore transient seek errors while the browser finishes buffering metadata.
+        }
+      }
     }
 
     function rafLoop() {
       // Lerp très fort (0.18) = quasi-instantané mais sans saccade de seek
       displayProgress += (scrollProgress - displayProgress) * 0.18;
 
-      if (scrollVideoEl.duration) {
-        const t = scrollVideoEl.duration * displayProgress;
-        // N'écrire que si delta > 1 frame (évite les seeks redondants)
-        if (Math.abs(t - scrollVideoEl.currentTime) > 0.016) {
-          scrollVideoEl.currentTime = t;
-        }
-      }
+      seekToProgress(displayProgress);
       requestAnimationFrame(rafLoop);
     }
 
-    // Fallback : si le seeking est impossible (serveur sans support HTTP Range,
-    // ex. `python -m http.server`), on joue la vidéo en boucle au lieu de la figer.
-    function startScrubFallback() {
-      scrollVideoEl.loop = true;
-      scrollVideoEl.muted = true;
-      scrollVideoEl.play().catch(() => {});
+    function updateScrollProgress() {
+      scrollProgress = calcProgress();
     }
 
     function startScrub() {
+      if (scrubStarted) return;
+      scrubStarted = true;
+      scrollVideoEl.pause();
+      scrollVideoEl.loop = false;
       scrollProgress = calcProgress();
       displayProgress = scrollProgress;
-      window.addEventListener('scroll', () => {
-        scrollProgress = calcProgress();
-      }, { passive: true });
-      scrollVideoEl.currentTime = scrollVideoEl.duration * scrollProgress;
+      seekToProgress(scrollProgress);
+      window.addEventListener('scroll', updateScrollProgress, { passive: true });
+      window.addEventListener('resize', updateScrollProgress, { passive: true });
       if (!rafRunning) {
         rafRunning = true;
         requestAnimationFrame(rafLoop);
       }
     }
 
-    // Sonde de seekabilité : on tente un seek non nul. S'il « prend », on active
-    // le scrub piloté au scroll ; sinon le navigateur ne sait pas seeker la vidéo
-    // (pas de Range) → on bascule en lecture bouclée pour ne jamais figer l'image.
-    function initScrollVideo() {
-      if (!scrollVideoEl.duration) { startScrubFallback(); return; }
-      let settled = false;
-      const decide = () => {
-        if (settled) return;
-        settled = true;
-        scrollVideoEl.removeEventListener('seeked', decide);
-        if (scrollVideoEl.currentTime > 0.05) {
-          scrollVideoEl.currentTime = 0;
-          startScrub();
-        } else {
-          startScrubFallback();
-        }
+    function primeVideoThenScrub() {
+      const start = () => {
+        scrollVideoEl.pause();
+        startScrub();
       };
-      scrollVideoEl.addEventListener('seeked', decide);
-      scrollVideoEl.currentTime = Math.min(0.2, scrollVideoEl.duration / 2);
-      setTimeout(decide, 800); // garde-fou si l'événement 'seeked' ne se déclenche pas
+
+      const playAttempt = scrollVideoEl.play();
+      if (playAttempt && typeof playAttempt.then === 'function') {
+        playAttempt.then(start).catch(start);
+      } else {
+        start();
+      }
     }
 
-    if (scrollVideoEl.readyState >= 2) {
+    function initScrollVideo() {
+      if (!scrollVideoEl.duration) return;
+      if (prefersReduced) {
+        seekToProgress(0);
+        return;
+      }
+      primeVideoThenScrub();
+    }
+
+    if (scrollVideoEl.readyState >= 1) {
       initScrollVideo();
     } else {
-      scrollVideoEl.addEventListener('canplay', initScrollVideo, { once: true });
+      scrollVideoEl.addEventListener('loadedmetadata', initScrollVideo, { once: true });
     }
   }
 
