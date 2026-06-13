@@ -383,9 +383,12 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollVideoEl.preload = 'auto';
 
     let scrollProgress = 0;
-    let displayProgress = 0;
-    let rafRunning = false;
+    let seekRaf = 0;
+    let lastSeekAt = 0;
+    let lastFrameIndex = -1;
     let scrubStarted = false;
+    const VIDEO_FPS = 30;
+    const SEEK_INTERVAL_MS = 1000 / VIDEO_FPS;
 
     function calcProgress() {
       const rect = scrollSection.getBoundingClientRect();
@@ -398,31 +401,42 @@ document.addEventListener('DOMContentLoaded', () => {
       const duration = scrollVideoEl.duration || 0;
       if (!duration) return 0;
       const endGuard = duration > 0.08 ? duration - 0.04 : duration;
-      return Math.max(0, Math.min(endGuard, duration * progress));
+      return Math.max(0, Math.min(endGuard, endGuard * progress));
     }
 
-    function seekToProgress(progress) {
+    function seekToProgress(progress, force = false) {
       const targetTime = getTargetTime(progress);
       if (!Number.isFinite(targetTime)) return;
-      if (Math.abs(targetTime - scrollVideoEl.currentTime) > 0.016) {
+      const frameIndex = Math.round(targetTime * VIDEO_FPS);
+      if (!force && frameIndex === lastFrameIndex) return;
+      lastFrameIndex = frameIndex;
+      const frameTime = Math.min(getTargetTime(1), frameIndex / VIDEO_FPS);
+      if (Math.abs(frameTime - scrollVideoEl.currentTime) > 0.012) {
         try {
-          scrollVideoEl.currentTime = targetTime;
+          scrollVideoEl.currentTime = frameTime;
         } catch (_) {
           // Ignore transient seek errors while the browser finishes buffering metadata.
         }
       }
     }
 
-    function rafLoop() {
-      // Lerp très fort (0.18) = quasi-instantané mais sans saccade de seek
-      displayProgress += (scrollProgress - displayProgress) * 0.18;
-
-      seekToProgress(displayProgress);
-      requestAnimationFrame(rafLoop);
+    function scheduleSeek(force = false) {
+      scrollProgress = calcProgress();
+      if (seekRaf) return;
+      seekRaf = requestAnimationFrame((now) => {
+        seekRaf = 0;
+        const elapsed = now - lastSeekAt;
+        if (!force && elapsed < SEEK_INTERVAL_MS) {
+          setTimeout(() => scheduleSeek(false), SEEK_INTERVAL_MS - elapsed);
+          return;
+        }
+        lastSeekAt = now;
+        seekToProgress(scrollProgress, force);
+      });
     }
 
     function updateScrollProgress() {
-      scrollProgress = calcProgress();
+      scheduleSeek(false);
     }
 
     function startScrub() {
@@ -431,14 +445,9 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollVideoEl.pause();
       scrollVideoEl.loop = false;
       scrollProgress = calcProgress();
-      displayProgress = scrollProgress;
-      seekToProgress(scrollProgress);
+      seekToProgress(scrollProgress, true);
       window.addEventListener('scroll', updateScrollProgress, { passive: true });
       window.addEventListener('resize', updateScrollProgress, { passive: true });
-      if (!rafRunning) {
-        rafRunning = true;
-        requestAnimationFrame(rafLoop);
-      }
     }
 
     function primeVideoThenScrub() {
