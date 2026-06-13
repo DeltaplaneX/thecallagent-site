@@ -19,15 +19,15 @@
   <meta name="twitter:title" content="Contactez TheCallAgent — Réservez une démo" />
   <meta name="twitter:description" content="Réservez une démonstration gratuite de TheCallAgent. Contactez Odilon Buisson par formulaire, email ou téléphone — réponse garantie sous 24h ouvrées." />
   <meta name="twitter:image" content="https://thecallagent.com/images/og-home.jpg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/variant-b.css" />
+  <link rel="stylesheet" href="css/brutalist.css" />
+  <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
   <!-- Retell Chat Widget -->
   <script
     id="retell-widget"
@@ -36,13 +36,72 @@
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
-    data-color="#2B6FFF"
+    data-color="#FFE000"
     data-bot-name="Call Agent"
     data-popup-message="Bonjour ! Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
-  <script type="application/ld+json" data-seo="codex">
+  <style>
+    /* ── Helpers locaux brutalistes pour la page contact ────────── */
+    .contact-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:0; border:var(--bw) solid var(--ink); background:#fff; box-shadow:var(--shadow-lg); }
+    .contact-form-wrap { padding:34px 30px; border-right:var(--bw) solid var(--ink); }
+    .contact-info { padding:34px 30px; background:var(--paper-2); }
+    .form-intro-ttl { font-weight:900; font-size:1.5rem; line-height:1; letter-spacing:-.02em; text-transform:uppercase; margin-bottom:10px; }
+    .form-intro-sub { font-size:.95rem; color:var(--ink-soft); margin-bottom:28px; }
+    .form-group { margin-bottom:20px; }
+    .form-group label { display:block; font-family:var(--mono); font-size:.74rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px; }
+    .form-group input,
+    .form-group textarea {
+      width:100%; font-family:var(--font); font-size:1rem; color:var(--ink);
+      background:var(--paper); border:var(--bw) solid var(--ink); padding:12px 14px;
+      box-shadow:3px 3px 0 var(--ink); transition:box-shadow .12s ease, transform .12s ease;
+    }
+    .form-group textarea { min-height:130px; resize:vertical; }
+    .form-group input:focus,
+    .form-group textarea:focus { outline:none; background:#fff; box-shadow:5px 5px 0 var(--ink); transform:translate(-1px,-1px); }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color:#8a8a82; }
+    .form-checkbox { display:flex; align-items:flex-start; gap:12px; font-family:var(--font); font-size:.86rem; line-height:1.5; color:var(--ink-soft); text-transform:none; letter-spacing:0; cursor:pointer; }
+    .form-checkbox input[type="checkbox"] { width:22px; height:22px; flex-shrink:0; appearance:none; -webkit-appearance:none; border:var(--bw) solid var(--ink); background:var(--paper); box-shadow:2px 2px 0 var(--ink); margin-top:1px; position:relative; cursor:pointer; }
+    .form-checkbox input[type="checkbox"]:checked { background:var(--accent); }
+    .form-checkbox input[type="checkbox"]:checked::after { content:'\2713'; position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-weight:900; color:var(--ink); font-size:.95rem; }
+    .form-submit { display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; margin-top:6px; font-family:var(--font); font-weight:800; font-size:1rem; letter-spacing:.01em; text-transform:uppercase; padding:15px 26px; border:var(--bw) solid var(--ink); background:var(--accent); color:var(--ink); box-shadow:var(--shadow); transition:transform .12s ease, box-shadow .12s ease; }
+    .form-submit:hover { transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--ink); }
+    .form-submit:active { transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink); }
+    .form-msg { display:none; margin-top:16px; font-family:var(--mono); font-size:.84rem; font-weight:700; padding:12px 14px; border:var(--bw) solid var(--ink); }
+    .form-msg.success { background:var(--ok); color:#fff; }
+    .form-msg.error { background:var(--accent-2); color:#fff; }
+    .form-msg.is-visible { display:block; }
+
+    .contact-profile { display:flex; align-items:center; gap:16px; margin-bottom:26px; padding:18px; background:#fff; border:var(--bw) solid var(--ink); box-shadow:var(--shadow); }
+    .contact-profile img { width:72px; height:72px; flex-shrink:0; object-fit:cover; border:var(--bw) solid var(--ink); }
+    .contact-profile .cp-name { font-weight:900; font-size:1.05rem; letter-spacing:-.01em; text-transform:uppercase; }
+    .contact-profile .cp-role { font-family:var(--mono); font-size:.74rem; color:var(--accent-2); font-weight:700; text-transform:uppercase; margin-top:3px; }
+    .contact-profile .cp-note { font-size:.8rem; color:var(--ink-soft); margin-top:5px; }
+
+    .info-block-ttl { font-weight:900; font-size:1.2rem; letter-spacing:-.01em; text-transform:uppercase; margin-bottom:6px; }
+    .info-block-sub { font-size:.86rem; color:var(--ink-soft); margin-bottom:20px; }
+    .contact-info-item { display:flex; align-items:flex-start; gap:14px; padding:14px 0; border-top:2px dashed var(--ink); }
+    .contact-info-item:first-of-type { border-top:var(--bw) solid var(--ink); }
+    .info-icon { width:42px; height:42px; flex-shrink:0; border:var(--bw) solid var(--ink); background:var(--accent); display:flex; align-items:center; justify-content:center; }
+    .info-label { font-family:var(--mono); font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); margin-bottom:3px; }
+    .info-value { font-weight:700; font-size:.96rem; color:var(--ink); }
+    a.info-value:hover { background:var(--accent); }
+
+    .booking-shell { max-width:980px; margin:46px auto 0; border:var(--bw) solid var(--ink); background:#fff; box-shadow:var(--shadow-lg); }
+    .booking-shell-top { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 18px; border-bottom:var(--bw) solid var(--ink); background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; }
+    .booking-shell-top .live { display:inline-flex; align-items:center; gap:8px; }
+    .booking-shell-top .live i { width:9px; height:9px; border-radius:50%; background:var(--accent); display:inline-block; animation:blink 1.4s steps(2) infinite; }
+    .booking-frame-wrap { position:relative; min-height:560px; background:#fff; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (max-width:900px){
+      .contact-grid { grid-template-columns:1fr; }
+      .contact-form-wrap { border-right:none; border-bottom:var(--bw) solid var(--ink); }
+    }
+  </style>
+  <script data-seo="codex" type="application/ld+json">
 [
   {
     "@context": "https://schema.org",
@@ -93,18 +152,15 @@
 </head>
 <body>
 
-<div class="noise-overlay" aria-hidden="true"></div>
-<canvas class="particles-canvas" aria-hidden="true"></canvas>
-
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Call Agent" class="nav-logo-img" width="869" height="369" /></a>
+    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" width="869" height="369" /></a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="nos-solutions.html">Nos Solutions</a></li>
       <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="contact.html" class="nav-cta">Contactez-nous</a></li>
+      <li><a href="contact.html" class="nav-cta active">Contactez-nous</a></li>
     </ul>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -112,26 +168,24 @@
   </div>
 </nav>
 
-<!-- ── Contact Hero ──────────────────────────────────────────── -->
-<section class="contact-hero">
+<!-- ── Contact Hero ────────────────────────────────────────── -->
+<section class="hero">
   <div class="container">
-    <div class="section-label reveal" style="justify-content:center;"><span style="display:none"></span>Contact</div>
-    <h1 class="section-title reveal reveal-delay-1">Prêt à passer<br /><em>à l'action ?</em></h1>
-    <p class="section-sub reveal reveal-delay-2">
-      Réservez une démonstration gratuite, posez vos questions ou démarrez directement. Nous répondons sous 24h.
-    </p>
+    <span class="eyebrow reveal"><span class="dot"></span> Contact</span>
+    <h1 class="reveal reveal-delay-1" style="font-weight:900;font-size:clamp(2.7rem,6.2vw,5.2rem);line-height:.92;letter-spacing:-.03em;text-transform:uppercase;margin-top:22px;">Prêt à passer<br /><em>à l'action&nbsp;?</em></h1>
+    <p class="hero-sub reveal reveal-delay-2">Réservez une démonstration gratuite, posez vos questions ou démarrez directement. Nous répondons sous 24h ouvrées.</p>
   </div>
 </section>
 
-<!-- ── Contact Body ──────────────────────────────────────────── -->
-<section class="contact-body">
+<!-- ── Contact Body ────────────────────────────────────────── -->
+<section class="section-pad">
   <div class="container">
-    <div class="contact-grid">
+    <div class="contact-grid reveal">
 
       <!-- Form -->
-      <div class="contact-form-wrap reveal">
-        <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin-bottom:8px;">Envoyez-nous un message</h2>
-        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:32px;">Décrivez votre projet ou votre besoin, nous vous recontactons rapidement.</p>
+      <div class="contact-form-wrap">
+        <h2 class="form-intro-ttl">Envoyez-nous <em>un message</em></h2>
+        <p class="form-intro-sub">Décrivez votre projet ou votre besoin, nous vous recontactons rapidement.</p>
 
         <form id="contact-form" novalidate>
           <div class="form-group">
@@ -160,7 +214,7 @@
               <span>Je consens à ce que mes données soient stockées et traitées pour établir un contact. Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de vos données.</span>
             </label>
           </div>
-          <button type="submit" class="form-submit magnetic-btn">Envoyer le message</button>
+          <button type="submit" class="form-submit">Envoyer le message →</button>
           <div class="form-msg success"></div>
           <div class="form-msg error"></div>
         </form>
@@ -170,19 +224,18 @@
       <div class="contact-info">
 
         <!-- Photo + identité -->
-        <div class="contact-profile reveal" style="display:flex;align-items:center;gap:16px;margin-bottom:28px;padding:20px;background:rgba(43,111,255,0.06);border:1px solid rgba(43,111,255,0.2);border-radius:var(--r);backdrop-filter:blur(8px);">
-          <img src="images/odilon.webp" alt="Odilon Buisson — The Call Agent" width="72" height="72"
-               style="border-radius:50%;object-fit:cover;border:2px solid var(--blue);flex-shrink:0;" />
+        <div class="contact-profile reveal">
+          <img src="images/odilon.webp" alt="Odilon Buisson — The Call Agent" width="72" height="72" />
           <div>
-            <div style="font-family:var(--font-h);font-weight:800;font-size:1rem;letter-spacing:-0.01em;">Odilon Buisson</div>
-            <div style="font-size:0.8rem;color:var(--cyan);margin-top:2px;">Fondateur · The Call Agent</div>
-            <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">Disponible pour échanger sur votre projet</div>
+            <div class="cp-name">Odilon Buisson</div>
+            <div class="cp-role">Fondateur · The Call Agent</div>
+            <div class="cp-note">Disponible pour échanger sur votre projet</div>
           </div>
         </div>
 
-        <div style="margin-bottom:8px;">
-          <h3 style="font-family:var(--font-h);font-weight:800;font-size:1.2rem;letter-spacing:-0.02em;margin-bottom:8px;">Informations de contact</h3>
-          <p style="font-size:0.875rem;color:var(--text-muted);">Ou contactez-nous directement via les canaux ci-dessous.</p>
+        <div>
+          <h3 class="info-block-ttl">Informations de contact</h3>
+          <p class="info-block-sub">Ou contactez-nous directement via les canaux ci-dessous.</p>
         </div>
 
         <div class="contact-info-item reveal">
@@ -191,7 +244,7 @@
           </div>
           <div>
             <div class="info-label">Téléphone</div>
-            <a href="tel:0664336380" class="info-value" style="transition:color 0.2s;">06 64 33 63 80</a>
+            <a href="tel:0664336380" class="info-value">06 64 33 63 80</a>
           </div>
         </div>
 
@@ -201,7 +254,7 @@
           </div>
           <div>
             <div class="info-label">Email</div>
-            <a href="mailto:odilon.buisson@thecallagent.com" class="info-value" style="transition:color 0.2s;word-break:break-all;">odilon.buisson@thecallagent.com</a>
+            <a href="mailto:odilon.buisson@thecallagent.com" class="info-value" style="word-break:break-all;">odilon.buisson@thecallagent.com</a>
           </div>
         </div>
 
@@ -225,24 +278,22 @@
           </div>
         </div>
 
-        <div class="contact-info-item reveal reveal-delay-4">
+        <div class="contact-info-item reveal reveal-delay-3">
           <div class="info-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </div>
           <div>
             <div class="info-label">LinkedIn</div>
-            <a href="https://fr.linkedin.com/in/odilon-buisson-8058bb210" target="_blank" rel="noopener noreferrer" class="info-value" style="color:var(--blue-light);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--blue-light)'">Odilon Buisson</a>
+            <a href="https://fr.linkedin.com/in/odilon-buisson-8058bb210" target="_blank" rel="noopener noreferrer" class="info-value">Odilon Buisson</a>
           </div>
         </div>
 
         <!-- Quick CTA -->
-        <div class="feature-card reveal reveal-delay-4" style="padding:24px;background:rgba(43,111,255,0.06);border-color:rgba(43,111,255,0.25);">
-          <div style="margin-bottom:10px;color:var(--blue-light);">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          </div>
-          <h4 style="font-family:var(--font-h);font-weight:700;margin-bottom:6px;font-size:1rem;">Réservez directement un créneau</h4>
-          <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:14px;line-height:1.6;">Choisissez un créneau de 30 min en direct dans mon agenda — sans aller-retour email.</p>
-          <button id="open-calendar-btn" class="btn btn-primary magnetic-btn" style="padding:10px 20px;font-size:0.875rem;width:100%;">Voir les créneaux disponibles →</button>
+        <div class="cell reveal reveal-delay-3" style="border:var(--bw) solid var(--ink);box-shadow:var(--shadow);margin-top:26px;background:var(--accent);">
+          <span class="kicker warn">Agenda direct</span>
+          <h3 style="font-weight:900;text-transform:uppercase;">Réservez un créneau</h3>
+          <p style="color:var(--ink);">Choisissez un créneau de 30 min en direct dans mon agenda — sans aller-retour email.</p>
+          <button id="open-calendar-btn" class="btn btn-dark" style="width:100%;margin-top:16px;justify-content:center;">Voir les créneaux disponibles →</button>
         </div>
 
       </div>
@@ -250,47 +301,48 @@
   </div>
 </section>
 
-<!-- ── Booking Section ──────────────────────────────────────── -->
-<section class="booking-section" id="booking" style="padding:80px 0;background:var(--bg-2);border-top:1px solid var(--border);">
+<!-- ── Booking Section ─────────────────────────────────────── -->
+<section class="analyse section-pad" id="booking">
   <div class="container">
-    <div class="section-label reveal" style="justify-content:center;margin-bottom:16px;"><span></span>Agenda en ligne</div>
-    <h2 class="section-title reveal reveal-delay-1" style="text-align:center;font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:12px;">
-      Réservez votre <em>démo gratuite</em>
-    </h2>
-    <p class="section-sub reveal reveal-delay-2" style="text-align:center;max-width:520px;margin:0 auto 40px;">
-      Choisissez le créneau qui vous convient — 30 minutes pour voir Call Agent en action.
-    </p>
-    <div class="reveal reveal-delay-3" style="max-width:900px;margin:0 auto;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);background:#ffffff;min-height:560px;position:relative;">
-      <div id="calendar-loader" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:var(--text-muted);">
-        <div style="width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--blue);border-radius:50%;animation:spin 0.8s linear infinite;"></div>
-        <span style="font-size:0.875rem;">Chargement du calendrier…</span>
+    <div class="section-head" style="margin:0 auto 0;text-align:center;">
+      <span class="eyebrow reveal"><span class="dot"></span> Agenda en ligne</span>
+      <h2 class="section-title reveal reveal-delay-1" style="margin-top:16px;">Réservez votre <em>démo gratuite</em></h2>
+      <p class="section-sub reveal reveal-delay-2" style="margin-left:auto;margin-right:auto;">Choisissez le créneau qui vous convient — 30 minutes pour voir l'agent en action.</p>
+    </div>
+
+    <div class="booking-shell reveal reveal-delay-3">
+      <div class="booking-shell-top">
+        <span class="live"><i></i> Agenda · 30 min</span>
+        <span>Démo gratuite</span>
       </div>
-      <iframe
-        id="booking-iframe"
-        src="https://calendar.app.google/x4PCjCjYi2vaFYLb7"
-        width="100%"
-        height="560"
-        frameborder="0"
-        scrolling="yes"
-        style="display:block;opacity:0;transition:opacity 0.4s;"
-        onload="this.style.opacity='1';document.getElementById('calendar-loader').style.display='none';"
-        title="Réserver une démo — The Call Agent"
-      ></iframe>
+      <div class="booking-frame-wrap">
+        <div id="calendar-loader" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:var(--ink-soft);">
+          <div style="width:36px;height:36px;border:var(--bw) solid var(--ink);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;"></div>
+          <span style="font-family:var(--mono);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;">Chargement du calendrier…</span>
+        </div>
+        <iframe
+          id="booking-iframe"
+          src="https://calendar.app.google/x4PCjCjYi2vaFYLb7"
+          width="100%"
+          height="560"
+          frameborder="0"
+          scrolling="yes"
+          style="display:block;opacity:0;transition:opacity 0.4s;"
+          onload="this.style.opacity='1';document.getElementById('calendar-loader').style.display='none';"
+          title="Réserver une démo — The Call Agent"
+        ></iframe>
+      </div>
     </div>
   </div>
 </section>
 
-<style>
-@keyframes spin { to { transform: rotate(360deg); } }
-</style>
-
-<!-- ── Footer ────────────────────────────────────────────────── -->
+<!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Call Agent" class="nav-logo-img" width="869" height="369" /></a>
-        <p class="footer-desc">Agent téléphonique IA qui automatise vos appels entrants et sortants, avec intégration CRM complète.</p>
+        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" width="869" height="369" /></a>
+        <p class="footer-desc">Agent téléphonique IA qui décroche, comprend et agit dans vos outils — entrants comme sortants, 24h/24.</p>
       </div>
       <div class="footer-col">
         <h5>Navigation</h5>
@@ -304,9 +356,9 @@
       <div class="footer-col">
         <h5>Solutions</h5>
         <ul>
-          <li><a href="nos-solutions.html#appels">Appels entrants</a></li>
-          <li><a href="nos-solutions.html#appels">Appels sortants</a></li>
-          <li><a href="nos-solutions.html#integrations">Hub CRM</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels entrants</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels sortants</a></li>
+          <li><a href="index.html#analyse">Analyse d'appel</a></li>
           <li><a href="nos-solutions.html#workflows">Workflows</a></li>
         </ul>
       </div>

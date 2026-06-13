@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@std/http/file-server": "jsr:@std/http@1.1.1/file-server",
+    "@std/path/from-file-url": "jsr:@std/path@1.1.5/from-file-url"
+  },
+  "tasks": {
+    "prepare:deno": "deno run --allow-read --allow-write scripts/prepare-deno-deploy.ts",
+    "serve:deno": "deno task prepare:deno && deno run --allow-read --allow-net dist/main.ts",
+    "deploy:deno:create": "deno task prepare:deno && deno deploy create dist --app thecallagent-site --runtime-mode dynamic --entrypoint main.ts --region global",
+    "deploy:deno": "deno task prepare:deno && deno deploy dist --app thecallagent-site --prod"
+  }
+}

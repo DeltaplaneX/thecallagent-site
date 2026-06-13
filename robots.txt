@@ -4,6 +4,7 @@ Disallow: /docs/
 Disallow: /tasks/
 Disallow: /graphify-out/
 Disallow: /stitch-export/
+Disallow: /_cache/
 
 User-agent: GPTBot
 Allow: /

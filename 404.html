@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Page introuvable — The Call Agent</title>
+  <meta name="description" content="Erreur 404 — cette page n'existe pas ou a été déplacée. Retournez à l'accueil de TheCallAgent, l'agent téléphonique IA pour PME." />
   <meta name="robots" content="noindex" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thecallagent.com/" />
+  <meta property="og:title" content="Page introuvable — The Call Agent" />
+  <meta property="og:description" content="Erreur 404 — cette page n'existe pas ou a été déplacée. Retournez à l'accueil de TheCallAgent, l'agent téléphonique IA pour PME." />
+  <meta property="og:image" content="https://thecallagent.com/images/og-home.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="TheCallAgent" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page introuvable — The Call Agent" />
+  <meta name="twitter:description" content="Erreur 404 — cette page n'existe pas ou a été déplacée. Retournez à l'accueil de TheCallAgent, l'agent téléphonique IA pour PME." />
+  <meta name="twitter:image" content="https://thecallagent.com/images/og-home.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -12,6 +26,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="css/brutalist.css" />
+  <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
   <!-- Retell Chat Widget -->
   <script
     id="retell-widget"
@@ -20,22 +36,19 @@
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
-    data-color="#2B6FFF"
+    data-color="#FFE000"
     data-bot-name="Call Agent"
     data-popup-message="Bonjour ! Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/variant-b.css" />
 </head>
 <body>
 
-<div class="noise-overlay" aria-hidden="true"></div>
-
+<!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Call Agent" class="nav-logo-img" /></a>
+    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" /></a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="nos-solutions.html">Nos Solutions</a></li>
@@ -48,30 +61,27 @@
   </div>
 </nav>
 
-<main>
-  <section class="error-404" style="min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem;">
-    <div class="container">
-      <p class="section-tag" style="margin-bottom:1.5rem;">Erreur 404</p>
-      <h1 style="font-size:clamp(2.5rem,8vw,6rem);font-weight:800;margin-bottom:1rem;line-height:1;">
-        Page<br />
-        <span style="background:linear-gradient(135deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">introuvable</span>
-      </h1>
-      <p style="font-size:1.125rem;color:var(--text-muted);max-width:480px;margin:0 auto 2.5rem;">
-        Cette page n'existe pas ou a été déplacée. Retournez à l'accueil pour continuer.
-      </p>
-      <a href="index.html" class="btn-primary">
-        Retour à l'accueil
-      </a>
+<!-- ── Erreur 404 ──────────────────────────────────────────── -->
+<section class="section-pad" style="display:flex;align-items:center;justify-content:center;min-height:72vh;text-align:center;">
+  <div class="container">
+    <span class="eyebrow reveal" style="margin-bottom:28px;"><span class="dot"></span> Erreur 404 · page introuvable</span>
+    <h1 class="reveal reveal-delay-1" style="font-weight:900;font-size:clamp(7rem,28vw,20rem);line-height:.82;letter-spacing:-.04em;color:var(--accent);-webkit-text-stroke:3px var(--ink);text-shadow:8px 8px 0 var(--ink);">404</h1>
+    <h2 class="section-title reveal reveal-delay-2" style="margin-top:34px;">La page a <em>raccroché</em>.</h2>
+    <p class="section-sub reveal reveal-delay-2" style="margin:18px auto 0;">Cette page n'existe pas ou a été déplacée. Pas de panique — votre agent, lui, ne rate jamais un appel. Revenez à l'accueil pour continuer.</p>
+    <div class="hero-actions reveal reveal-delay-3" style="justify-content:center;margin-top:38px;">
+      <a href="index.html" class="btn btn-primary">← Retour à l'accueil</a>
+      <a href="contact.html" class="btn">Contactez-nous</a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
+<!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Call Agent" class="nav-logo-img" /></a>
-        <p class="footer-desc">Agent téléphonique IA qui automatise vos appels entrants et sortants, avec intégration CRM complète.</p>
+        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" /></a>
+        <p class="footer-desc">Agent téléphonique IA qui décroche, comprend et agit dans vos outils — entrants comme sortants, 24h/24.</p>
       </div>
       <div class="footer-col">
         <h5>Navigation</h5>
@@ -85,9 +95,9 @@
       <div class="footer-col">
         <h5>Solutions</h5>
         <ul>
-          <li><a href="nos-solutions.html#appels">Appels entrants</a></li>
-          <li><a href="nos-solutions.html#appels">Appels sortants</a></li>
-          <li><a href="nos-solutions.html#integrations">Hub CRM</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels entrants</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels sortants</a></li>
+          <li><a href="index.html#analyse">Analyse d'appel</a></li>
           <li><a href="nos-solutions.html#workflows">Workflows</a></li>
         </ul>
       </div>

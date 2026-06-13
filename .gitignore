@@ -10,6 +10,9 @@ lh-*.json
 
 # Fichiers temporaires
 cached-bundle.js
+dist/
+_cache/
+graphify-out/cache/ast/
 nul
 images/odilon-avatar.png
 

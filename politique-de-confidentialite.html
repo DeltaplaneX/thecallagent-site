@@ -26,11 +26,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <!-- Async Google Fonts (non-blocking) -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" /></noscript>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/variant-b.css" />
+  <link rel="stylesheet" href="css/brutalist.css" />
+  <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
   <!-- Retell Chat Widget -->
   <script
     id="retell-widget"
@@ -39,22 +36,42 @@
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
-    data-color="#2B6FFF"
+    data-color="#FFE000"
     data-bot-name="Call Agent"
     data-popup-message="Bonjour ! Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
+  <style>
+    /* Mise en page « document légal » — lisible, casse normale, max-width confortable */
+    .legal-wrap { max-width:820px; margin:0 auto; }
+    .legal-content { font-size:1.02rem; line-height:1.8; color:var(--ink); }
+    .legal-content h2.part { font-weight:900; font-size:clamp(1.6rem,4vw,2.2rem); line-height:1.05; letter-spacing:-.02em; text-transform:uppercase; margin:64px 0 24px; padding-bottom:12px; border-bottom:var(--bw) solid var(--ink); }
+    .legal-content h2.clause { font-weight:800; font-size:1.35rem; line-height:1.15; letter-spacing:-.01em; margin:44px 0 14px; }
+    .legal-content h2.clause .num { font-family:var(--mono); background:var(--ink); color:var(--paper); padding:2px 9px; margin-right:10px; font-size:.9rem; }
+    .legal-content h3 { font-family:var(--mono); font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:.04em; margin:26px 0 12px; }
+    .legal-content p { margin-bottom:16px; }
+    .legal-content a { color:var(--ink); border-bottom:3px solid var(--accent); font-weight:600; }
+    .legal-content strong { font-weight:800; }
+    .legal-content ul { margin:14px 0 18px; }
+    .legal-content li { position:relative; padding-left:26px; margin-bottom:10px; }
+    .legal-content li::before { content:'\2192'; position:absolute; left:0; font-weight:900; color:var(--accent-2); }
+    .legal-content code { font-family:var(--mono); background:var(--paper-2); border:2px solid var(--ink); padding:1px 7px; font-size:.9em; }
+    .legal-callout { border:var(--bw) solid var(--ink); background:#fff; box-shadow:var(--shadow); padding:22px 24px; margin:0 0 40px; }
+    .legal-callout p { margin-bottom:0; }
+    .legal-table { width:100%; border-collapse:collapse; border:var(--bw) solid var(--ink); margin:18px 0 24px; font-size:.94rem; }
+    .legal-table th { background:var(--ink); color:var(--paper); font-family:var(--mono); text-transform:uppercase; letter-spacing:.04em; font-size:.8rem; text-align:left; padding:12px 14px; border:2px solid var(--ink); }
+    .legal-table td { padding:12px 14px; border:2px solid var(--ink); vertical-align:top; }
+    .legal-table tr:nth-child(even) td { background:var(--paper-2); }
+    .legal-update { font-family:var(--mono); font-size:.86rem; text-transform:uppercase; letter-spacing:.06em; }
+  </style>
 </head>
 <body>
-
-<div class="noise-overlay" aria-hidden="true"></div>
-<canvas class="particles-canvas" aria-hidden="true"></canvas>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
   <div class="container nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Logo TheCallAgent" class="nav-logo-img" width="869" height="369" /></a>
+    <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" width="869" height="369" /></a>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="nos-solutions.html">Nos Solutions</a></li>
@@ -67,276 +84,289 @@
   </div>
 </nav>
 
-<!-- ── Hero ──────────────────────────────────────────────────── -->
-<section style="padding:120px 0 60px;">
+<!-- ── Hero ────────────────────────────────────────────────── -->
+<section class="section-pad" style="padding-bottom:56px;">
   <div class="container">
-    <div class="section-label reveal" style="justify-content:center;"><span></span>Légal</div>
-    <h1 class="section-title reveal reveal-delay-1" style="text-align:center;font-size:clamp(1.8rem,4vw,2.8rem);">
-      Politique de <em>confidentialité</em> &amp; Conditions d'utilisation
-    </h1>
-    <p class="section-sub reveal reveal-delay-2" style="text-align:center;">
-      Dernière mise à jour : 16 mars 2026
-    </p>
-  </div>
-</section>
-
-<!-- ── Contenu ────────────────────────────────────────────────── -->
-<section style="padding:0 0 100px;">
-  <div class="container">
-    <div class="legal-content" style="max-width:780px;margin:0 auto;font-size:1rem;line-height:1.85;color:var(--text);">
-
-      <p style="margin-bottom:32px;padding:20px;background:rgba(43,111,255,0.06);border-left:3px solid var(--blue-light);border-radius:6px;">
-        <strong>Portée de ce document :</strong> la présente page couvre à la fois le <strong>site vitrine</strong> (<em>thecallagent.com</em>) et la <strong>plateforme Call Agent</strong> (<em>app.thecallagent.com</em>) réservée aux clients partenaires. Les sections applicables sont indiquées clairement.
-      </p>
-
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PARTIE 1 — POLITIQUE DE CONFIDENTIALITÉ               -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.6rem;letter-spacing:-0.02em;margin:48px 0 24px;">Partie 1 — Politique de confidentialité</h2>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">1. Présentation</h2>
-      <p>TheCallAgent exploite un site vitrine accessible au grand public (<em>thecallagent.com</em>) ainsi qu'une plateforme web (<em>app.thecallagent.com</em>) exclusivement destinée aux clients partenaires disposant d'un compte approuvé. Cette application n'est pas accessible au grand public.</p>
-      <p>La présente politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos données personnelles, que ce soit via le site vitrine ou la plateforme.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">2. Responsable du traitement</h2>
-      <p>Le responsable du traitement des données personnelles collectées sur le site et la plateforme est :</p>
-      <p>
-        <strong>TheCallAgent</strong><br />
-        Représenté par Odilon Buisson<br />
-        15 Rue de Saint-Hubert, 33370 Artigues-Près-Bordeaux, France<br />
-        Email : <a href="mailto:odilon.buisson@thecallagent.com" style="color:var(--blue-light);">odilon.buisson@thecallagent.com</a><br />
-        Téléphone : <a href="tel:0664336380" style="color:var(--blue-light);">06 64 33 63 80</a>
-      </p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">3. Données collectées</h2>
-
-      <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin:28px 0 12px;">3.1 Site vitrine — formulaire de contact</h3>
-      <p>Nous collectons les données suivantes lorsque vous remplissez le formulaire de contact :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><strong>Nom complet</strong> (obligatoire)</li>
-        <li style="margin-bottom:6px;"><strong>Adresse email</strong> (obligatoire)</li>
-        <li style="margin-bottom:6px;"><strong>Nom de l'entreprise</strong> (optionnel)</li>
-        <li style="margin-bottom:6px;"><strong>Numéro de téléphone</strong> (optionnel)</li>
-        <li style="margin-bottom:6px;"><strong>Message</strong> (obligatoire)</li>
-        <li style="margin-bottom:6px;"><strong>Consentement</strong> : enregistrement de votre accord explicite via la case à cocher RGPD du formulaire</li>
-      </ul>
-      <p>Ces données sont transmises via un webhook sécurisé (n8n) à notre équipe pour traitement.</p>
-
-      <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin:28px 0 12px;">3.2 Plateforme — usage client</h3>
-      <p>Dans le cadre de l'utilisation de notre plateforme, nous collectons les données suivantes :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><strong>Adresse e-mail</strong> : pour l'authentification et l'identification de votre compte.</li>
-        <li style="margin-bottom:6px;"><strong>Données Google Calendar</strong> : événements de calendrier accessibles via l'API Google Calendar, après votre consentement explicite via OAuth 2.0.</li>
-        <li style="margin-bottom:6px;"><strong>Données Gmail</strong> : lecture, envoi et gestion de vos e-mails via l'API Gmail, après votre consentement explicite via OAuth 2.0.</li>
-        <li style="margin-bottom:6px;"><strong>Données Google Drive</strong> : fichiers et documents accessibles via l'API Google Drive, après votre consentement explicite via OAuth 2.0.</li>
-        <li style="margin-bottom:6px;"><strong>Données CRM</strong> : contacts et fiches clients synchronisées via vos configurations Airtable.</li>
-        <li style="margin-bottom:6px;"><strong>Données d'appels</strong> : métadonnées d'appels entrants et sortants (durée, date, statut) synchronisées via vos configurations Retell et Airtable.</li>
-        <li style="margin-bottom:6px;"><strong>Messages de conversation</strong> : échanges avec les assistants IA, stockés pour assurer la continuité de vos conversations.</li>
-        <li style="margin-bottom:6px;"><strong>Documents générés</strong> : devis, factures et contrats créés via la plateforme.</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">4. Finalités et base légale</h2>
-      <table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:0.9rem;">
-        <thead>
-          <tr style="background:rgba(43,111,255,0.08);">
-            <th style="padding:12px;text-align:left;border:1px solid var(--border);font-family:var(--font-h);">Finalité</th>
-            <th style="padding:12px;text-align:left;border:1px solid var(--border);font-family:var(--font-h);">Base légale (RGPD art. 6)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="padding:12px;border:1px solid var(--border);">Répondre à votre demande de contact ou de démonstration</td>
-            <td style="padding:12px;border:1px solid var(--border);">Consentement (art. 6.1.a) + Intérêt légitime (art. 6.1.f)</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);">Gestion de la relation commerciale</td>
-            <td style="padding:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);">Intérêt légitime (art. 6.1.f)</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;border:1px solid var(--border);">Fourniture des services de la plateforme (CRM, e-mails, agenda, IA)</td>
-            <td style="padding:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);">Exécution du contrat (art. 6.1.b)</td>
-          </tr>
-          <tr>
-            <td style="padding:12px;border:1px solid var(--border);">Gestion des comptes utilisateurs et intégrations tierces</td>
-            <td style="padding:12px;border:1px solid var(--border);background:rgba(255,255,255,0.02);">Consentement (art. 6.1.a) + Intérêt légitime (art. 6.1.f)</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">5. Utilisation des données (plateforme)</h2>
-      <p>Vos données sont utilisées exclusivement pour :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;">Vous permettre d'accéder et de gérer vos événements Google Calendar.</li>
-        <li style="margin-bottom:6px;">Lire, envoyer et organiser vos e-mails via Gmail.</li>
-        <li style="margin-bottom:6px;">Rechercher, stocker et partager des fichiers via Google Drive.</li>
-        <li style="margin-bottom:6px;">Gérer vos contacts et prospects dans le CRM intégré.</li>
-        <li style="margin-bottom:6px;">Afficher et analyser vos appels entrants et sortants.</li>
-        <li style="margin-bottom:6px;">Générer des documents comptables (devis, factures, contrats).</li>
-        <li style="margin-bottom:6px;">Fournir des réponses personnalisées via nos assistants IA.</li>
-        <li style="margin-bottom:6px;">Améliorer la qualité et la performance de la plateforme.</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">6. Accès aux services Google (données à portée limitée)</h2>
-      <p>La plateforme utilise les API Google pour accéder à vos données de calendrier, e-mails et fichiers. Conformément à la Politique relative aux données utilisateur des services d'API Google, y compris les exigences d'utilisation limitée :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;">Nous accédons uniquement aux données nécessaires au fonctionnement des services activés par l'utilisateur (Calendar, Gmail, Drive).</li>
-        <li style="margin-bottom:6px;">Nous ne vendons jamais vos données Google à des tiers.</li>
-        <li style="margin-bottom:6px;">Nous ne les utilisons pas à des fins publicitaires.</li>
-        <li style="margin-bottom:6px;">L'accès à chaque service peut être révoqué à tout moment depuis les paramètres de votre compte Google ou depuis la plateforme.</li>
-        <li style="margin-bottom:6px;">Les jetons d'accès sont stockés de manière chiffrée et ne sont utilisés que pour les requêtes API nécessaires.</li>
-        <li style="margin-bottom:6px;">Aucune donnée Google n'est transmise à des modèles d'IA tiers à des fins d'entraînement.</li>
-      </ul>
-
-      <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin:28px 0 12px;">Scopes Google utilisés</h3>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><code style="background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:4px;font-size:0.9em;">calendar.events</code> — Lecture et gestion de vos événements de calendrier.</li>
-        <li style="margin-bottom:6px;"><code style="background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:4px;font-size:0.9em;">gmail.modify</code> — Lecture, envoi et gestion de vos e-mails.</li>
-        <li style="margin-bottom:6px;"><code style="background:rgba(255,255,255,0.06);padding:2px 6px;border-radius:4px;font-size:0.9em;">drive.file</code> — Accès aux fichiers créés ou ouverts par l'application.</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">7. Applications et services tiers</h2>
-      <p>Outre les services Google, la plateforme peut se connecter aux services tiers suivants, après votre consentement :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><strong>Airtable</strong> — CRM et gestion des contacts.</li>
-        <li style="margin-bottom:6px;"><strong>Retell AI</strong> — Gestion et analyse des appels téléphoniques.</li>
-        <li style="margin-bottom:6px;"><strong>Twilio</strong> — Envoi de SMS.</li>
-        <li style="margin-bottom:6px;"><strong>LinkedIn</strong> — Publication de posts professionnels.</li>
-        <li style="margin-bottom:6px;"><strong>Anthropic (Claude)</strong> — Traitement par IA des requêtes conversationnelles.</li>
-      </ul>
-      <p>Les données transmises à ces services sont strictement limitées à ce qui est nécessaire à l'exécution de la fonctionnalité demandée. Aucune donnée n'est partagée entre ces services sans votre action explicite.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">8. Destinataires des données</h2>
-      <p>Vos données sont traitées exclusivement en interne par TheCallAgent. Elles ne sont ni revendues ni transmises à des tiers à des fins commerciales.</p>
-      <p>Nos sous-traitants techniques ont accès à vos données dans le cadre strict de leur mission :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><strong>n8n</strong> : automatisation du formulaire de contact (traitement du webhook)</li>
-        <li style="margin-bottom:6px;"><strong>Retell AI</strong> : agent vocal embarqué sur le site (widget de démonstration) et gestion des appels</li>
-        <li style="margin-bottom:6px;"><strong>Supabase</strong> : hébergement de la base de données de la plateforme</li>
-        <li style="margin-bottom:6px;"><strong>Google API</strong> : accès aux données Calendar, Gmail et Drive avec consentement</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">9. Transferts hors Union européenne</h2>
-      <p>Retell AI est une société dont les serveurs sont situés aux États-Unis. L'utilisation de son widget peut impliquer un transfert de données vers des serveurs hors de l'Union européenne. Ce transfert est encadré par les clauses contractuelles types (CCT) adoptées par la Commission européenne.</p>
-      <p>Pour toute information sur les garanties mises en place, contactez-nous à : <a href="mailto:odilon.buisson@thecallagent.com" style="color:var(--blue-light);">odilon.buisson@thecallagent.com</a>.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">10. Cookies et traceurs</h2>
-      <p>Ce site n'utilise pas de cookies de suivi ou publicitaires.</p>
-      <p>Des technologies tierces peuvent déposer des données techniques lors de votre visite :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;"><strong>Widget Retell AI</strong> : script de démonstration vocale — peut stocker des données de session.</li>
-        <li style="margin-bottom:6px;"><strong>Google Calendar</strong> : iframe de réservation de démo — soumis à la politique de confidentialité de Google.</li>
-      </ul>
-      <p>Aucun outil d'analyse d'audience (Google Analytics, etc.) n'est installé sur ce site.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">11. Sécurité des données</h2>
-      <p>Nous mettons en œuvre des mesures de sécurité appropriées, incluant :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;">Chiffrement des données en transit (HTTPS/TLS).</li>
-        <li style="margin-bottom:6px;">Authentification sécurisée via Supabase Auth.</li>
-        <li style="margin-bottom:6px;">Politiques de sécurité au niveau des lignes (Row Level Security) sur toutes les tables de données.</li>
-        <li style="margin-bottom:6px;">Stockage sécurisé des jetons d'accès et clés API.</li>
-        <li style="margin-bottom:6px;">Isolation des données entre utilisateurs (architecture multi-tenant).</li>
-        <li style="margin-bottom:6px;">Accès restreint aux seuls utilisateurs approuvés par un administrateur.</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">12. Conservation des données</h2>
-      <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin:28px 0 12px;">12.1 Site vitrine</h3>
-      <p>Vos données sont conservées pendant <strong>3 ans à compter du dernier contact</strong>, conformément aux recommandations de la CNIL pour la prospection commerciale B2B. À l'issue de ce délai, vos données sont supprimées de nos systèmes ou anonymisées.</p>
-
-      <h3 style="font-family:var(--font-h);font-weight:700;font-size:1.15rem;margin:28px 0 12px;">12.2 Plateforme</h3>
-      <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, toutes les données associées (conversations, configurations, jetons, documents générés) sont supprimées dans un délai de <strong>30 jours</strong>.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">13. Vos droits</h2>
-      <p>Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez des droits suivants :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:8px;"><strong>Droit d'accès</strong> : obtenir une copie de vos données personnelles détenues par TheCallAgent.</li>
-        <li style="margin-bottom:8px;"><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes.</li>
-        <li style="margin-bottom:8px;"><strong>Droit à l'effacement</strong> : demander la suppression de vos données, sous réserve d'obligations légales.</li>
-        <li style="margin-bottom:8px;"><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré et lisible par machine.</li>
-        <li style="margin-bottom:8px;"><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données fondé sur l'intérêt légitime.</li>
-        <li style="margin-bottom:8px;"><strong>Droit au retrait du consentement</strong> : retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur à ce retrait.</li>
-        <li style="margin-bottom:8px;"><strong>Droit de révoquer l'accès aux services Google</strong> (Calendar, Gmail, Drive) à tout moment, depuis vos paramètres Google ou depuis la plateforme.</li>
-        <li style="margin-bottom:8px;"><strong>Droit de déconnecter toute intégration tierce</strong> depuis les paramètres de la plateforme.</li>
-      </ul>
-      <p>Pour exercer ces droits, adressez votre demande à : <a href="mailto:odilon.buisson@thecallagent.com" style="color:var(--blue-light);">odilon.buisson@thecallagent.com</a></p>
-      <p>Nous nous engageons à vous répondre dans un délai d'<strong>un mois</strong> à compter de la réception de votre demande.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">14. Droit de réclamation auprès de la CNIL</h2>
-      <p>Si vous estimez que le traitement de vos données personnelles ne respecte pas la réglementation applicable, vous pouvez introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> :</p>
-      <p>
-        CNIL — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07<br />
-        Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light);">www.cnil.fr</a>
-      </p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">15. Mise à jour de cette politique</h2>
-      <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. En cas de modification substantielle, une mention sera affichée sur le site. La version applicable est celle disponible sur cette page, identifiée par sa date de mise à jour en en-tête.</p>
-
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <!-- PARTIE 2 — CONDITIONS D'UTILISATION                   -->
-      <!-- ═══════════════════════════════════════════════════════ -->
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.6rem;letter-spacing:-0.02em;margin:72px 0 24px;">Partie 2 — Conditions d'utilisation</h2>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">1. Objet</h2>
-      <p>Les présentes conditions d'utilisation régissent l'accès et l'utilisation de la plateforme Call Agent, accessible à l'adresse <em>app.thecallagent.com</em>. En utilisant la plateforme, vous acceptez l'intégralité de ces conditions.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">2. Accès à la plateforme</h2>
-      <p>L'accès à Call Agent est réservé aux utilisateurs disposant d'un compte approuvé par un administrateur. La plateforme n'est pas ouverte au grand public. Chaque compte est personnel et ne doit pas être partagé.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">3. Services proposés</h2>
-      <p>La plateforme permet, selon les intégrations activées par l'utilisateur :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;">Gestion d'un CRM (contacts, prospects) via Airtable.</li>
-        <li style="margin-bottom:6px;">Envoi, lecture et gestion d'e-mails via Gmail.</li>
-        <li style="margin-bottom:6px;">Gestion d'agenda via Google Calendar (création, modification, suppression d'événements).</li>
-        <li style="margin-bottom:6px;">Stockage et partage de fichiers via Google Drive.</li>
-        <li style="margin-bottom:6px;">Génération de documents comptables (devis, factures, contrats).</li>
-        <li style="margin-bottom:6px;">Analyse et gestion d'appels téléphoniques via Retell AI.</li>
-        <li style="margin-bottom:6px;">Envoi de SMS via Twilio.</li>
-        <li style="margin-bottom:6px;">Publication de contenu sur LinkedIn.</li>
-        <li style="margin-bottom:6px;">Recherche dans une base de connaissances interne (RAG).</li>
-        <li style="margin-bottom:6px;">Interaction avec un assistant IA conversationnel.</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">4. Responsabilités de l'utilisateur</h2>
-      <p>L'utilisateur s'engage à :</p>
-      <ul style="padding-left:24px;margin:12px 0;">
-        <li style="margin-bottom:6px;">Utiliser la plateforme conformément à sa destination professionnelle.</li>
-        <li style="margin-bottom:6px;">Ne pas utiliser la plateforme à des fins illicites, frauduleuses ou abusives.</li>
-        <li style="margin-bottom:6px;"><strong>Vérifier le contenu généré par l'IA</strong> avant tout envoi (e-mails, SMS, documents, publications).</li>
-        <li style="margin-bottom:6px;">Maintenir la confidentialité de ses identifiants de connexion.</li>
-        <li style="margin-bottom:6px;">Ne pas tenter de contourner les mesures de sécurité de la plateforme.</li>
-        <li style="margin-bottom:6px;">Respecter les conditions d'utilisation des services tiers connectés (Google, Airtable, LinkedIn, etc.).</li>
-      </ul>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">5. Limites de responsabilité</h2>
-      <p>Call Agent est fourni « en l'état ». Nous ne garantissons pas l'absence d'erreurs dans les réponses de l'IA, la disponibilité permanente des services tiers, ni l'exactitude des données synchronisées. L'utilisateur reste seul responsable des actions effectuées via la plateforme (envoi d'e-mails, création de documents, publication de contenu).</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">6. Propriété intellectuelle</h2>
-      <p>La plateforme Call Agent, son code, son interface et sa documentation sont la propriété de The Call Agent. Les contenus générés par l'utilisateur via la plateforme restent la propriété de l'utilisateur.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">7. Résiliation</h2>
-      <p>L'accès à la plateforme peut être suspendu ou résilié par un administrateur en cas de non-respect des présentes conditions, ou à la demande de l'utilisateur. En cas de résiliation, les données de l'utilisateur seront supprimées conformément à la politique de confidentialité ci-dessus.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">8. Modifications</h2>
-      <p>Nous nous réservons le droit de modifier ces conditions d'utilisation et la politique de confidentialité. Toute modification sera publiée sur cette page avec une date de mise à jour actualisée.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">9. Droit applicable</h2>
-      <p>Les présentes conditions sont régies par le droit français. Tout litige relatif à l'utilisation de la plateforme sera soumis à la juridiction compétente.</p>
-
-      <h2 style="font-family:var(--font-h);font-weight:800;font-size:1.4rem;letter-spacing:-0.02em;margin:48px 0 16px;">10. Contact</h2>
-      <p>Pour toute question relative à cette politique de confidentialité ou aux conditions d'utilisation, veuillez nous contacter via le site <a href="contact.html" style="color:var(--blue-light);">thecallagent.com</a>.</p>
-
+    <div class="legal-wrap">
+      <span class="eyebrow reveal"><span class="dot"></span> Légal</span>
+      <h1 class="section-title reveal reveal-delay-1" style="margin-top:18px;">Politique de <em>confidentialité</em> &amp; Conditions d'utilisation</h1>
+      <p class="legal-update reveal reveal-delay-2" style="margin-top:18px;">Dernière mise à jour : 16 mars 2026</p>
     </div>
   </div>
 </section>
 
-<!-- ── Footer ────────────────────────────────────────────────── -->
+<!-- ── Contenu ─────────────────────────────────────────────── -->
+<section class="section-pad" style="padding-top:0;">
+  <div class="container">
+    <div class="legal-wrap">
+      <div class="legal-content">
+
+        <div class="legal-callout reveal">
+          <p><strong>Portée de ce document :</strong> la présente page couvre à la fois le <strong>site vitrine</strong> (<em>thecallagent.com</em>) et la <strong>plateforme Call Agent</strong> (<em>app.thecallagent.com</em>) réservée aux clients partenaires. Les sections applicables sont indiquées clairement.</p>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- PARTIE 1 — POLITIQUE DE CONFIDENTIALITÉ               -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <h2 class="part">Partie 1 — Politique de confidentialité</h2>
+
+        <h2 class="clause"><span class="num">01</span>Présentation</h2>
+        <p>TheCallAgent exploite un site vitrine accessible au grand public (<em>thecallagent.com</em>) ainsi qu'une plateforme web (<em>app.thecallagent.com</em>) exclusivement destinée aux clients partenaires disposant d'un compte approuvé. Cette application n'est pas accessible au grand public.</p>
+        <p>La présente politique de confidentialité décrit comment nous collectons, utilisons et protégeons vos données personnelles, que ce soit via le site vitrine ou la plateforme.</p>
+
+        <h2 class="clause"><span class="num">02</span>Responsable du traitement</h2>
+        <p>Le responsable du traitement des données personnelles collectées sur le site et la plateforme est :</p>
+        <p>
+          <strong>TheCallAgent</strong><br />
+          Représenté par Odilon Buisson<br />
+          15 Rue de Saint-Hubert, 33370 Artigues-Près-Bordeaux, France<br />
+          Email : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a><br />
+          Téléphone : <a href="tel:0664336380">06 64 33 63 80</a>
+        </p>
+
+        <h2 class="clause"><span class="num">03</span>Données collectées</h2>
+
+        <h3>3.1 Site vitrine — formulaire de contact</h3>
+        <p>Nous collectons les données suivantes lorsque vous remplissez le formulaire de contact :</p>
+        <ul>
+          <li><strong>Nom complet</strong> (obligatoire)</li>
+          <li><strong>Adresse email</strong> (obligatoire)</li>
+          <li><strong>Nom de l'entreprise</strong> (optionnel)</li>
+          <li><strong>Numéro de téléphone</strong> (optionnel)</li>
+          <li><strong>Message</strong> (obligatoire)</li>
+          <li><strong>Consentement</strong> : enregistrement de votre accord explicite via la case à cocher RGPD du formulaire</li>
+        </ul>
+        <p>Ces données sont transmises via un webhook sécurisé (n8n) à notre équipe pour traitement.</p>
+
+        <h3>3.2 Plateforme — usage client</h3>
+        <p>Dans le cadre de l'utilisation de notre plateforme, nous collectons les données suivantes :</p>
+        <ul>
+          <li><strong>Adresse e-mail</strong> : pour l'authentification et l'identification de votre compte.</li>
+          <li><strong>Données Google Calendar</strong> : événements de calendrier accessibles via l'API Google Calendar, après votre consentement explicite via OAuth 2.0.</li>
+          <li><strong>Données Gmail</strong> : lecture, envoi et gestion de vos e-mails via l'API Gmail, après votre consentement explicite via OAuth 2.0.</li>
+          <li><strong>Données Google Drive</strong> : fichiers et documents accessibles via l'API Google Drive, après votre consentement explicite via OAuth 2.0.</li>
+          <li><strong>Données CRM</strong> : contacts et fiches clients synchronisées via vos configurations Airtable.</li>
+          <li><strong>Données d'appels</strong> : métadonnées d'appels entrants et sortants (durée, date, statut) synchronisées via vos configurations Retell et Airtable.</li>
+          <li><strong>Messages de conversation</strong> : échanges avec les assistants IA, stockés pour assurer la continuité de vos conversations.</li>
+          <li><strong>Documents générés</strong> : devis, factures et contrats créés via la plateforme.</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">04</span>Finalités et base légale</h2>
+        <table class="legal-table">
+          <thead>
+            <tr>
+              <th>Finalité</th>
+              <th>Base légale (RGPD art. 6)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Répondre à votre demande de contact ou de démonstration</td>
+              <td>Consentement (art. 6.1.a) + Intérêt légitime (art. 6.1.f)</td>
+            </tr>
+            <tr>
+              <td>Gestion de la relation commerciale</td>
+              <td>Intérêt légitime (art. 6.1.f)</td>
+            </tr>
+            <tr>
+              <td>Fourniture des services de la plateforme (CRM, e-mails, agenda, IA)</td>
+              <td>Exécution du contrat (art. 6.1.b)</td>
+            </tr>
+            <tr>
+              <td>Gestion des comptes utilisateurs et intégrations tierces</td>
+              <td>Consentement (art. 6.1.a) + Intérêt légitime (art. 6.1.f)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="clause"><span class="num">05</span>Utilisation des données (plateforme)</h2>
+        <p>Vos données sont utilisées exclusivement pour :</p>
+        <ul>
+          <li>Vous permettre d'accéder et de gérer vos événements Google Calendar.</li>
+          <li>Lire, envoyer et organiser vos e-mails via Gmail.</li>
+          <li>Rechercher, stocker et partager des fichiers via Google Drive.</li>
+          <li>Gérer vos contacts et prospects dans le CRM intégré.</li>
+          <li>Afficher et analyser vos appels entrants et sortants.</li>
+          <li>Générer des documents comptables (devis, factures, contrats).</li>
+          <li>Fournir des réponses personnalisées via nos assistants IA.</li>
+          <li>Améliorer la qualité et la performance de la plateforme.</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">06</span>Accès aux services Google (données à portée limitée)</h2>
+        <p>La plateforme utilise les API Google pour accéder à vos données de calendrier, e-mails et fichiers. Conformément à la Politique relative aux données utilisateur des services d'API Google, y compris les exigences d'utilisation limitée :</p>
+        <ul>
+          <li>Nous accédons uniquement aux données nécessaires au fonctionnement des services activés par l'utilisateur (Calendar, Gmail, Drive).</li>
+          <li>Nous ne vendons jamais vos données Google à des tiers.</li>
+          <li>Nous ne les utilisons pas à des fins publicitaires.</li>
+          <li>L'accès à chaque service peut être révoqué à tout moment depuis les paramètres de votre compte Google ou depuis la plateforme.</li>
+          <li>Les jetons d'accès sont stockés de manière chiffrée et ne sont utilisés que pour les requêtes API nécessaires.</li>
+          <li>Aucune donnée Google n'est transmise à des modèles d'IA tiers à des fins d'entraînement.</li>
+        </ul>
+
+        <h3>Scopes Google utilisés</h3>
+        <ul>
+          <li><code>calendar.events</code> — Lecture et gestion de vos événements de calendrier.</li>
+          <li><code>gmail.modify</code> — Lecture, envoi et gestion de vos e-mails.</li>
+          <li><code>drive.file</code> — Accès aux fichiers créés ou ouverts par l'application.</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">07</span>Applications et services tiers</h2>
+        <p>Outre les services Google, la plateforme peut se connecter aux services tiers suivants, après votre consentement :</p>
+        <ul>
+          <li><strong>Airtable</strong> — CRM et gestion des contacts.</li>
+          <li><strong>Retell AI</strong> — Gestion et analyse des appels téléphoniques.</li>
+          <li><strong>Twilio</strong> — Envoi de SMS.</li>
+          <li><strong>LinkedIn</strong> — Publication de posts professionnels.</li>
+          <li><strong>Anthropic (Claude)</strong> — Traitement par IA des requêtes conversationnelles.</li>
+        </ul>
+        <p>Les données transmises à ces services sont strictement limitées à ce qui est nécessaire à l'exécution de la fonctionnalité demandée. Aucune donnée n'est partagée entre ces services sans votre action explicite.</p>
+
+        <h2 class="clause"><span class="num">08</span>Destinataires des données</h2>
+        <p>Vos données sont traitées exclusivement en interne par TheCallAgent. Elles ne sont ni revendues ni transmises à des tiers à des fins commerciales.</p>
+        <p>Nos sous-traitants techniques ont accès à vos données dans le cadre strict de leur mission :</p>
+        <ul>
+          <li><strong>n8n</strong> : automatisation du formulaire de contact (traitement du webhook)</li>
+          <li><strong>Retell AI</strong> : agent vocal embarqué sur le site (widget de démonstration) et gestion des appels</li>
+          <li><strong>Supabase</strong> : hébergement de la base de données de la plateforme</li>
+          <li><strong>Google API</strong> : accès aux données Calendar, Gmail et Drive avec consentement</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">09</span>Transferts hors Union européenne</h2>
+        <p>Retell AI est une société dont les serveurs sont situés aux États-Unis. L'utilisation de son widget peut impliquer un transfert de données vers des serveurs hors de l'Union européenne. Ce transfert est encadré par les clauses contractuelles types (CCT) adoptées par la Commission européenne.</p>
+        <p>Pour toute information sur les garanties mises en place, contactez-nous à : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a>.</p>
+
+        <h2 class="clause"><span class="num">10</span>Cookies et traceurs</h2>
+        <p>Ce site n'utilise pas de cookies de suivi ou publicitaires.</p>
+        <p>Des technologies tierces peuvent déposer des données techniques lors de votre visite :</p>
+        <ul>
+          <li><strong>Widget Retell AI</strong> : script de démonstration vocale — peut stocker des données de session.</li>
+          <li><strong>Google Calendar</strong> : iframe de réservation de démo — soumis à la politique de confidentialité de Google.</li>
+        </ul>
+        <p>Aucun outil d'analyse d'audience (Google Analytics, etc.) n'est installé sur ce site.</p>
+
+        <h2 class="clause"><span class="num">11</span>Sécurité des données</h2>
+        <p>Nous mettons en œuvre des mesures de sécurité appropriées, incluant :</p>
+        <ul>
+          <li>Chiffrement des données en transit (HTTPS/TLS).</li>
+          <li>Authentification sécurisée via Supabase Auth.</li>
+          <li>Politiques de sécurité au niveau des lignes (Row Level Security) sur toutes les tables de données.</li>
+          <li>Stockage sécurisé des jetons d'accès et clés API.</li>
+          <li>Isolation des données entre utilisateurs (architecture multi-tenant).</li>
+          <li>Accès restreint aux seuls utilisateurs approuvés par un administrateur.</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">12</span>Conservation des données</h2>
+        <h3>12.1 Site vitrine</h3>
+        <p>Vos données sont conservées pendant <strong>3 ans à compter du dernier contact</strong>, conformément aux recommandations de la CNIL pour la prospection commerciale B2B. À l'issue de ce délai, vos données sont supprimées de nos systèmes ou anonymisées.</p>
+
+        <h3>12.2 Plateforme</h3>
+        <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, toutes les données associées (conversations, configurations, jetons, documents générés) sont supprimées dans un délai de <strong>30 jours</strong>.</p>
+
+        <h2 class="clause"><span class="num">13</span>Vos droits</h2>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez des droits suivants :</p>
+        <ul>
+          <li><strong>Droit d'accès</strong> : obtenir une copie de vos données personnelles détenues par TheCallAgent.</li>
+          <li><strong>Droit de rectification</strong> : corriger des données inexactes ou incomplètes.</li>
+          <li><strong>Droit à l'effacement</strong> : demander la suppression de vos données, sous réserve d'obligations légales.</li>
+          <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré et lisible par machine.</li>
+          <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données fondé sur l'intérêt légitime.</li>
+          <li><strong>Droit au retrait du consentement</strong> : retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur à ce retrait.</li>
+          <li><strong>Droit de révoquer l'accès aux services Google</strong> (Calendar, Gmail, Drive) à tout moment, depuis vos paramètres Google ou depuis la plateforme.</li>
+          <li><strong>Droit de déconnecter toute intégration tierce</strong> depuis les paramètres de la plateforme.</li>
+        </ul>
+        <p>Pour exercer ces droits, adressez votre demande à : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a></p>
+        <p>Nous nous engageons à vous répondre dans un délai d'<strong>un mois</strong> à compter de la réception de votre demande.</p>
+
+        <h2 class="clause"><span class="num">14</span>Droit de réclamation auprès de la CNIL</h2>
+        <p>Si vous estimez que le traitement de vos données personnelles ne respecte pas la réglementation applicable, vous pouvez introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> :</p>
+        <p>
+          CNIL — 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07<br />
+          Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a>
+        </p>
+
+        <h2 class="clause"><span class="num">15</span>Mise à jour de cette politique</h2>
+        <p>Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. En cas de modification substantielle, une mention sera affichée sur le site. La version applicable est celle disponible sur cette page, identifiée par sa date de mise à jour en en-tête.</p>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- PARTIE 2 — CONDITIONS D'UTILISATION                   -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <h2 class="part">Partie 2 — Conditions d'utilisation</h2>
+
+        <h2 class="clause"><span class="num">01</span>Objet</h2>
+        <p>Les présentes conditions d'utilisation régissent l'accès et l'utilisation de la plateforme Call Agent, accessible à l'adresse <em>app.thecallagent.com</em>. En utilisant la plateforme, vous acceptez l'intégralité de ces conditions.</p>
+
+        <h2 class="clause"><span class="num">02</span>Accès à la plateforme</h2>
+        <p>L'accès à Call Agent est réservé aux utilisateurs disposant d'un compte approuvé par un administrateur. La plateforme n'est pas ouverte au grand public. Chaque compte est personnel et ne doit pas être partagé.</p>
+
+        <h2 class="clause"><span class="num">03</span>Services proposés</h2>
+        <p>La plateforme permet, selon les intégrations activées par l'utilisateur :</p>
+        <ul>
+          <li>Gestion d'un CRM (contacts, prospects) via Airtable.</li>
+          <li>Envoi, lecture et gestion d'e-mails via Gmail.</li>
+          <li>Gestion d'agenda via Google Calendar (création, modification, suppression d'événements).</li>
+          <li>Stockage et partage de fichiers via Google Drive.</li>
+          <li>Génération de documents comptables (devis, factures, contrats).</li>
+          <li>Analyse et gestion d'appels téléphoniques via Retell AI.</li>
+          <li>Envoi de SMS via Twilio.</li>
+          <li>Publication de contenu sur LinkedIn.</li>
+          <li>Recherche dans une base de connaissances interne (RAG).</li>
+          <li>Interaction avec un assistant IA conversationnel.</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">04</span>Responsabilités de l'utilisateur</h2>
+        <p>L'utilisateur s'engage à :</p>
+        <ul>
+          <li>Utiliser la plateforme conformément à sa destination professionnelle.</li>
+          <li>Ne pas utiliser la plateforme à des fins illicites, frauduleuses ou abusives.</li>
+          <li><strong>Vérifier le contenu généré par l'IA</strong> avant tout envoi (e-mails, SMS, documents, publications).</li>
+          <li>Maintenir la confidentialité de ses identifiants de connexion.</li>
+          <li>Ne pas tenter de contourner les mesures de sécurité de la plateforme.</li>
+          <li>Respecter les conditions d'utilisation des services tiers connectés (Google, Airtable, LinkedIn, etc.).</li>
+        </ul>
+
+        <h2 class="clause"><span class="num">05</span>Limites de responsabilité</h2>
+        <p>Call Agent est fourni « en l'état ». Nous ne garantissons pas l'absence d'erreurs dans les réponses de l'IA, la disponibilité permanente des services tiers, ni l'exactitude des données synchronisées. L'utilisateur reste seul responsable des actions effectuées via la plateforme (envoi d'e-mails, création de documents, publication de contenu).</p>
+
+        <h2 class="clause"><span class="num">06</span>Propriété intellectuelle</h2>
+        <p>La plateforme Call Agent, son code, son interface et sa documentation sont la propriété de The Call Agent. Les contenus générés par l'utilisateur via la plateforme restent la propriété de l'utilisateur.</p>
+
+        <h2 class="clause"><span class="num">07</span>Résiliation</h2>
+        <p>L'accès à la plateforme peut être suspendu ou résilié par un administrateur en cas de non-respect des présentes conditions, ou à la demande de l'utilisateur. En cas de résiliation, les données de l'utilisateur seront supprimées conformément à la politique de confidentialité ci-dessus.</p>
+
+        <h2 class="clause"><span class="num">08</span>Modifications</h2>
+        <p>Nous nous réservons le droit de modifier ces conditions d'utilisation et la politique de confidentialité. Toute modification sera publiée sur cette page avec une date de mise à jour actualisée.</p>
+
+        <h2 class="clause"><span class="num">09</span>Droit applicable</h2>
+        <p>Les présentes conditions sont régies par le droit français. Tout litige relatif à l'utilisation de la plateforme sera soumis à la juridiction compétente.</p>
+
+        <h2 class="clause"><span class="num">10</span>Contact</h2>
+        <p>Pour toute question relative à cette politique de confidentialité ou aux conditions d'utilisation, veuillez nous contacter via le site <a href="contact.html">thecallagent.com</a>.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────────────────── -->
+<section class="cta">
+  <div class="container">
+    <span class="eyebrow reveal" style="border-color:#111;"><span class="dot"></span> Une question sur vos données&nbsp;?</span>
+    <h2 class="reveal reveal-delay-1">Parlons-en<br />directement.</h2>
+    <p class="reveal reveal-delay-2">Notre équipe répond à toute demande relative à la confidentialité, au RGPD ou aux conditions d'utilisation.</p>
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="contact.html" class="btn btn-dark">Nous contacter →</a>
+      <a href="mailto:odilon.buisson@thecallagent.com" class="btn">Écrire un email</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="Call Agent" class="nav-logo-img" width="869" height="369" /></a>
-        <p class="footer-desc">Agent téléphonique IA qui automatise vos appels entrants et sortants, avec intégration CRM complète.</p>
+        <a href="index.html" class="nav-logo"><img src="images/logo-trim.png" alt="The Call Agent" class="nav-logo-img" width="869" height="369" /></a>
+        <p class="footer-desc">Agent téléphonique IA qui décroche, comprend et agit dans vos outils — entrants comme sortants, 24h/24.</p>
       </div>
       <div class="footer-col">
         <h5>Navigation</h5>
@@ -350,9 +380,9 @@
       <div class="footer-col">
         <h5>Solutions</h5>
         <ul>
-          <li><a href="nos-solutions.html#appels">Appels entrants</a></li>
-          <li><a href="nos-solutions.html#appels">Appels sortants</a></li>
-          <li><a href="nos-solutions.html#integrations">Hub CRM</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels entrants</a></li>
+          <li><a href="nos-solutions.html#entrant-sortant">Appels sortants</a></li>
+          <li><a href="index.html#analyse">Analyse d'appel</a></li>
           <li><a href="nos-solutions.html#workflows">Workflows</a></li>
         </ul>
       </div>
