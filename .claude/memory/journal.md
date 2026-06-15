@@ -306,4 +306,25 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 20:04
+> Session fermée à 02:37
+
+## 2026-06-13
+- fix: optimize 0404 video for scroll scrub
+- fix: keep 0404 video scroll-scrubbed
+- feat: publish refreshed static site
+- chore: session sync 2026-06-10
+- docs: mark IONOS MCP read access restored
+
+## 2026-06-14
+- fix: clarify homepage proof band
+- favicon: symbole officiel Call Agent
+- fix: smooth 0404 scroll scrub
+- fix: optimize 0404 video for scroll scrub
+- fix: keep 0404 video scroll-scrubbed
+
+## 2026-06-15
+- fix: clarify homepage proof band
+- favicon: symbole officiel Call Agent
+- fix: smooth 0404 scroll scrub
+- fix: optimize 0404 video for scroll scrub
+- fix: keep 0404 video scroll-scrubbed
