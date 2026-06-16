@@ -328,3 +328,10 @@ project: thecallagent-site
 - fix: smooth 0404 scroll scrub
 - fix: optimize 0404 video for scroll scrub
 - fix: keep 0404 video scroll-scrubbed
+
+## 2026-06-16
+- chore: session sync 2026-06-15
+- fix: clarify homepage proof band
+- favicon: symbole officiel Call Agent
+- fix: smooth 0404 scroll scrub
+- fix: optimize 0404 video for scroll scrub
