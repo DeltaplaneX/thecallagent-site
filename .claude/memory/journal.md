@@ -342,3 +342,17 @@ project: thecallagent-site
 - fix: clarify homepage proof band
 - favicon: symbole officiel Call Agent
 - fix: smooth 0404 scroll scrub
+
+## 2026-06-18
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
+- fix: clarify homepage proof band
+- favicon: symbole officiel Call Agent
+
+## 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
+- fix: clarify homepage proof band
+- favicon: symbole officiel Call Agent
