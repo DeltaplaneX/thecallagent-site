@@ -370,3 +370,31 @@ project: thecallagent-site
 - chore: update config/docs 2026-06-17
 - chore: session sync 2026-06-15
 - fix: clarify homepage proof band
+
+## 2026-06-21
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
+
+## 2026-06-22
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
+
+## 2026-06-23
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
+
+## 2026-06-24
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+- chore: session sync 2026-06-15
