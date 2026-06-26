@@ -398,3 +398,24 @@ project: thecallagent-site
 - chore: session sync 2026-06-17
 - chore: update config/docs 2026-06-17
 - chore: session sync 2026-06-15
+
+## 2026-06-25
+- chore: update config/docs
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+
+## 2026-06-26
+- chore: update config/docs
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
+
+## 2026-06-27
+- chore: update config/docs
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
+- chore: session sync 2026-06-17
+- chore: update config/docs 2026-06-17
