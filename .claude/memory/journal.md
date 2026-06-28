@@ -426,3 +426,10 @@ project: thecallagent-site
 - Choix user : **durcir le front** (pas de redéploiement backend). TDD : fonction pure `leadSucceeded(res, data)` = `res.ok && data.success===true` → RED→GREEN 6/6 (`node --test`, zéro dépendance).
 - Smoke test live validé : vraie fiche + emails de test (prospect = gmail Odilon, tél vide → pas de SMS). Backend pytest 14/14 (inchangé).
 - Reste optionnel : aligner backend sur `400` + redeploy Railway si besoin de conformité REST stricte.
+
+## 2026-06-29
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+- chore: update config/docs 2026-06-20
+- chore: session sync 2026-06-19
