@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 02:37
+> Session fermée à 14:27
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
@@ -419,3 +419,10 @@ project: thecallagent-site
 - chore: session sync 2026-06-19
 - chore: session sync 2026-06-17
 - chore: update config/docs 2026-06-17
+
+## 2026-06-28 — Migration formulaire → backend Railway `/lead` (BDR-001)
+- `WEBHOOK_URL` (`js/main.js` + `dist/js/main.js`) : n8n cloud → `https://thecallagent-backend-production.up.railway.app/lead`. Payload inchangé.
+- systematic-debugging : endpoint testé live → CORS OK (`thecallagent.com`), healthz OK, happy path `200 {success:true}`. Écart trouvé : consent manquant renvoie `200` (et non `400` comme le rapport) — conflit de spec assumé (test backend assert 200).
+- Choix user : **durcir le front** (pas de redéploiement backend). TDD : fonction pure `leadSucceeded(res, data)` = `res.ok && data.success===true` → RED→GREEN 6/6 (`node --test`, zéro dépendance).
+- Smoke test live validé : vraie fiche + emails de test (prospect = gmail Odilon, tél vide → pas de SMS). Backend pytest 14/14 (inchangé).
+- Reste optionnel : aligner backend sur `400` + redeploy Railway si besoin de conformité REST stricte.

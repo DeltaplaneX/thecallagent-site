@@ -12,7 +12,15 @@
    - Scroll reveal
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', () => {
+/* Did the backend accept the lead? The /lead endpoint signals the outcome via
+   BOTH the HTTP status and a JSON `success` flag, so a rejected lead (e.g.
+   200 + {success:false} when consent is missing) must NOT be shown as sent.
+   Side-effect-free + exported at the bottom of the file for unit tests. */
+function leadSucceeded(res, data) {
+  return !!res && res.ok === true && !!data && data.success === true;
+}
+
+if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', () => {
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -273,10 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ── Contact Form (n8n Webhook) ────────────────────────── */
+  /* ── Contact Form (Railway backend /lead) ──────────────── */
   const form = document.querySelector('#contact-form');
   if (form) {
-    const WEBHOOK_URL = 'https://odilonbuisson.app.n8n.cloud/webhook/adb6ee25-01bd-4c69-8797-da599dc89d91';
+    const WEBHOOK_URL = 'https://thecallagent-backend-production.up.railway.app/lead';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -319,7 +327,9 @@ document.addEventListener('DOMContentLoaded', () => {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name, email, company, phone, message, consent })
         });
-        if (res.ok) {
+        let data = null;
+        try { data = await res.json(); } catch (_) { /* non-JSON body */ }
+        if (leadSucceeded(res, data)) {
           if (successMsg) { successMsg.textContent = 'Message envoyé ! Nous vous répondrons sous 24h.'; successMsg.style.display = 'block'; }
           form.reset();
           btn.style.transform = 'scale(1.05)';
@@ -589,3 +599,8 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
 });
+
+/* Expose pure helpers for unit tests (no-op in the browser). */
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { leadSucceeded };
+}
