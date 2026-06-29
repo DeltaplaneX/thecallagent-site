@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 14:27
+> Session fermée à 05:15
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
