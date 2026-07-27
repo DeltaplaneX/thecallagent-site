@@ -91,7 +91,7 @@
     <div class="legal-wrap">
       <span class="eyebrow reveal"><span class="dot"></span> Légal</span>
       <h1 class="section-title reveal reveal-delay-1" style="margin-top:18px;">Politique de <em>confidentialité</em> &amp; Conditions d'utilisation</h1>
-      <p class="legal-update reveal reveal-delay-2" style="margin-top:18px;">Dernière mise à jour : 16 mars 2026</p>
+      <p class="legal-update reveal reveal-delay-2" style="margin-top:18px;">Dernière mise à jour : 27 juillet 2026</p>
     </div>
   </div>
 </section>
@@ -139,18 +139,16 @@
         </ul>
         <p>Ces données sont transmises via un webhook sécurisé (n8n) à notre équipe pour traitement.</p>
 
-        <h3>3.2 Plateforme — usage client</h3>
-        <p>Dans le cadre de l'utilisation de notre plateforme, nous collectons les données suivantes :</p>
+        <h3>3.2 Plateforme — usage client (app.thecallagent.com)</h3>
+        <p>Dans le cadre de l'utilisation de la plateforme partenaires, nous collectons uniquement les données suivantes :</p>
         <ul>
           <li><strong>Adresse e-mail</strong> : pour l'authentification et l'identification de votre compte.</li>
-          <li><strong>Données Google Calendar</strong> : événements de calendrier accessibles via l'API Google Calendar, après votre consentement explicite via OAuth 2.0.</li>
-          <li><strong>Données Gmail</strong> : lecture, envoi et gestion de vos e-mails via l'API Gmail, après votre consentement explicite via OAuth 2.0.</li>
-          <li><strong>Données Google Drive</strong> : fichiers et documents accessibles via l'API Google Drive, après votre consentement explicite via OAuth 2.0.</li>
           <li><strong>Données CRM</strong> : contacts et fiches clients synchronisées via vos configurations Airtable.</li>
           <li><strong>Données d'appels</strong> : métadonnées d'appels entrants et sortants (durée, date, statut) synchronisées via vos configurations Retell et Airtable.</li>
           <li><strong>Messages de conversation</strong> : échanges avec les assistants IA, stockés pour assurer la continuité de vos conversations.</li>
           <li><strong>Documents générés</strong> : devis, factures et contrats créés via la plateforme.</li>
         </ul>
+        <p><strong>Ce que nous ne collectons pas :</strong> TheCallAgent ne demande ni ne stocke les données de vos comptes Google (Calendar, Gmail, Drive) ou d'autres outils sensibles. Lorsque votre activité nécessite une connexion à vos outils, la solution est définie avec vous : c'est vous qui connectez vos propres comptes, directement depuis la plateforme, via le service d'intégration Composio (voir section 06).</p>
 
         <h2 class="clause"><span class="num">04</span>Finalités et base légale</h2>
         <table class="legal-table">
@@ -170,7 +168,7 @@
               <td>Intérêt légitime (art. 6.1.f)</td>
             </tr>
             <tr>
-              <td>Fourniture des services de la plateforme (CRM, e-mails, agenda, IA)</td>
+              <td>Fourniture des services de la plateforme (CRM, appels, documents, IA)</td>
               <td>Exécution du contrat (art. 6.1.b)</td>
             </tr>
             <tr>
@@ -183,37 +181,28 @@
         <h2 class="clause"><span class="num">05</span>Utilisation des données (plateforme)</h2>
         <p>Vos données sont utilisées exclusivement pour :</p>
         <ul>
-          <li>Vous permettre d'accéder et de gérer vos événements Google Calendar.</li>
-          <li>Lire, envoyer et organiser vos e-mails via Gmail.</li>
-          <li>Rechercher, stocker et partager des fichiers via Google Drive.</li>
           <li>Gérer vos contacts et prospects dans le CRM intégré.</li>
           <li>Afficher et analyser vos appels entrants et sortants.</li>
           <li>Générer des documents comptables (devis, factures, contrats).</li>
           <li>Fournir des réponses personnalisées via nos assistants IA.</li>
+          <li>Exécuter les actions sur les outils que vous avez vous-même connectés via Composio (créer un rendez-vous, envoyer un e-mail…), sans conservation des données concernées.</li>
           <li>Améliorer la qualité et la performance de la plateforme.</li>
         </ul>
 
-        <h2 class="clause"><span class="num">06</span>Accès aux services Google (données à portée limitée)</h2>
-        <p>La plateforme utilise les API Google pour accéder à vos données de calendrier, e-mails et fichiers. Conformément à la Politique relative aux données utilisateur des services d'API Google, y compris les exigences d'utilisation limitée :</p>
+        <h2 class="clause"><span class="num">06</span>Connexion de vos outils via Composio</h2>
+        <p>La plateforme ne demande aucun accès direct à vos comptes Google (Calendar, Gmail, Drive) ni à d'autres services sensibles, et ne stocke aucun identifiant ou jeton d'accès associé. Lorsque votre configuration nécessite une connexion à vos outils, celle-ci est établie par vous-même, depuis <em>app.thecallagent.com</em>, via <strong>Composio</strong>, un service spécialisé dans la gestion sécurisée des connexions (OAuth 2.0) :</p>
         <ul>
-          <li>Nous accédons uniquement aux données nécessaires au fonctionnement des services activés par l'utilisateur (Calendar, Gmail, Drive).</li>
-          <li>Nous ne vendons jamais vos données Google à des tiers.</li>
-          <li>Nous ne les utilisons pas à des fins publicitaires.</li>
-          <li>L'accès à chaque service peut être révoqué à tout moment depuis les paramètres de votre compte Google ou depuis la plateforme.</li>
-          <li>Les jetons d'accès sont stockés de manière chiffrée et ne sont utilisés que pour les requêtes API nécessaires.</li>
-          <li>Aucune donnée Google n'est transmise à des modèles d'IA tiers à des fins d'entraînement.</li>
+          <li>C'est vous qui autorisez chaque connexion, service par service, depuis votre espace partenaire.</li>
+          <li>Les jetons d'accès (tokens OAuth) sont gérés et stockés par Composio, jamais par TheCallAgent.</li>
+          <li>Les données de vos outils ne font que transiter le temps d'exécuter l'action que vous avez demandée ; elles ne sont ni conservées, ni revendues, ni utilisées à des fins publicitaires ou d'entraînement de modèles d'IA.</li>
+          <li>Vous pouvez révoquer chaque connexion à tout moment, depuis la plateforme ou depuis les paramètres du service concerné (par exemple votre compte Google).</li>
         </ul>
-
-        <h3>Scopes Google utilisés</h3>
-        <ul>
-          <li><code>calendar.events</code> — Lecture et gestion de vos événements de calendrier.</li>
-          <li><code>gmail.modify</code> — Lecture, envoi et gestion de vos e-mails.</li>
-          <li><code>drive.file</code> — Accès aux fichiers créés ou ouverts par l'application.</li>
-        </ul>
+        <p>La politique de confidentialité de Composio est consultable sur <a href="https://composio.dev/legal/privacy" target="_blank" rel="noopener">composio.dev</a>.</p>
 
         <h2 class="clause"><span class="num">07</span>Applications et services tiers</h2>
-        <p>Outre les services Google, la plateforme peut se connecter aux services tiers suivants, après votre consentement :</p>
+        <p>Selon votre configuration, la plateforme peut se connecter aux services tiers suivants, toujours après votre consentement :</p>
         <ul>
+          <li><strong>Composio</strong> — Gestion sécurisée des connexions à vos outils (OAuth 2.0).</li>
           <li><strong>Airtable</strong> — CRM et gestion des contacts.</li>
           <li><strong>Retell AI</strong> — Gestion et analyse des appels téléphoniques.</li>
           <li><strong>Twilio</strong> — Envoi de SMS.</li>
@@ -229,11 +218,11 @@
           <li><strong>n8n</strong> : automatisation du formulaire de contact (traitement du webhook)</li>
           <li><strong>Retell AI</strong> : agent vocal embarqué sur le site (widget de démonstration) et gestion des appels</li>
           <li><strong>Supabase</strong> : hébergement de la base de données de la plateforme</li>
-          <li><strong>Google API</strong> : accès aux données Calendar, Gmail et Drive avec consentement</li>
+          <li><strong>Composio</strong> : gestion des connexions OAuth vers les outils que vous choisissez de relier à la plateforme</li>
         </ul>
 
         <h2 class="clause"><span class="num">09</span>Transferts hors Union européenne</h2>
-        <p>Retell AI est une société dont les serveurs sont situés aux États-Unis. L'utilisation de son widget peut impliquer un transfert de données vers des serveurs hors de l'Union européenne. Ce transfert est encadré par les clauses contractuelles types (CCT) adoptées par la Commission européenne.</p>
+        <p>Retell AI (gestion des appels) et Composio (gestion des connexions) sont des sociétés dont les serveurs sont situés aux États-Unis. L'utilisation de leurs services peut impliquer un transfert de données vers des serveurs hors de l'Union européenne. Ces transferts sont encadrés par les clauses contractuelles types (CCT) adoptées par la Commission européenne.</p>
         <p>Pour toute information sur les garanties mises en place, contactez-nous à : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a>.</p>
 
         <h2 class="clause"><span class="num">10</span>Cookies et traceurs</h2>
@@ -261,7 +250,7 @@
         <p>Vos données sont conservées pendant <strong>3 ans à compter du dernier contact</strong>, conformément aux recommandations de la CNIL pour la prospection commerciale B2B. À l'issue de ce délai, vos données sont supprimées de nos systèmes ou anonymisées.</p>
 
         <h3>12.2 Plateforme</h3>
-        <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, toutes les données associées (conversations, configurations, jetons, documents générés) sont supprimées dans un délai de <strong>30 jours</strong>.</p>
+        <p>Vos données sont conservées tant que votre compte est actif. En cas de suppression de compte, toutes les données associées (conversations, configurations, connexions, documents générés) sont supprimées dans un délai de <strong>30 jours</strong>.</p>
 
         <h2 class="clause"><span class="num">13</span>Vos droits</h2>
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez des droits suivants :</p>
@@ -272,7 +261,7 @@
           <li><strong>Droit à la portabilité</strong> : recevoir vos données dans un format structuré et lisible par machine.</li>
           <li><strong>Droit d'opposition</strong> : vous opposer au traitement de vos données fondé sur l'intérêt légitime.</li>
           <li><strong>Droit au retrait du consentement</strong> : retirer votre consentement à tout moment, sans affecter la licéité du traitement antérieur à ce retrait.</li>
-          <li><strong>Droit de révoquer l'accès aux services Google</strong> (Calendar, Gmail, Drive) à tout moment, depuis vos paramètres Google ou depuis la plateforme.</li>
+          <li><strong>Droit de révoquer chaque connexion à vos outils</strong> (établie via Composio) à tout moment, depuis la plateforme ou depuis le service concerné (par exemple votre compte Google).</li>
           <li><strong>Droit de déconnecter toute intégration tierce</strong> depuis les paramètres de la plateforme.</li>
         </ul>
         <p>Pour exercer ces droits, adressez votre demande à : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a></p>
@@ -300,7 +289,7 @@
         <p>L'accès à Call Agent est réservé aux utilisateurs disposant d'un compte approuvé par un administrateur. La plateforme n'est pas ouverte au grand public. Chaque compte est personnel et ne doit pas être partagé.</p>
 
         <h2 class="clause"><span class="num">03</span>Services proposés</h2>
-        <p>La plateforme permet, selon les intégrations activées par l'utilisateur :</p>
+        <p>La plateforme permet, selon les intégrations que l'utilisateur a lui-même connectées via Composio :</p>
         <ul>
           <li>Gestion d'un CRM (contacts, prospects) via Airtable.</li>
           <li>Envoi, lecture et gestion d'e-mails via Gmail.</li>
