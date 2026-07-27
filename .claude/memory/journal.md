@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 05:15
+> Session fermée à 14:28
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
@@ -433,3 +433,194 @@ project: thecallagent-site
 - chore: update config/docs
 - chore: update config/docs 2026-06-20
 - chore: session sync 2026-06-19
+
+## 2026-06-30
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-01
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-02
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-03
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-04
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-05
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-06
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-07
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-08
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-09
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-10
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-11
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-12
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-13
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-14
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-15
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-16
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-16
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-17
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-18
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-19
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-20
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-21
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-22
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-23
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-24
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+
+## 2026-07-27
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+- chore: session sync 2026-06-28
+- chore: update config/docs
+- chore: update config/docs
+- fix(video): scroll-video 0404 invisible sur mobile — cause: iOS ne charge/peint pas la video sans autoplay ni poster. Fix: attrs autoplay/loop/poster sur les 4 pages index*, poster genere (videos/0404-poster.jpg), fallback touchstart dans main.js (Low Power Mode).
+- docs(legal): politique de confidentialite reecrite (les 2 versions) — plus de collecte Google Calendar/Gmail/Drive; les clients connectent eux-memes leurs outils sur app.thecallagent.com via Composio (tokens geres par Composio, pas par TheCallAgent). Sections 3.2, 04-09, 13 + CGU services + date MAJ 27/07/2026.
