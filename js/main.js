@@ -488,6 +488,19 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     } else {
       scrollVideoEl.addEventListener('loadedmetadata', initScrollVideo, { once: true });
     }
+
+    // iOS Low Power Mode bloque l'autoplay : la vidéo reste sur le poster
+    // (readyState 0) tant qu'un play() n'est pas déclenché par un geste.
+    window.addEventListener('touchstart', () => {
+      if (scrollVideoEl.readyState >= 2) return;
+      const attempt = scrollVideoEl.play();
+      if (attempt && typeof attempt.then === 'function') {
+        attempt.then(() => {
+          scrollVideoEl.pause();
+          seekToProgress(calcProgress(), true);
+        }).catch(() => {});
+      }
+    }, { once: true, passive: true });
   }
 
   /* ── Smooth reveal for hero on load ───────────────────── */
