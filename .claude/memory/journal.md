@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 14:28
+> Session fermée à 19:01
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
@@ -624,3 +624,325 @@ project: thecallagent-site
 - chore: update config/docs
 - fix(video): scroll-video 0404 invisible sur mobile — cause: iOS ne charge/peint pas la video sans autoplay ni poster. Fix: attrs autoplay/loop/poster sur les 4 pages index*, poster genere (videos/0404-poster.jpg), fallback touchstart dans main.js (Low Power Mode).
 - docs(legal): politique de confidentialite reecrite (les 2 versions) — plus de collecte Google Calendar/Gmail/Drive; les clients connectent eux-memes leurs outils sur app.thecallagent.com via Composio (tokens geres par Composio, pas par TheCallAgent). Sections 3.2, 04-09, 13 + CGU services + date MAJ 27/07/2026.
+
+## 2026-07-28
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-07-29
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-07-30
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-07-31
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-01
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-02
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-03
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-04
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-05
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-06
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-07
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-08
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-11
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-12
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-13
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-14
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-15
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-18
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-19
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-21
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-22
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-23
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-24
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-25
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-26
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-27
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-28
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-29
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-08-30
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-01
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-03
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-04
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-05
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-06
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-07
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-08
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-09
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-10
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-11
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-12
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-13
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-14
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-15
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-16
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-17
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-18
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+- docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
