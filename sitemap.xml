@@ -1,46 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
     <loc>https://thecallagent.com/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/" />
   </url>
 
   <url>
     <loc>https://thecallagent.com/nos-solutions.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/nos-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/nos-solutions.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/solutions.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/nos-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/nos-solutions.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/solutions.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.81</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/nos-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/solutions.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/nos-solutions.html" />
   </url>
 
   <url>
     <loc>https://thecallagent.com/contact.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/contact.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/contact.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/contact.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/contact.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/contact.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/contact.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/contact.html" />
   </url>
 
   <url>
     <loc>https://thecallagent.com/a-propos.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/a-propos.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/about.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.63</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/a-propos.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/about.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.63</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/a-propos.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/a-propos.html" />
   </url>
 
   <url>
     <loc>https://thecallagent.com/politique-de-confidentialite.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-confidentialite.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/privacy-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-confidentialite.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/privacy-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-confidentialite.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/privacy-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-confidentialite.html" />
   </url>
 
   <url>
     <loc>https://thecallagent.com/avis-juridique.html</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/avis-juridique.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/avis-juridique.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/legal-notice.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/avis-juridique.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/avis-juridique.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/legal-notice.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/avis-juridique.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/legal-notice.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/avis-juridique.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/conditions-generales.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/conditions-generales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/conditions-generales.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/terms.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/conditions-generales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/conditions-generales.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/terms.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/conditions-generales.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/terms.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/conditions-generales.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/politique-de-remboursement.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-remboursement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-remboursement.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/refund-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-remboursement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-remboursement.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/refund-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-remboursement.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/refund-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-remboursement.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/politique-de-cookies.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-cookies.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/en/cookie-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-cookies.html" />
+  </url>
+
+  <url>
+    <loc>https://thecallagent.com/zh/cookie-policy.html</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.27</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-cookies.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://thecallagent.com/en/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/cookie-policy.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-cookies.html" />
   </url>
 
 </urlset>

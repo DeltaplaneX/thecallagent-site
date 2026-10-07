@@ -9,6 +9,7 @@
 
 ## Informations utiles
 - Langue principale : francais.
+- Versions traduites : anglais (https://thecallagent.com/en/) et chinois simplifie (https://thecallagent.com/zh/), memes pages avec slugs anglais (solutions, about, contact, legal-notice, privacy-policy, terms, refund-policy, cookie-policy).
 - Zone servie : France.
 - Contact : odilon.buisson@thecallagent.com.
 - Telephone : +33 6 64 33 63 80.

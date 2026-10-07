@@ -30,6 +30,9 @@ Deno.serve(async (request) => {
     return new Response(null, { status: 404, headers: HTML_HEADERS });
   }
 
-  const body = await Deno.readFile(new URL("404.html", import.meta.url));
+  // Page 404 dans la langue du chemin demande (/en/, /zh/), sinon FR.
+  const path = new URL(request.url).pathname;
+  const lang = path.startsWith("/en/") ? "en/" : path.startsWith("/zh/") ? "zh/" : "";
+  const body = await Deno.readFile(new URL(`${lang}404.html`, import.meta.url));
   return new Response(body, { status: 404, headers: HTML_HEADERS });
 });

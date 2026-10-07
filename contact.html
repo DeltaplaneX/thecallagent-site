@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thecallagent.com/contact.html" />
+  <link rel="alternate" hreflang="fr" href="https://thecallagent.com/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://thecallagent.com/en/contact.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thecallagent.com/contact.html" />
   <title>Contactez TheCallAgent — Réservez une démo</title>
   <meta name="description" content="Réservez une démonstration gratuite de TheCallAgent. Contactez Odilon Buisson par formulaire, email ou téléphone — réponse garantie sous 24h ouvrées." />
   <!-- Open Graph -->
@@ -28,17 +32,19 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/brutalist.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
-  <!-- Retell Chat Widget -->
+  <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
+       Stub inerte (type=text/plain), active au clic par js/main.js
+       (CNIL : consentement prealable aux traceurs tiers). -->
   <script
     id="retell-widget"
-    src="https://dashboard.retellai.com/retell-widget.js"
-    type="module"
+    data-consent-src="https://dashboard.retellai.com/retell-widget.js"
+    type="text/plain" data-type="module"
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
     data-color="#FFE000"
     data-bot-name="Call Agent"
-    data-popup-message="Bonjour ! Comment puis-je vous aider ?"
+    data-popup-message="Bonjour ! Je suis l’assistant IA de TheCallAgent. Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
@@ -70,8 +76,8 @@
     .form-submit:hover { transform:translate(-2px,-2px); box-shadow:7px 7px 0 var(--ink); }
     .form-submit:active { transform:translate(2px,2px); box-shadow:2px 2px 0 var(--ink); }
     .form-msg { display:none; margin-top:16px; font-family:var(--mono); font-size:.84rem; font-weight:700; padding:12px 14px; border:var(--bw) solid var(--ink); }
-    .form-msg.success { background:var(--ok); color:#fff; }
-    .form-msg.error { background:var(--accent-2); color:#fff; }
+    .form-msg.success { background:var(--ok); color:var(--ink); }
+    .form-msg.error { background:var(--accent-2); color:var(--ink); }
     .form-msg.is-visible { display:block; }
 
     .contact-profile { display:flex; align-items:center; gap:16px; margin-bottom:26px; padding:18px; background:#fff; border:var(--bw) solid var(--ink); box-shadow:var(--shadow); }
@@ -151,6 +157,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
@@ -162,11 +169,18 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html" class="nav-cta active">Contactez-nous</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Langue / Language / 语言">
+      <a href="contact.html" hreflang="fr" lang="fr" aria-current="true" title="Français">FR</a>
+      <a href="/en/contact.html" hreflang="en" lang="en" title="English">EN</a>
+      <a href="/zh/contact.html" hreflang="zh-CN" lang="zh-CN" title="中文">中文</a>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<main id="contenu" tabindex="-1">
 
 <!-- ── Contact Hero ────────────────────────────────────────── -->
 <section class="hero">
@@ -215,8 +229,8 @@
             </label>
           </div>
           <button type="submit" class="form-submit">Envoyer le message →</button>
-          <div class="form-msg success"></div>
-          <div class="form-msg error"></div>
+          <div class="form-msg success" role="status" aria-live="polite"></div>
+          <div class="form-msg error" role="alert" aria-live="assertive"></div>
         </form>
       </div>
 
@@ -316,13 +330,20 @@
         <span>Démo gratuite</span>
       </div>
       <div class="booking-frame-wrap">
+        <!-- Google Calendar charge UNIQUEMENT au clic (depose des cookies Google). -->
+        <div id="calendar-consent" class="tp-placeholder">
+          <p class="tp-placeholder-ttl">Choisir un créneau</p>
+          <p class="tp-placeholder-txt">Le calendrier de réservation est fourni par Google Calendar (Google LLC, États-Unis). Il n'est chargé qu'à votre demande et peut déposer des cookies Google. <a href="politique-de-cookies.html">En savoir plus</a></p>
+          <button type="button" class="btn btn-primary" id="calendar-consent-btn">Afficher le calendrier →</button>
+          <a class="tp-placeholder-alt" href="https://calendar.app.google/x4PCjCjYi2vaFYLb7" target="_blank" rel="noopener">Ou ouvrir la page de réservation Google dans un nouvel onglet</a>
+        </div>
         <div id="calendar-loader" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:var(--ink-soft);">
           <div style="width:36px;height:36px;border:var(--bw) solid var(--ink);border-top-color:var(--accent);border-radius:50%;animation:spin 0.8s linear infinite;"></div>
           <span style="font-family:var(--mono);font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;">Chargement du calendrier…</span>
         </div>
         <iframe
           id="booking-iframe"
-          src="https://calendar.app.google/x4PCjCjYi2vaFYLb7"
+          data-consent-src="https://calendar.app.google/x4PCjCjYi2vaFYLb7"
           width="100%"
           height="560"
           frameborder="0"
@@ -335,6 +356,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
@@ -373,9 +396,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 The Call Agent · Artigues-Près-Bordeaux, France</span>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;">
         <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        <a href="avis-juridique.html">Avis juridique</a>
+        <a href="avis-juridique.html">Mentions légales</a>
+        <a href="conditions-generales.html">Conditions générales</a>
+        <a href="politique-de-remboursement.html">Remboursement</a>
+        <a href="politique-de-cookies.html#gerer">Gérer mes cookies</a>
       </div>
     </div>
   </div>

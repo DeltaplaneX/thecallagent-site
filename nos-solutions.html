@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thecallagent.com/nos-solutions.html" />
+  <link rel="alternate" hreflang="fr" href="https://thecallagent.com/nos-solutions.html" />
+  <link rel="alternate" hreflang="en" href="https://thecallagent.com/en/solutions.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/solutions.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thecallagent.com/nos-solutions.html" />
   <title>Appels entrants et sortants automatisés — TheCallAgent</title>
   <meta name="description" content="Appels entrants et sortants automatisés, intégration CRM, SMS et email. TheCallAgent gère chaque appel à votre place et met à jour votre pipeline, 24h/24." />
   <!-- Open Graph -->
@@ -28,17 +32,19 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/brutalist.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
-  <!-- Retell Chat Widget -->
+  <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
+       Stub inerte (type=text/plain), active au clic par js/main.js
+       (CNIL : consentement prealable aux traceurs tiers). -->
   <script
     id="retell-widget"
-    src="https://dashboard.retellai.com/retell-widget.js"
-    type="module"
+    data-consent-src="https://dashboard.retellai.com/retell-widget.js"
+    type="text/plain" data-type="module"
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
     data-color="#FFE000"
     data-bot-name="Call Agent"
-    data-popup-message="Bonjour ! Comment puis-je vous aider ?"
+    data-popup-message="Bonjour ! Je suis l’assistant IA de TheCallAgent. Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
@@ -117,6 +123,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
@@ -128,11 +135,18 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html" class="nav-cta">Contactez-nous</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Langue / Language / 语言">
+      <a href="nos-solutions.html" hreflang="fr" lang="fr" aria-current="true" title="Français">FR</a>
+      <a href="/en/solutions.html" hreflang="en" lang="en" title="English">EN</a>
+      <a href="/zh/solutions.html" hreflang="zh-CN" lang="zh-CN" title="中文">中文</a>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<main id="contenu" tabindex="-1">
 
 <!-- ── Hero ────────────────────────────────────────────────── -->
 <section class="hero">
@@ -165,7 +179,7 @@
           <li>Prise de rendez-vous directement dans votre calendrier</li>
           <li>Mise à jour du CRM en temps réel pendant l'appel</li>
           <li>Confirmation par email et SMS automatique</li>
-          <li>Disponible 24h/24, 7j/7, jamais en ligne occupée</li>
+          <li>Disponible 24h/24, 7j/7, sans ligne occupée</li>
         </ul>
       </article>
       <article class="cell" data-modal="sortants" role="button" tabindex="0" aria-haspopup="dialog">
@@ -189,10 +203,10 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow reveal"><span class="dot"></span> Intégrations natives</span>
-      <h2 class="section-title reveal reveal-delay-1">Connecté à <em>tous vos outils</em></h2>
+      <h2 class="section-title reveal reveal-delay-1">Connecté à <em>vos outils</em></h2>
       <p class="section-sub reveal reveal-delay-2">L'agent lit, modifie et crée des données dans vos outils existants, sans aucune saisie manuelle. Votre pipeline reste synchronisé à la seconde près.</p>
     </div>
-    <div class="cards-grid cards-3 reveal">
+    <div class="cards-grid cards-5 reveal">
       <article class="cell" data-modal="int-crm" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
         <h3>CRM</h3>
@@ -207,11 +221,6 @@
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
         <h3>Calendrier</h3>
         <p>Consultation des disponibilités, création et modification d'événements en temps réel pendant l'appel.</p>
-      </article>
-      <article class="cell" data-modal="int-linkedin" role="button" tabindex="0" aria-haspopup="dialog">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
-        <h3>LinkedIn</h3>
-        <p>Création et publication de posts automatisés pour maintenir votre présence professionnelle sans effort.</p>
       </article>
       <article class="cell" data-modal="int-sms" role="button" tabindex="0" aria-haspopup="dialog">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
@@ -253,8 +262,8 @@
       <article class="cell" data-modal="wf-contenu" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
         <span class="kicker warn" style="margin-bottom:0;">03</span>
         <div>
-          <h3>Production de contenu</h3>
-          <p>Sélection du sujet, brief automatique, rédaction cohérente avec votre charte, validation humaine express, puis publication programmée et partage sur les canaux choisis.</p>
+          <h3>Production de contenu &amp; LinkedIn</h3>
+          <p>Sélection du sujet, brief automatique, rédaction cohérente avec votre charte, validation humaine express, puis publication programmée sur votre site et vos posts LinkedIn.</p>
         </div>
       </article>
       <article class="cell" data-modal="wf-enrichissement" role="button" tabindex="0" aria-haspopup="dialog" style="display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:start;border-right:none;">
@@ -321,6 +330,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
@@ -358,9 +369,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 The Call Agent · Artigues-Près-Bordeaux, France</span>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;">
         <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        <a href="avis-juridique.html">Avis juridique</a>
+        <a href="avis-juridique.html">Mentions légales</a>
+        <a href="conditions-generales.html">Conditions générales</a>
+        <a href="politique-de-remboursement.html">Remboursement</a>
+        <a href="politique-de-cookies.html#gerer">Gérer mes cookies</a>
       </div>
     </div>
   </div>
@@ -382,7 +396,7 @@
   <article id="fiche-entrants" data-fiche>
     <div class="modal-eyebrow">Appels entrants</div>
     <h3 class="modal-title" id="modalTitle">Décrocher pour vous, qualifier, déclencher l'action</h3>
-    <p class="modal-pitch">Quand un client appelle, l'agent vocal répond instantanément, comprend la demande et la traite jusqu'au bout — sans qu'aucun humain n'ait à reprendre la conversation.</p>
+    <p class="modal-pitch">Quand un client appelle, l'agent vocal répond instantanément, comprend la demande et la traite jusqu'au bout — et ne passe la main à un humain que lorsque c'est nécessaire.</p>
 
     <div class="modal-section">
       <h4>Comment ça marche en 3 étapes</h4>
@@ -406,12 +420,12 @@
     </div>
 
     <div class="modal-section">
-      <h4>Promesses mesurables</h4>
+      <h4>Ce que fait l'agent</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">100%</div><div class="modal-kpi-label">Appels décrochés</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">24/7</div><div class="modal-kpi-label">Disponibilité réelle</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">&lt; 1 s</div><div class="modal-kpi-label">Temps de réponse (latence ~600 ms)</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">0</div><div class="modal-kpi-label">Saisie manuelle post-appel</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">24/7</div><div class="modal-kpi-label">Décroche jour, nuit, week-end et jours fériés</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Parallèle</div><div class="modal-kpi-label">Plusieurs appels traités en même temps, sans ligne occupée</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Naturel</div><div class="modal-kpi-label">Conversation en langage courant, sans menu vocal à touches</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Auto</div><div class="modal-kpi-label">Résumé et fiche client poussés dans vos outils après l'appel</div></div>
       </div>
     </div>
 
@@ -445,12 +459,12 @@
     </div>
 
     <div class="modal-section">
-      <h4>Promesses mesurables</h4>
+      <h4>Ce que fait l'agent</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">20+</div><div class="modal-kpi-label">appels gérés en simultané (1 seul pour un humain)</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">0,10 €</div><div class="modal-kpi-label">Coût par minute d'appel IA (vs ~0,60 €/appel au standard humain)</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">100%</div><div class="modal-kpi-label">Contacts loggés au CRM</div></div>
-        <div class="modal-kpi"><div class="modal-kpi-value">62 %</div><div class="modal-kpi-label">des appels aux PME non décrochés en direct</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Parallèle</div><div class="modal-kpi-label">Plusieurs appels sortants menés en même temps</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Sur devis</div><div class="modal-kpi-label">Tarif selon le volume d'appels et les intégrations</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">CRM</div><div class="modal-kpi-label">Chaque contact et son issue enregistrés dans votre CRM</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Script</div><div class="modal-kpi-label">Suit votre script, vos règles de qualification et vos horaires</div></div>
       </div>
     </div>
 
@@ -545,37 +559,6 @@
       <ul class="modal-list">
         <li><strong>Lit</strong> : créneaux libres, événements existants, fuseaux horaires.</li>
         <li><strong>Écrit</strong> : nouveau RDV, modification, suppression, rappel programmé.</li>
-      </ul>
-    </div>
-
-    <div class="modal-cta"><a href="contact.html" class="btn btn-primary">Voir une démo</a></div>
-  </article>
-
-  <article id="fiche-int-linkedin" data-fiche>
-    <div class="modal-eyebrow">Intégration · LinkedIn</div>
-    <h3 class="modal-title">Présence professionnelle entretenue automatiquement</h3>
-    <p class="modal-pitch">L'agent rédige et publie pour vous, à votre cadence, dans votre voix. Vous restez visible sans devoir bloquer du temps chaque semaine.</p>
-
-    <div class="modal-section">
-      <h4>Ce que l'agent fait sur votre profil pro</h4>
-      <ul class="modal-list">
-        <li>Génère des posts à partir de vos thèmes, retours clients ou actualités du secteur.</li>
-        <li>Publie selon un planning hebdomadaire que vous validez en un clic.</li>
-        <li>Recycle un appel marquant ou un retour client en post (avec votre accord).</li>
-        <li>Surveille les commentaires et vous alerte sur les interactions à fort potentiel commercial.</li>
-      </ul>
-    </div>
-
-    <div class="modal-section">
-      <h4>Scénario type</h4>
-      <p class="modal-scenario">Vous avez clos un dossier important. L'agent en propose un mini retour d'expérience, vous le présente le mardi matin, vous l'éditez en 30 secondes, il publie le jeudi à l'heure optimale et trace les vues / contacts générés.</p>
-    </div>
-
-    <div class="modal-section">
-      <h4>Données lues / écrites</h4>
-      <ul class="modal-list">
-        <li><strong>Lit</strong> : posts existants, commentaires, métriques d'engagement.</li>
-        <li><strong>Écrit</strong> : nouveau post, réponse à commentaire (sur validation), planification.</li>
       </ul>
     </div>
 
@@ -697,7 +680,7 @@
     <div class="modal-section">
       <h4>Bénéfice business</h4>
       <ul class="modal-list">
-        <li>Plus aucun lead n'est oublié dans le tableur.</li>
+        <li>Les leads ne dorment plus dans un tableur.</li>
         <li>Pipeline alimenté de manière prévisible chaque semaine.</li>
         <li>Le commercial humain n'intervient que sur les RDV qualifiés.</li>
       </ul>
@@ -712,9 +695,9 @@
   </article>
 
   <article id="fiche-wf-contenu" data-fiche>
-    <div class="modal-eyebrow">Workflow 03 · Contenu</div>
+    <div class="modal-eyebrow">Workflow 03 · Contenu &amp; LinkedIn</div>
     <h3 class="modal-title">Production et publication de contenu en pilote auto</h3>
-    <p class="modal-pitch">L'agent rédige, illustre et publie des articles ou pages produit selon un calendrier éditorial — vous validez avant mise en ligne.</p>
+    <p class="modal-pitch">L'agent rédige, illustre et publie articles, pages produit et posts LinkedIn selon un calendrier éditorial — vous validez avant mise en ligne.</p>
 
     <div class="modal-section">
       <h4>Étapes du flux</h4>
@@ -723,8 +706,17 @@
         <li>Brief auto : structure, mots-clés, angle, public visé.</li>
         <li>Rédaction d'une première version cohérente avec votre charte éditoriale.</li>
         <li>Validation humaine express (relecture, ajustements éventuels).</li>
-        <li>Publication programmée sur le site, partage automatique sur les canaux choisis.</li>
+        <li>Publication programmée sur le site et sur LinkedIn, partage automatique sur les autres canaux choisis.</li>
       </ol>
+    </div>
+
+    <div class="modal-section">
+      <h4>Côté LinkedIn</h4>
+      <ul class="modal-list">
+        <li>Posts générés à partir de vos thèmes, retours clients ou actualités du secteur.</li>
+        <li>Planning hebdomadaire validé en un clic, publication à l'heure optimale.</li>
+        <li>Alerte sur les commentaires à fort potentiel commercial.</li>
+      </ul>
     </div>
 
     <div class="modal-section">
@@ -813,8 +805,8 @@
   <!-- ===== ZONE D — Secteurs ================================= -->
   <article id="fiche-sec-immobilier" data-fiche>
     <div class="modal-eyebrow">Secteur · Immobilier</div>
-    <h3 class="modal-title">L'agence qui ne rate aucun acquéreur ni vendeur</h3>
-    <p class="modal-pitch">Le téléphone reste le premier canal de l'immobilier — et le plus mal traité, faute de temps. Call Agent y répond toujours, qualifie et déclenche la suite.</p>
+    <h3 class="modal-title">L'agence joignable à toute heure par acquéreurs et vendeurs</h3>
+    <p class="modal-pitch">Le téléphone reste le premier canal de l'immobilier — et le plus mal traité, faute de temps. Call Agent y répond à toute heure, qualifie et déclenche la suite.</p>
 
     <div class="modal-section">
       <h4>3 problèmes typiques du secteur</h4>
@@ -842,7 +834,7 @@
     <div class="modal-section">
       <h4>Indicateur clé</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">78 %</div><div class="modal-kpi-label">des acheteurs choisissent le 1er agent qui répond</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Immédiat</div><div class="modal-kpi-label">Rappel du contact dès réception de sa demande, même hors horaires</div></div>
       </div>
     </div>
 
@@ -880,7 +872,7 @@
     <div class="modal-section">
       <h4>Indicateur clé</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">−34 %</div><div class="modal-kpi-label">de rendez-vous manqués grâce aux rappels</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">Rappel</div><div class="modal-kpi-label">Rappel automatique avant chaque rendez-vous, avec confirmation ou report</div></div>
       </div>
     </div>
 
@@ -918,7 +910,7 @@
     <div class="modal-section">
       <h4>Indicateur clé</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">×21</div><div class="modal-kpi-label">plus de leads qualifiés si réponse en moins de 5 min</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">×21</div><div class="modal-kpi-label">de chances de qualifier un prospect rappelé en 5 min plutôt qu'en 30 min — Oldroyd (MIT Sloan) &amp; InsideSales.com, 2007</div></div>
       </div>
     </div>
 
@@ -956,7 +948,7 @@
     <div class="modal-section">
       <h4>Indicateur clé</h4>
       <div class="modal-kpi-grid">
-        <div class="modal-kpi"><div class="modal-kpi-value">70 %</div><div class="modal-kpi-label">de paniers e-commerce abandonnés en moyenne</div></div>
+        <div class="modal-kpi"><div class="modal-kpi-value">70 %</div><div class="modal-kpi-label">des paniers e-commerce abandonnés en moyenne — Baymard Institute, méta-analyse de 50 études, 2025</div></div>
       </div>
     </div>
 

@@ -33,3 +33,20 @@ schema: "ID | Date | Titre | Décision | Pourquoi | Alternatives | Statut"
 - **Alternatives considérées** : ...
 - **Statut** : actif / obsolète
 -->
+
+## BDR — Services tiers chargés au clic, pas de bandeau cookies (2026-10-02)
+- **Décision (Odilon)** : Retell (chat) et Google Calendar ne se chargent qu'après clic sur un encart d'information CNIL ; pas de bandeau global.
+- **Pourquoi** : aucun autre traceur sur le site → art. 82 non déclenché avant action ; meilleure perf, zéro friction.
+- **Conséquence** : tout nouveau script tiers doit passer par le stub `data-consent-src` (js/main.js `thirdPartyOnClick`). Google Fonts reste à auto-héberger.
+
+## BDR — Offres réservées aux professionnels (2026-10-02)
+- CGV B2B uniquement → pas de médiateur de la consommation, pas de rétractation en ligne (L221-3 = hors établissement seulement). Si des particuliers peuvent souscrire un jour : médiateur + CGV consommateur à ajouter.
+
+## BDR — Site trilingue : sous-dossiers statiques `/en/` et `/zh/`, slugs anglais, hreflang (2026-10-08)
+- **Décision** : une page HTML complète par langue (10 FR à la racine, 10 EN sous `/en/`, 10 ZH sous `/zh/` avec les mêmes slugs anglais : `solutions`, `about`, `contact`, `legal-notice`, `privacy-policy`, `terms`, `refund-policy`, `cookie-policy`, `404`). Pas de i18n JS côté contenu : seuls les messages générés par `js/main.js` (formulaire, launcher Retell) passent par le dictionnaire `TCA_I18N` lu sur `<html lang>`. Sélecteur FR | EN | 中文 dans la nav (`.lang-switch`), 4 `<link hreflang>` (fr, en, zh-CN, x-default = FR) sur chaque page, sitemap 27 URLs avec `xhtml:link`. Chinois = `lang="zh-CN"`, `og:locale zh_CN`, polices système CJK en repli (`html[lang="zh-CN"]`).
+- **Pourquoi** : SEO (une URL par langue, indexable sans JS), Lighthouse inchangé, aucun build step (contrainte du projet). Pas de redirection automatique par langue navigateur (recommandation Google, zéro piège bouton retour).
+- **Conséquence** : toute modif de contenu FR doit être reportée dans `en/` et `zh/` ; les chaînes JS nouvelles vont dans `TCA_I18N` (3 langues) ; le texte CSS `content:` se surcharge par `html[lang=…]`. Pages légales EN/ZH = traductions de courtoisie, la version FR prévaut (note `.translation-note`). Script de contrôle : `scratchpad/verify_i18n.py` (séquence de balises, ids, liens, head) — à recopier dans `scripts/` si on itère.
+
+## BDR — Déploiement prod = Vercel relié à GitHub `main` (2026-10-08)
+- **Constat** : `thecallagent.com` est servi par Vercel (`Server: Vercel`, alias `thecallagent-site-git-main-…vercel.app`), projet `thecallagent-site` (compte deltaplanex). La note vault disait IONOS (seulement le DNS/domaine). Un `git push origin main` déclenche le déploiement ; `dist/` + scripts Deno = chemin alternatif non utilisé en prod.
+- **Conséquence** : « push à la fin » = mise en prod. Vérifier après chaque push : `curl -sI https://thecallagent.com/js/main.js` (Last-Modified) et une page nouvelle.

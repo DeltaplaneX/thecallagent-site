@@ -8,6 +8,9 @@ const requiredFiles = [
   "contact.html",
   "avis-juridique.html",
   "politique-de-confidentialite.html",
+  "conditions-generales.html",
+  "politique-de-remboursement.html",
+  "politique-de-cookies.html",
   "404.html",
   "css/brutalist.css",
   "js/main.js",
@@ -18,7 +21,7 @@ const requiredFiles = [
 ];
 
 const optionalFiles = ["cached-bundle.js"];
-const requiredDirs = ["images", "videos"];
+const requiredDirs = ["images", "videos", "en", "zh"];
 
 async function exists(path: URL): Promise<boolean> {
   try {

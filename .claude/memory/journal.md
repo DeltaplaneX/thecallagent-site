@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 19:01
+> Session fermée à 17:32
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
@@ -946,3 +946,149 @@ project: thecallagent-site
 - fix(video): affichage mobile de la video 0404
 - chore: update config/docs
 - docs(memory): record /lead migration (BDR-001, LRN-001) + refresh graphify
+
+## 2026-09-19
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-20
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-21
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-23
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-24
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-25
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-26
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-27
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-28
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-29
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-09-30
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-01
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-02
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-02 — Mise en conformité légale du site
+- Audit + autoresearch (droit FR, CNIL, CGV/L221-3, EAA, AI Act, fact-check stats) → wiki [[Research - Conformite du site thecallagent.com (2026-10)]].
+- Créé : conditions-generales.html, politique-de-cookies.html, politique-de-remboursement.html ; corrigé mentions légales (SASU), PDC (sous-traitants, §3.3 appels), footers x17, sitemap.
+- Retell (chat d'orientation) + Google Calendar chargés au clic ; WCAG clavier/contrastes/skip-link/main/aria ; chiffres non prouvés retirés ou sourcés.
+- Non commité. En attente : capital social, polices auto-hébergées, annonce IA de l'agent, validation CGV.
+
+## 2026-10-03
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-04
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-05
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-06
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-07
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-08
+- chore: sync memoire + graphify
+- chore: sync memoire + graphify
+- docs(legal): politique de confidentialite alignee sur le modele Composio
+- fix(video): affichage mobile de la video 0404
+- chore: update config/docs
+
+## 2026-10-08 — Site trilingue FR/EN/ZH, vidéo 0404, mise en prod
+- Diagnostic : prod Vercel = bb86edc (29/06), sans le fix vidéo iOS ni les pages légales ; `main` local 4 commits en avance, jamais poussé. Fichier vidéo sain (H.264 High@4.0, all-intra, poster OK).
+- Livré : sélecteur FR | EN | 中文 dans la nav + hreflang sur les 10 pages FR ; 20 pages traduites (`en/`, `zh/`, slugs anglais) par 15 agents sur spec commune, 20/20 au script de vérif ; `TCA_I18N` dans main.js ; CSS CJK + `content:` par langue ; sitemap 27 URLs ; scripts Deno (3 pages légales, en/, zh/, 404 localisée) ; llms.txt.
+- Vidéo : repli poster en fond, suppression `translateZ/backface-visibility`, déverrouillage touchend/click/keydown, watchdog seek → lecture en boucle, `.video-failed`. Scrub vérifié dans Chromium (currentTime suit le scroll, 0 erreur).
+- Test `node --test tests/lead-response.test.js` 6/6 (garde `typeof document` sur l'IIFE Retell). Commit + push `main` → déploiement Vercel.
+- Reste : capital social SASU (TODO en commentaire), polices auto-hébergées, Lighthouse baseline, doublons `*-brutalist` / `index-variant-*` non traduits (noindex), `Fiche-projet_*.pdf` laissé hors git.

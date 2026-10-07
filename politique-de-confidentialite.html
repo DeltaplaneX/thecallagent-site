@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thecallagent.com/politique-de-confidentialite.html" />
+  <link rel="alternate" hreflang="fr" href="https://thecallagent.com/politique-de-confidentialite.html" />
+  <link rel="alternate" hreflang="en" href="https://thecallagent.com/en/privacy-policy.html" />
+  <link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/privacy-policy.html" />
+  <link rel="alternate" hreflang="x-default" href="https://thecallagent.com/politique-de-confidentialite.html" />
   <title>Politique de confidentialité & Conditions d'utilisation — TheCallAgent</title>
   <meta name="description" content="Politique de confidentialité et conditions d'utilisation de TheCallAgent. Site vitrine et plateforme : vos droits RGPD, données collectées, et conditions d'accès." />
   <!-- Open Graph -->
@@ -28,17 +32,19 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/brutalist.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
-  <!-- Retell Chat Widget -->
+  <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
+       Stub inerte (type=text/plain), active au clic par js/main.js
+       (CNIL : consentement prealable aux traceurs tiers). -->
   <script
     id="retell-widget"
-    src="https://dashboard.retellai.com/retell-widget.js"
-    type="module"
+    data-consent-src="https://dashboard.retellai.com/retell-widget.js"
+    type="text/plain" data-type="module"
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
     data-color="#FFE000"
     data-bot-name="Call Agent"
-    data-popup-message="Bonjour ! Comment puis-je vous aider ?"
+    data-popup-message="Bonjour ! Je suis l’assistant IA de TheCallAgent. Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
@@ -67,6 +73,7 @@
   </style>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
@@ -78,11 +85,18 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html" class="nav-cta">Contactez-nous</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Langue / Language / 语言">
+      <a href="politique-de-confidentialite.html" hreflang="fr" lang="fr" aria-current="true" title="Français">FR</a>
+      <a href="/en/privacy-policy.html" hreflang="en" lang="en" title="English">EN</a>
+      <a href="/zh/privacy-policy.html" hreflang="zh-CN" lang="zh-CN" title="中文">中文</a>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<main id="contenu" tabindex="-1">
 
 <!-- ── Hero ────────────────────────────────────────────────── -->
 <section class="section-pad" style="padding-bottom:56px;">
@@ -90,7 +104,7 @@
     <div class="legal-wrap">
       <span class="eyebrow reveal"><span class="dot"></span> Légal</span>
       <h1 class="section-title reveal reveal-delay-1" style="margin-top:18px;">Politique de <em>confidentialité</em> &amp; Conditions d'utilisation</h1>
-      <p class="legal-update reveal reveal-delay-2" style="margin-top:18px;">Dernière mise à jour : 27 juillet 2026</p>
+      <p class="legal-update reveal reveal-delay-2" style="margin-top:18px;">Dernière mise à jour : 2 octobre 2026</p>
     </div>
   </div>
 </section>
@@ -117,8 +131,8 @@
         <h2 class="clause"><span class="num">02</span>Responsable du traitement</h2>
         <p>Le responsable du traitement des données personnelles collectées sur le site et la plateforme est :</p>
         <p>
-          <strong>TheCallAgent</strong><br />
-          Représenté par Odilon Buisson<br />
+          <strong>CALL AGENT</strong> (SASU, RCS Bordeaux 989 047 691), exploitant la marque TheCallAgent<br />
+          Représentée par Odilon Buisson, président<br />
           15 Rue de Saint-Hubert, 33370 Artigues-Près-Bordeaux, France<br />
           Email : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a><br />
           Téléphone : <a href="tel:0664336380">06 64 33 63 80</a>
@@ -136,7 +150,7 @@
           <li><strong>Message</strong> (obligatoire)</li>
           <li><strong>Consentement</strong> : enregistrement de votre accord explicite via la case à cocher RGPD du formulaire</li>
         </ul>
-        <p>Ces données sont transmises via un webhook sécurisé (n8n) à notre équipe pour traitement.</p>
+        <p>Ces données sont transmises de manière chiffrée (HTTPS) à notre serveur applicatif, hébergé par Railway, qui les transmet à notre équipe pour traitement.</p>
 
         <h3>3.2 Plateforme — usage client (app.thecallagent.com)</h3>
         <p>Dans le cadre de l'utilisation de la plateforme partenaires, nous collectons uniquement les données suivantes :</p>
@@ -148,6 +162,11 @@
           <li><strong>Documents générés</strong> : devis, factures et contrats créés via la plateforme.</li>
         </ul>
         <p><strong>Ce que nous ne collectons pas :</strong> TheCallAgent ne demande ni ne stocke les données de vos comptes Google (Calendar, Gmail, Drive) ou d'autres outils sensibles. Lorsque votre activité nécessite une connexion à vos outils, la solution est définie avec vous : c'est vous qui connectez vos propres comptes, directement depuis la plateforme, via le service d'intégration Composio (voir section 06).</p>
+
+        <h3>3.3 Appels traités par l'agent vocal</h3>
+        <p>Lorsque l'agent vocal répond aux appels ou appelle pour le compte de nos clients, il traite les données des personnes en ligne : numéro de téléphone, voix, contenu et transcription de la conversation. Pour ces traitements, <strong>notre client est responsable du traitement</strong> et TheCallAgent agit en qualité de <strong>sous-traitant</strong> (article 28 du RGPD), dans le cadre d'un contrat de sous-traitance conclu avec chaque client.</p>
+        <p>Conformément à l'article 50 du règlement européen sur l'intelligence artificielle (règlement (UE) 2024/1689), l'agent indique à la personne, dès le début de l'appel, qu'elle échange avec un système d'intelligence artificielle. Elle est également informée de l'éventuel enregistrement de la conversation, de sa finalité et de son droit de s'y opposer.</p>
+        <p>Les enregistrements de conversation sont conservés au maximum <strong>6 mois</strong>, sauf durée différente convenue avec le client et justifiée par sa finalité. Les personnes appelées exercent leurs droits auprès de l'entreprise concernée ; TheCallAgent l'assiste pour y répondre.</p>
 
         <h2 class="clause"><span class="num">04</span>Finalités et base légale</h2>
         <table class="legal-table">
@@ -214,24 +233,31 @@
         <p>Vos données sont traitées exclusivement en interne par TheCallAgent. Elles ne sont ni revendues ni transmises à des tiers à des fins commerciales.</p>
         <p>Nos sous-traitants techniques ont accès à vos données dans le cadre strict de leur mission :</p>
         <ul>
-          <li><strong>n8n</strong> : automatisation du formulaire de contact (traitement du webhook)</li>
-          <li><strong>Retell AI</strong> : agent vocal embarqué sur le site (widget de démonstration) et gestion des appels</li>
-          <li><strong>Supabase</strong> : hébergement de la base de données de la plateforme</li>
-          <li><strong>Composio</strong> : gestion des connexions OAuth vers les outils que vous choisissez de relier à la plateforme</li>
+          <li><strong>IONOS SE</strong> (Allemagne) : hébergement du site vitrine</li>
+          <li><strong>Railway</strong> (États-Unis) : hébergement du serveur applicatif qui reçoit le formulaire de contact</li>
+          <li><strong>n8n</strong> : automatisation des traitements internes (workflows)</li>
+          <li><strong>Supabase</strong> : base de données et authentification de la plateforme</li>
+          <li><strong>Retell AI</strong> (États-Unis) : assistant de discussion (chat) du site, chargé uniquement à votre demande, et gestion des appels de la plateforme</li>
+          <li><strong>Google LLC</strong> (États-Unis) : calendrier de réservation de démo, chargé uniquement à votre demande, et polices de caractères (Google Fonts)</li>
+          <li><strong>Composio</strong> (États-Unis) : gestion des connexions OAuth vers les outils que vous choisissez de relier à la plateforme</li>
+          <li><strong>Airtable</strong> (États-Unis) : CRM et gestion des contacts de la plateforme</li>
+          <li><strong>Twilio</strong> (États-Unis) : envoi de SMS</li>
+          <li><strong>Anthropic</strong> (États-Unis) : traitement par IA des requêtes conversationnelles de la plateforme</li>
         </ul>
 
         <h2 class="clause"><span class="num">09</span>Transferts hors Union européenne</h2>
-        <p>Retell AI (gestion des appels) et Composio (gestion des connexions) sont des sociétés dont les serveurs sont situés aux États-Unis. L'utilisation de leurs services peut impliquer un transfert de données vers des serveurs hors de l'Union européenne. Ces transferts sont encadrés par les clauses contractuelles types (CCT) adoptées par la Commission européenne.</p>
+        <p>Plusieurs de nos sous-traitants sont établis aux États-Unis (Railway, Retell AI, Google, Composio, Airtable, Twilio, Anthropic). Leur intervention peut impliquer un transfert de données hors de l'Union européenne. Selon le prestataire, ces transferts sont encadrés par la décision d'adéquation de la Commission européenne du 10 juillet 2023 (<em>EU-US Data Privacy Framework</em>), lorsque le prestataire y est certifié, ou par les clauses contractuelles types adoptées par la Commission européenne.</p>
         <p>Pour toute information sur les garanties mises en place, contactez-nous à : <a href="mailto:odilon.buisson@thecallagent.com">odilon.buisson@thecallagent.com</a>.</p>
 
         <h2 class="clause"><span class="num">10</span>Cookies et traceurs</h2>
-        <p>Ce site n'utilise pas de cookies de suivi ou publicitaires.</p>
-        <p>Des technologies tierces peuvent déposer des données techniques lors de votre visite :</p>
+        <p>Ce site ne dépose aucun cookie publicitaire ni de mesure d'audience. Aucun outil d'analyse (Google Analytics, pixel publicitaire, etc.) n'y est installé.</p>
+        <p>Deux services tiers susceptibles de déposer des traceurs ne sont chargés <strong>qu'après votre clic</strong> sur un bouton qui vous en informe :</p>
         <ul>
-          <li><strong>Widget Retell AI</strong> : script de démonstration vocale — peut stocker des données de session.</li>
-          <li><strong>Google Calendar</strong> : iframe de réservation de démo — soumis à la politique de confidentialité de Google.</li>
+          <li><strong>Chat Retell AI</strong> : assistant de discussion automatisé qui vous oriente vers la bonne offre.</li>
+          <li><strong>Google Calendar</strong> : calendrier de réservation de démo, sur la page contact.</li>
         </ul>
-        <p>Aucun outil d'analyse d'audience (Google Analytics, etc.) n'est installé sur ce site.</p>
+        <p>Les polices de caractères du site sont chargées depuis Google Fonts : à cette occasion, votre navigateur transmet votre adresse IP à Google LLC.</p>
+        <p>La liste des traceurs, leur finalité, leur durée de vie et la manière de retirer votre consentement figurent dans notre <a href="politique-de-cookies.html">politique de cookies</a>.</p>
 
         <h2 class="clause"><span class="num">11</span>Sécurité des données</h2>
         <p>Nous mettons en œuvre des mesures de sécurité appropriées, incluant :</p>
@@ -280,6 +306,7 @@
         <!-- PARTIE 2 — CONDITIONS D'UTILISATION                   -->
         <!-- ═══════════════════════════════════════════════════════ -->
         <h2 class="part">Partie 2 — Conditions d'utilisation</h2>
+        <p>Les conditions commerciales des offres par abonnement (prix, paiement, durée, résiliation, remboursement) et les conditions d'utilisation du site vitrine figurent dans nos <a href="conditions-generales.html">conditions générales</a>.</p>
 
         <h2 class="clause"><span class="num">01</span>Objet</h2>
         <p>Les présentes conditions d'utilisation régissent l'accès et l'utilisation de la plateforme Call Agent, accessible à l'adresse <em>app.thecallagent.com</em>. En utilisant la plateforme, vous acceptez l'intégralité de ces conditions.</p>
@@ -349,6 +376,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
@@ -386,9 +415,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 The Call Agent · Artigues-Près-Bordeaux, France</span>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;">
         <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        <a href="avis-juridique.html">Avis juridique</a>
+        <a href="avis-juridique.html">Mentions légales</a>
+        <a href="conditions-generales.html">Conditions générales</a>
+        <a href="politique-de-remboursement.html">Remboursement</a>
+        <a href="politique-de-cookies.html#gerer">Gérer mes cookies</a>
       </div>
     </div>
   </div>

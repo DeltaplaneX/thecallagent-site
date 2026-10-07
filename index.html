@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="canonical" href="https://thecallagent.com/" />
+  <link rel="alternate" hreflang="fr" href="https://thecallagent.com/" />
+  <link rel="alternate" hreflang="en" href="https://thecallagent.com/en/" />
+  <link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/" />
+  <link rel="alternate" hreflang="x-default" href="https://thecallagent.com/" />
   <title>TheCallAgent — Agent téléphonique IA connecté à tout métier</title>
   <meta name="description" content="Connectez un agent téléphonique IA à vos règles métier, outils et données. TheCallAgent automatise appels, CRM et workflows 24h/24." />
   <!-- Open Graph -->
@@ -28,17 +32,19 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/brutalist.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
-  <!-- Retell Chat Widget -->
+  <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
+       Stub inerte (type=text/plain), active au clic par js/main.js
+       (CNIL : consentement prealable aux traceurs tiers). -->
   <script
     id="retell-widget"
-    src="https://dashboard.retellai.com/retell-widget.js"
-    type="module"
+    data-consent-src="https://dashboard.retellai.com/retell-widget.js"
+    type="text/plain" data-type="module"
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
     data-color="#FFE000"
     data-bot-name="Call Agent"
-    data-popup-message="Bonjour ! Comment puis-je vous aider ?"
+    data-popup-message="Bonjour ! Je suis l’assistant IA de TheCallAgent. Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
@@ -104,6 +110,7 @@
   </script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
@@ -115,11 +122,18 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html" class="nav-cta">Contactez-nous</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Langue / Language / 语言">
+      <a href="index.html" hreflang="fr" lang="fr" aria-current="true" title="Français">FR</a>
+      <a href="/en/" hreflang="en" lang="en" title="English">EN</a>
+      <a href="/zh/" hreflang="zh-CN" lang="zh-CN" title="中文">中文</a>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<main id="contenu" tabindex="-1">
 
 <!-- ── Hero ────────────────────────────────────────────────── -->
 <section class="hero">
@@ -169,16 +183,16 @@
 <section class="stats">
   <div class="stats-grid">
     <div class="stat-item">
-      <span class="stat-number" data-target="62" data-suffix="%">62%</span>
-      <p class="stat-label">des appels aux PME ne sont pas décrochés en direct</p>
+      <span class="stat-number">0</span>
+      <p class="stat-label">ressaisie après l'appel : le résumé et la fiche client arrivent directement dans vos outils</p>
     </div>
     <div class="stat-item">
       <span class="stat-number" data-target="21" data-suffix="×">21×</span>
-      <p class="stat-label">plus de chances de qualifier un lead en répondant en moins de 5 min</p>
+      <p class="stat-label">plus de chances de qualifier un prospect rappelé en 5&nbsp;min plutôt qu'en 30&nbsp;min<span class="stat-source">Oldroyd (MIT Sloan) &amp; InsideSales.com, <cite>Lead Response Management Study</cite>, 2007</span></p>
     </div>
     <div class="stat-item">
       <span class="stat-number" data-target="24" data-suffix="/7">24/7</span>
-      <p class="stat-label">disponible, jamais en ligne occupée</p>
+      <p class="stat-label">disponible jour, nuit et week-end</p>
     </div>
   </div>
 </section>
@@ -345,6 +359,8 @@
   </div>
 </section>
 
+</main>
+
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
@@ -382,9 +398,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 The Call Agent · Artigues-Près-Bordeaux, France</span>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;">
         <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        <a href="avis-juridique.html">Avis juridique</a>
+        <a href="avis-juridique.html">Mentions légales</a>
+        <a href="conditions-generales.html">Conditions générales</a>
+        <a href="politique-de-remboursement.html">Remboursement</a>
+        <a href="politique-de-cookies.html#gerer">Gérer mes cookies</a>
       </div>
     </div>
   </div>

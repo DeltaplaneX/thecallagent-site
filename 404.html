@@ -28,22 +28,25 @@
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="css/brutalist.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
-  <!-- Retell Chat Widget -->
+  <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
+       Stub inerte (type=text/plain), active au clic par js/main.js
+       (CNIL : consentement prealable aux traceurs tiers). -->
   <script
     id="retell-widget"
-    src="https://dashboard.retellai.com/retell-widget.js"
-    type="module"
+    data-consent-src="https://dashboard.retellai.com/retell-widget.js"
+    type="text/plain" data-type="module"
     data-public-key="key_ac3128317f7d5f92b15d188ae459"
     data-agent-id="agent_032a66d0c88bb08e2b5bd5969c"
     data-title="The Call Agent"
     data-color="#FFE000"
     data-bot-name="Call Agent"
-    data-popup-message="Bonjour ! Comment puis-je vous aider ?"
+    data-popup-message="Bonjour ! Je suis l’assistant IA de TheCallAgent. Comment puis-je vous aider ?"
     data-show-ai-popup="true"
     data-show-ai-popup-time="3"
   ></script>
 </head>
 <body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
 
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav>
@@ -55,11 +58,18 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html" class="nav-cta">Contactez-nous</a></li>
     </ul>
+    <div class="lang-switch" role="group" aria-label="Langue / Language / 语言">
+      <a href="404.html" hreflang="fr" lang="fr" aria-current="true" title="Français">FR</a>
+      <a href="/en/404.html" hreflang="en" lang="en" title="English">EN</a>
+      <a href="/zh/404.html" hreflang="zh-CN" lang="zh-CN" title="中文">中文</a>
+    </div>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
+
+<main id="contenu" tabindex="-1">
 
 <!-- ── Erreur 404 ──────────────────────────────────────────── -->
 <section class="section-pad" style="display:flex;align-items:center;justify-content:center;min-height:72vh;text-align:center;">
@@ -74,6 +84,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
@@ -112,9 +124,12 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 The Call Agent · Artigues-Près-Bordeaux, France</span>
-      <div style="display:flex;gap:20px;">
+      <div style="display:flex;flex-wrap:wrap;gap:8px 20px;">
         <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        <a href="avis-juridique.html">Avis juridique</a>
+        <a href="avis-juridique.html">Mentions légales</a>
+        <a href="conditions-generales.html">Conditions générales</a>
+        <a href="politique-de-remboursement.html">Remboursement</a>
+        <a href="politique-de-cookies.html#gerer">Gérer mes cookies</a>
       </div>
     </div>
   </div>

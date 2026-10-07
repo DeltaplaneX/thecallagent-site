@@ -20,6 +20,69 @@ function leadSucceeded(res, data) {
   return !!res && res.ok === true && !!data && data.success === true;
 }
 
+/* ── Libellés JS par langue ─────────────────────────────────
+   Les pages /en/ et /zh/ partagent ce fichier : la langue est lue sur
+   <html lang>. Le texte HTML est traduit dans chaque page ; seuls les
+   messages générés ici (formulaire, launcher Retell) passent par tcaT(). */
+const TCA_LANG = ((typeof document !== 'undefined' && document.documentElement.lang) || 'fr').slice(0, 2).toLowerCase();
+const TCA_I18N = {
+  fr: {
+    formRequired: 'Veuillez remplir tous les champs obligatoires.',
+    formConsent: 'Veuillez accepter la politique de confidentialité.',
+    formEmail: 'Adresse email invalide.',
+    formSending: 'Envoi en cours…',
+    formSent: 'Message envoyé ! Nous vous répondrons sous 24h.',
+    formError: 'Une erreur est survenue. Veuillez nous contacter directement par email.',
+    tpAria: 'Assistant IA de discussion',
+    tpTitle: 'Une question ? Assistant IA',
+    tpNote: 'Ce chat automatisé vous oriente vers la bonne offre. Il est fourni par Retell AI (États-Unis) et peut déposer des traceurs nécessaires à son fonctionnement. Rien n’est chargé sans votre accord ; retrait possible à tout moment.',
+    tpDetails: 'Détails',
+    tpDetailsHref: 'politique-de-cookies.html',
+    tpAccept: 'Ouvrir le chat',
+    tpRefuse: 'Non merci',
+    tpActivated: 'Assistant de discussion activé pour cette session.',
+    tpRevoked: 'Consentement retiré. Le chat Retell ne sera plus chargé automatiquement. Rechargez la page pour le désactiver immédiatement.'
+  },
+  en: {
+    formRequired: 'Please fill in all required fields.',
+    formConsent: 'Please accept the privacy policy.',
+    formEmail: 'Invalid email address.',
+    formSending: 'Sending…',
+    formSent: 'Message sent! We will get back to you within 24 hours.',
+    formError: 'Something went wrong. Please contact us directly by email.',
+    tpAria: 'AI chat assistant',
+    tpTitle: 'A question? AI assistant',
+    tpNote: 'This automated chat points you to the right offer. It is provided by Retell AI (United States) and may set trackers required for it to work. Nothing is loaded without your consent; you can withdraw it at any time.',
+    tpDetails: 'Details',
+    tpDetailsHref: '/en/cookie-policy.html',
+    tpAccept: 'Open the chat',
+    tpRefuse: 'No thanks',
+    tpActivated: 'Chat assistant enabled for this session.',
+    tpRevoked: 'Consent withdrawn. The Retell chat will no longer load automatically. Reload the page to disable it immediately.'
+  },
+  zh: {
+    formRequired: '请填写所有必填字段。',
+    formConsent: '请接受隐私政策。',
+    formEmail: '电子邮件地址无效。',
+    formSending: '发送中…',
+    formSent: '消息已发送！我们将在 24 小时内回复您。',
+    formError: '发生错误，请直接通过电子邮件联系我们。',
+    tpAria: 'AI 聊天助手',
+    tpTitle: '有问题？AI 助手',
+    tpNote: '此自动聊天可为您推荐合适的方案。它由 Retell AI（美国）提供，可能会设置其运行所需的跟踪器。未经您同意不会加载任何内容；您可随时撤回同意。',
+    tpDetails: '详情',
+    tpDetailsHref: '/zh/cookie-policy.html',
+    tpAccept: '打开聊天',
+    tpRefuse: '不用了，谢谢',
+    tpActivated: '本次会话已启用聊天助手。',
+    tpRevoked: '已撤回同意。Retell 聊天将不再自动加载。请刷新页面以立即停用。'
+  }
+};
+function tcaT(key) {
+  const dict = TCA_I18N[TCA_LANG] || TCA_I18N.fr;
+  return dict[key] !== undefined ? dict[key] : TCA_I18N.fr[key];
+}
+
 if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded', () => {
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -286,6 +349,22 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   if (form) {
     const WEBHOOK_URL = 'https://thecallagent-backend-production.up.railway.app/lead';
 
+    /* Accessibilite des erreurs (WCAG 3.3.1) : marque les champs fautifs,
+       les relie au message d'erreur (lu par les lecteurs d'ecran) et
+       place le focus sur le premier, au lieu d'un simple tremblement visuel. */
+    function flagInvalid(names) {
+      const errorMsg = form.querySelector('.form-msg.error');
+      if (errorMsg && !errorMsg.id) errorMsg.id = 'contact-form-error';
+      const fields = names.filter(Boolean)
+        .map(n => form.querySelector('[name="' + n + '"]'))
+        .filter(Boolean);
+      fields.forEach(el => {
+        el.setAttribute('aria-invalid', 'true');
+        if (errorMsg) el.setAttribute('aria-describedby', errorMsg.id);
+      });
+      if (fields[0]) fields[0].focus();
+    }
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('.form-submit');
@@ -294,6 +373,10 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
 
       if (successMsg) successMsg.style.display = 'none';
       if (errorMsg) errorMsg.style.display = 'none';
+      form.querySelectorAll('[aria-invalid]').forEach(el => {
+        el.removeAttribute('aria-invalid');
+        el.removeAttribute('aria-describedby');
+      });
 
       const name    = form.querySelector('[name="name"]').value.trim();
       const email   = form.querySelector('[name="email"]').value.trim();
@@ -303,22 +386,26 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       const consent = form.querySelector('[name="consent"]').checked;
 
       if (!name || !email || !message) {
-        if (errorMsg) { errorMsg.textContent = 'Veuillez remplir tous les champs obligatoires.'; errorMsg.style.display = 'block'; }
+        if (errorMsg) { errorMsg.textContent = tcaT('formRequired'); errorMsg.style.display = 'block'; }
+        flagInvalid([!name && 'name', !email && 'email', !message && 'message']);
         shakeElement(btn);
         return;
       }
       if (!consent) {
-        if (errorMsg) { errorMsg.textContent = 'Veuillez accepter la politique de confidentialité.'; errorMsg.style.display = 'block'; }
+        if (errorMsg) { errorMsg.textContent = tcaT('formConsent'); errorMsg.style.display = 'block'; }
+        flagInvalid(['consent']);
         shakeElement(btn);
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        if (errorMsg) { errorMsg.textContent = 'Adresse email invalide.'; errorMsg.style.display = 'block'; }
+        if (errorMsg) { errorMsg.textContent = tcaT('formEmail'); errorMsg.style.display = 'block'; }
+        flagInvalid(['email']);
         shakeElement(form.querySelector('[name="email"]'));
         return;
       }
 
-      btn.textContent = 'Envoi en cours…';
+      const btnLabel = btn.textContent;        // libellé traduit dans le HTML
+      btn.textContent = tcaT('formSending');
       btn.disabled = true;
 
       try {
@@ -330,7 +417,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
         let data = null;
         try { data = await res.json(); } catch (_) { /* non-JSON body */ }
         if (leadSucceeded(res, data)) {
-          if (successMsg) { successMsg.textContent = 'Message envoyé ! Nous vous répondrons sous 24h.'; successMsg.style.display = 'block'; }
+          if (successMsg) { successMsg.textContent = tcaT('formSent'); successMsg.style.display = 'block'; }
           form.reset();
           btn.style.transform = 'scale(1.05)';
           setTimeout(() => { btn.style.transform = ''; }, 300);
@@ -338,9 +425,9 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
           throw new Error('Erreur serveur');
         }
       } catch (err) {
-        if (errorMsg) { errorMsg.textContent = 'Une erreur est survenue. Veuillez nous contacter directement par email.'; errorMsg.style.display = 'block'; }
+        if (errorMsg) { errorMsg.textContent = tcaT('formError'); errorMsg.style.display = 'block'; }
       } finally {
-        btn.textContent = 'Envoyer le message';
+        btn.textContent = btnLabel;
         btn.disabled = false;
       }
     });
@@ -397,8 +484,13 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     let lastSeekAt = 0;
     let lastFrameIndex = -1;
     let scrubStarted = false;
+    let playbackFallback = false;   // scrub impossible -> lecture en boucle
+    let seekedOnce = false;
+    let pendingSeekSince = 0;
+    let seekWatchdog = 0;
     const VIDEO_FPS = 30;
     const SEEK_INTERVAL_MS = 1000 / VIDEO_FPS;
+    const SEEK_TIMEOUT_MS = 3000;
 
     function calcProgress() {
       const rect = scrollSection.getBoundingClientRect();
@@ -415,6 +507,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     }
 
     function seekToProgress(progress, force = false) {
+      if (playbackFallback) return;
       const targetTime = getTargetTime(progress);
       if (!Number.isFinite(targetTime)) return;
       const frameIndex = Math.round(targetTime * VIDEO_FPS);
@@ -423,6 +516,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       const frameTime = Math.min(getTargetTime(1), frameIndex / VIDEO_FPS);
       if (Math.abs(frameTime - scrollVideoEl.currentTime) > 0.012) {
         try {
+          if (!pendingSeekSince) pendingSeekSince = performance.now();
           scrollVideoEl.currentTime = frameTime;
         } catch (_) {
           // Ignore transient seek errors while the browser finishes buffering metadata.
@@ -449,6 +543,37 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       scheduleSeek(false);
     }
 
+    /* Repli : si aucun seek n'aboutit alors que des données sont là
+       (serveur sans HTTP Range, webview in-app, décodeur qui refuse le
+       scrub), on lit la vidéo en boucle plutôt que de laisser une image
+       figée ou noire. */
+    function fallbackToPlayback() {
+      if (playbackFallback) return;
+      playbackFallback = true;
+      if (seekWatchdog) { clearInterval(seekWatchdog); seekWatchdog = 0; }
+      window.removeEventListener('scroll', updateScrollProgress);
+      window.removeEventListener('resize', updateScrollProgress);
+      scrollVideoEl.loop = true;
+      const attempt = scrollVideoEl.play();
+      if (attempt && typeof attempt.catch === 'function') attempt.catch(() => {});
+    }
+
+    function startSeekWatchdog() {
+      if (seekWatchdog || seekedOnce) return;
+      seekWatchdog = setInterval(() => {
+        if (seekedOnce) { clearInterval(seekWatchdog); seekWatchdog = 0; return; }
+        if (scrollVideoEl.readyState < 2 || !pendingSeekSince) return;   // pas encore de données : on attend
+        const r = scrollVideoEl.seekable;
+        const noRange = r.length === 0 || r.end(r.length - 1) <= 0;
+        if (noRange || performance.now() - pendingSeekSince > SEEK_TIMEOUT_MS) fallbackToPlayback();
+      }, 500);
+    }
+
+    scrollVideoEl.addEventListener('seeked', () => { seekedOnce = true; pendingSeekSince = 0; });
+    // Source illisible (codec, 404, réseau) : on masque le lecteur, le poster
+    // en fond CSS de .scroll-video-sticky reste visible.
+    scrollVideoEl.addEventListener('error', () => { scrollSection.classList.add('video-failed'); });
+
     function startScrub() {
       if (scrubStarted) return;
       scrubStarted = true;
@@ -458,6 +583,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       seekToProgress(scrollProgress, true);
       window.addEventListener('scroll', updateScrollProgress, { passive: true });
       window.addEventListener('resize', updateScrollProgress, { passive: true });
+      startSeekWatchdog();
     }
 
     function primeVideoThenScrub() {
@@ -489,18 +615,25 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       scrollVideoEl.addEventListener('loadedmetadata', initScrollVideo, { once: true });
     }
 
-    // iOS Low Power Mode bloque l'autoplay : la vidéo reste sur le poster
-    // (readyState 0) tant qu'un play() n'est pas déclenché par un geste.
-    window.addEventListener('touchstart', () => {
-      if (scrollVideoEl.readyState >= 2) return;
+    // iOS Low Power Mode et certaines webviews bloquent l'autoplay : la vidéo
+    // reste sur le poster (readyState 0) tant qu'un play() n'est pas déclenché
+    // par un vrai geste. Sur WebKit, touchstart seul ne vaut pas activation :
+    // on écoute aussi touchend / click / keydown, jusqu'au premier succès.
+    const unlockEvents = ['touchend', 'touchstart', 'click', 'keydown'];
+    function removeUnlock() { unlockEvents.forEach(ev => window.removeEventListener(ev, unlockOnGesture)); }
+    function unlockOnGesture() {
+      if (scrollVideoEl.readyState >= 2) { removeUnlock(); return; }
       const attempt = scrollVideoEl.play();
       if (attempt && typeof attempt.then === 'function') {
         attempt.then(() => {
+          removeUnlock();
+          if (playbackFallback) return;        // la lecture en boucle continue
           scrollVideoEl.pause();
           seekToProgress(calcProgress(), true);
         }).catch(() => {});
       }
-    }, { once: true, passive: true });
+    }
+    unlockEvents.forEach(ev => window.addEventListener(ev, unlockOnGesture, { passive: true }));
   }
 
   /* ── Smooth reveal for hero on load ───────────────────── */
@@ -583,6 +716,18 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
         const slug = t.getAttribute('data-modal');
         if (slug) openModal(slug, t);
       });
+
+      /* Accessibilite clavier (WCAG 2.1.1) : ces declencheurs sont des
+         <article role="button" tabindex="0">, pas des <button> natifs.
+         Enter et Espace ne declenchent donc PAS 'click' tout seuls :
+         il faut les cabler a la main, sinon la fiche est focusable
+         mais impossible a ouvrir sans souris. */
+      t.addEventListener('keydown', (e) => {
+        if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+        e.preventDefault(); // Espace ferait defiler la page
+        const slug = t.getAttribute('data-modal');
+        if (slug) openModal(slug, t);
+      });
     });
 
     closeBtn.addEventListener('click', closeModal);
@@ -617,3 +762,112 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { leadSucceeded };
 }
+/* ─────────────────────────────────────────────────────────
+   Services tiers charges AU CLIC (CNIL, art. 82 loi I&L)
+   Retell AI (chat ecrit d'orientation) et Google Calendar (iframe) peuvent
+   deposer des traceurs : rien n'est charge tant que le visiteur
+   n'a pas clique sur un bouton qui l'informe du service tiers.
+   Le choix Retell est memorise pour la session (sessionStorage),
+   retirable depuis politique-de-cookies.html ([data-tp-revoke]).
+   ───────────────────────────────────────────────────────── */
+(function thirdPartyOnClick() {
+  if (typeof document === 'undefined') return;   // require() sans DOM (tests Node)
+  const RETELL_KEY = 'tca-consent-retell';
+  const RETELL_DISMISS_KEY = 'tca-consent-retell-refus';
+
+  function remember(key, on) {
+    try { on ? sessionStorage.setItem(key, '1') : sessionStorage.removeItem(key); } catch (_) { /* stockage bloque */ }
+  }
+  function remembered(key) {
+    try { return sessionStorage.getItem(key) === '1'; } catch (_) { return false; }
+  }
+
+  // Retell : recree une vraie <script type="module"> a partir du stub inerte.
+  function loadRetell(stub) {
+    if (stub.dataset.loaded) return;
+    stub.dataset.loaded = '1';
+    const s = document.createElement('script');
+    Array.from(stub.attributes).forEach(({ name, value }) => {
+      if (['id', 'type', 'data-type', 'data-consent-src', 'data-loaded'].includes(name)) return;
+      s.setAttribute(name, value);
+    });
+    stub.removeAttribute('id');            // le widget se lit par cet id
+    s.id = 'retell-widget';
+    s.type = stub.dataset.type || 'module';
+    s.src = stub.dataset.consentSrc;
+    document.head.appendChild(s);
+  }
+
+  function mountRetellLauncher(stub) {
+    // Information CNIL affichee AVANT tout chargement : identite du tiers,
+    // finalite, traceurs, consequence du refus, droit de retrait.
+    // Accepter et refuser ont la meme taille et le meme poids.
+    const wrap = document.createElement('div');
+    wrap.className = 'tp-launcher';
+    wrap.setAttribute('role', 'region');
+    wrap.setAttribute('aria-label', tcaT('tpAria'));
+    wrap.innerHTML =
+      '<p class="tp-launcher-ttl">' + tcaT('tpTitle') + '</p>' +
+      '<p class="tp-launcher-note">' + tcaT('tpNote') + ' ' +
+      '<a href="' + tcaT('tpDetailsHref') + '">' + tcaT('tpDetails') + '</a></p>' +
+      '<div class="tp-launcher-actions">' +
+      '<button type="button" class="tp-launcher-btn" data-tp="accept">' + tcaT('tpAccept') + '</button>' +
+      '<button type="button" class="tp-launcher-btn tp-launcher-btn--alt" data-tp="refuse">' + tcaT('tpRefuse') + '</button>' +
+      '</div>';
+    wrap.querySelector('[data-tp="accept"]').addEventListener('click', () => {
+      remember(RETELL_KEY, true);
+      wrap.remove();
+      loadRetell(stub);
+    });
+    wrap.querySelector('[data-tp="refuse"]').addEventListener('click', () => {
+      remember(RETELL_DISMISS_KEY, true);   // memorise le refus pour la session
+      wrap.remove();
+    });
+    document.body.appendChild(wrap);
+  }
+
+  function init() {
+    const stub = document.getElementById('retell-widget');
+    if (stub && stub.dataset.consentSrc) {
+      if (remembered(RETELL_KEY)) loadRetell(stub);
+      else if (!remembered(RETELL_DISMISS_KEY) || document.querySelector('[data-tp-activate]')) mountRetellLauncher(stub);
+    }
+
+    const iframe = document.getElementById('booking-iframe');
+    const gate = document.getElementById('calendar-consent');
+    const gateBtn = document.getElementById('calendar-consent-btn');
+    if (iframe && gate && gateBtn && iframe.dataset.consentSrc) {
+      gateBtn.addEventListener('click', () => {
+        gate.remove();                        // revele le loader existant
+        iframe.src = iframe.dataset.consentSrc;
+        iframe.focus();
+      });
+    }
+
+    // Activation explicite depuis la page politique de cookies.
+    document.querySelectorAll('[data-tp-activate]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!stub) return;
+        remember(RETELL_KEY, true);
+        const l = document.querySelector('.tp-launcher');
+        if (l) l.remove();
+        loadRetell(stub);
+        const out = document.querySelector('[data-tp-revoke-status]');
+        if (out) out.textContent = tcaT('tpActivated');
+      });
+    });
+
+    // Retrait du consentement (page politique de cookies).
+    document.querySelectorAll('[data-tp-revoke]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        remember(RETELL_KEY, false);
+        remember(RETELL_DISMISS_KEY, false);
+        const out = document.querySelector('[data-tp-revoke-status]');
+        if (out) out.textContent = tcaT('tpRevoked');
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
