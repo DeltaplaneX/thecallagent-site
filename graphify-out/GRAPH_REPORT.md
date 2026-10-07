@@ -1,11 +1,11 @@
-# Graph Report - thecallagent-site  (2026-09-18)
+# Graph Report - thecallagent-site  (2026-10-08)
 
 ## Corpus Check
-- 7 files · ~309,371 words
+- 7 files · ~349,538 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1671 nodes · 5054 edges · 48 communities detected
+- 1682 nodes · 5071 edges · 44 communities detected
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
@@ -54,10 +54,6 @@
 - [[_COMMUNITY_Community 41|Community 41]]
 - [[_COMMUNITY_Community 42|Community 42]]
 - [[_COMMUNITY_Community 43|Community 43]]
-- [[_COMMUNITY_Community 44|Community 44]]
-- [[_COMMUNITY_Community 45|Community 45]]
-- [[_COMMUNITY_Community 46|Community 46]]
-- [[_COMMUNITY_Community 47|Community 47]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `jS()` - 1367 edges
@@ -73,248 +69,232 @@
 
 ## Surprising Connections (you probably didn't know these)
 - `da()` --calls--> `jS()`  [EXTRACTED]
-  cached-bundle.js → cached-bundle.js  _Bridges community 1 → community 0_
+  cached-bundle.js → cached-bundle.js  _Bridges community 2 → community 10_
+- `jS()` --calls--> `gw()`  [EXTRACTED]
+  cached-bundle.js → cached-bundle.js  _Bridges community 2 → community 0_
 - `_w()` --calls--> `jS()`  [EXTRACTED]
-  cached-bundle.js → cached-bundle.js  _Bridges community 1 → community 2_
+  cached-bundle.js → cached-bundle.js  _Bridges community 2 → community 4_
 - `jS()` --calls--> `Le()`  [EXTRACTED]
-  cached-bundle.js → cached-bundle.js  _Bridges community 1 → community 22_
+  cached-bundle.js → cached-bundle.js  _Bridges community 2 → community 22_
 - `_()` --calls--> `i()`  [EXTRACTED]
-  cached-bundle.js → cached-bundle.js  _Bridges community 4 → community 2_
-- `_g()` --calls--> `_()`  [EXTRACTED]
-  cached-bundle.js → cached-bundle.js  _Bridges community 4 → community 0_
+  cached-bundle.js → cached-bundle.js  _Bridges community 1 → community 3_
 
 ## Communities
 
 ### Community 0 - "Community 0"
 Cohesion: 0.02
-Nodes (193): $4(), a0(), Aa(), ac(), add(), Ag(), aj(), aS() (+185 more)
+Nodes (188): $4(), a0(), A2(), Aa(), Af(), Ag(), aj(), ak() (+180 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.01
-Nodes (33): Aie(), bx(), DN(), ege(), Eie(), Fle(), goe(), Hle() (+25 more)
+Cohesion: 0.02
+Nodes (153): _(), a0e(), A6(), aee(), ale(), An(), Ave(), awe() (+145 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.03
-Nodes (120): A2(), addObserver(), az(), bindMethods(), build(), cancel(), canRun(), Cj() (+112 more)
+Cohesion: 0.01
+Nodes (35): Aie(), bx(), Cge(), dge(), DN(), ege(), Eie(), Fle() (+27 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.03
-Nodes (36): Bz(), C6(), Cle(), cxe(), F3(), fg(), g1, gq() (+28 more)
+Nodes (116): add(), addObserver(), az(), bde(), bindMethods(), build(), cancel(), canRun() (+108 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.04
-Nodes (100): _(), A6(), ale(), An(), b(), Bc(), bD(), Bg() (+92 more)
+Nodes (93): $0(), _5(), a5(), aB(), ac(), ah(), B5(), bj() (+85 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.06
-Nodes (23): Dle(), Em(), ey(), gde(), gS(), Gu, gV(), Hi() (+15 more)
+Nodes (23): Em(), ey(), gde(), gS(), Gu, gV(), Hi(), iV() (+15 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.04
-Nodes (87): Af(), ak(), Ao(), bl(), Br(), BS(), c0(), Ca() (+79 more)
+Cohesion: 0.05
+Nodes (5): g1, gq(), jle(), sq, Yg
 
 ### Community 7 - "Community 7"
 Cohesion: 0.03
-Nodes (73): _9(), aD(), ahe(), ai(), aV(), B7(), bt(), Bve() (+65 more)
+Nodes (86): a_(), Ade(), ape(), bD(), ble(), bpe(), bse(), bV() (+78 more)
 
 ### Community 8 - "Community 8"
-Cohesion: 0.06
-Nodes (77): $0(), _5(), a5(), aB(), B5(), bj(), Bm(), Bu() (+69 more)
+Cohesion: 0.05
+Nodes (67): _0e(), $8(), _9(), A8(), abe(), ahe(), B1e(), b8() (+59 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.04
-Nodes (74): a_(), Ade(), Afe(), ape(), Ave(), bde(), ble(), bse() (+66 more)
+Cohesion: 0.06
+Nodes (38): Aq(), ax(), b0e(), cD(), cn(), Cq(), dC(), Dle() (+30 more)
 
 ### Community 10 - "Community 10"
-Cohesion: 0.04
-Nodes (57): aee(), aP, aue(), awe(), bae(), BP(), bue(), CS() (+49 more)
+Cohesion: 0.05
+Nodes (55): aL(), aT(), bE(), Bz(), C6(), da(), dT(), f4() (+47 more)
 
 ### Community 11 - "Community 11"
-Cohesion: 0.08
-Nodes (26): Aq(), cn(), Cq(), Dve(), Dz(), Eq(), gT(), hT() (+18 more)
+Cohesion: 0.04
+Nodes (24): a3(), bbe(), bme(), bq(), eA(), hm(), hq, hV() (+16 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.06
-Nodes (56): _0e(), $8(), A8(), abe(), B1e(), b8(), BF(), C8() (+48 more)
+Cohesion: 0.05
+Nodes (57): ai(), Ase(), bt(), _ce(), clamp(), de(), displayable(), Dj() (+49 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.06
-Nodes (10): bq(), hq, hV(), JR, Kq(), qq(), vq(), XQ() (+2 more)
+Cohesion: 0.07
+Nodes (38): _3(), aD(), Are(), bA(), Ej(), fxe(), getObserversCount(), gm() (+30 more)
 
 ### Community 14 - "Community 14"
-Cohesion: 0.07
-Nodes (30): a3(), _ae(), bbe(), bme(), bO(), Cae(), eA(), eae() (+22 more)
+Cohesion: 0.08
+Nodes (29): c3(), cxe(), d3(), dx(), exe(), fX(), gfe(), gue() (+21 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.09
-Nodes (28): Ase(), Cge(), dge(), displayable(), dP(), dse(), Ese(), fse() (+20 more)
+Cohesion: 0.1
+Nodes (16): calcProgress(), getTargetTime(), init(), initScrollVideo(), loadRetell(), mountRetellLauncher(), primeVideoThenScrub(), remembered() (+8 more)
 
 ### Community 16 - "Community 16"
 Cohesion: 0.09
-Nodes (25): aL(), aye(), bye(), clear(), cye(), dae(), dye(), ed() (+17 more)
+Nodes (26): Afe(), aye(), Cfe(), clear(), cye(), dae(), dye(), ed() (+18 more)
 
 ### Community 17 - "Community 17"
-Cohesion: 0.12
-Nodes (25): _3(), ah(), Are(), bA(), fxe(), gm(), ime(), io() (+17 more)
+Cohesion: 0.09
+Nodes (22): aP, BB(), cI(), Dce(), e5(), fb(), ffe(), Hce() (+14 more)
 
 ### Community 18 - "Community 18"
-Cohesion: 0.1
-Nodes (23): a0e(), E0e(), e3(), fC(), Hbe(), HC(), Ic(), l3() (+15 more)
+Cohesion: 0.09
+Nodes (24): aue(), bae(), bue(), cue(), cV(), Do(), due(), eue() (+16 more)
 
 ### Community 19 - "Community 19"
-Cohesion: 0.16
-Nodes (8): calcProgress(), getTargetTime(), initScrollVideo(), primeVideoThenScrub(), scheduleSeek(), seekToProgress(), startScrub(), updateScrollProgress()
+Cohesion: 0.11
+Nodes (19): aV(), B7(), Bve(), F7(), fP(), ia(), iM(), jV() (+11 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.13
-Nodes (17): BB(), cI(), Dce(), e5(), fb(), ffe(), Hce(), Hd() (+9 more)
+Nodes (19): e3(), fC(), Hbe(), HC(), Ic(), l3(), mX(), oC() (+11 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.18
-Nodes (14): c3(), exe(), gfe(), ixe(), kD(), Mwe(), nh(), nxe() (+6 more)
+Cohesion: 0.11
+Nodes (18): aae(), bO(), DB(), DI(), eae(), FI(), gae(), iae() (+10 more)
 
 ### Community 22 - "Community 22"
-Cohesion: 0.18
-Nodes (12): h1(), i3(), ibe(), jL(), kbe(), Le(), Mm(), n3() (+4 more)
+Cohesion: 0.14
+Nodes (16): cme(), eme(), gye(), h1(), i3(), ibe(), Jpe(), Le() (+8 more)
 
 ### Community 23 - "Community 23"
+Cohesion: 0.18
+Nodes (16): fE(), Gve(), ipe(), kV(), Kve(), lA(), mfe(), pD() (+8 more)
+
+### Community 24 - "Community 24"
+Cohesion: 0.14
+Nodes (13): Cae(), eve(), Gme(), Gx(), jve(), kae(), LI(), Ove() (+5 more)
+
+### Community 25 - "Community 25"
+Cohesion: 0.17
+Nodes (12): _ae(), Ec(), F3(), gxe(), hxe(), mxe(), Owe(), pxe() (+4 more)
+
+### Community 26 - "Community 26"
 Cohesion: 0.17
 Nodes (12): e1e(), Gwe(), KC(), kwe(), ky(), Ny(), qwe(), r1e() (+4 more)
 
-### Community 24 - "Community 24"
-Cohesion: 0.17
-Nodes (12): bpe(), fX(), gpe(), gue(), Kue(), lxe(), mce(), mue() (+4 more)
-
-### Community 25 - "Community 25"
-Cohesion: 0.2
-Nodes (11): ax(), b0e(), cD(), dC(), f0e(), Gte(), Pte(), Te() (+3 more)
-
-### Community 26 - "Community 26"
-Cohesion: 0.2
-Nodes (11): Fbe(), iX(), Jfe(), NX(), Qfe(), Tbe(), tx(), Xfe() (+3 more)
-
 ### Community 27 - "Community 27"
-Cohesion: 0.25
-Nodes (8): aae(), DI(), gae(), Jae(), oae(), sae(), vae(), yae()
+Cohesion: 0.22
+Nodes (10): ehe(), GE(), jge(), jL(), kbe(), n3(), r3(), Sge() (+2 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.29
-Nodes (8): getObserversCount(), isActive(), isDisabled(), isStale(), isStatic(), Oj(), Pj(), Wu()
+Cohesion: 0.33
+Nodes (6): BP(), Cj(), ensureInfiniteQueryData(), fetchInfiniteQuery(), prefetchInfiniteQuery(), zP()
 
 ### Community 29 - "Community 29"
-Cohesion: 0.25
-Nodes (8): Ec(), gxe(), mxe(), Owe(), S3(), u3(), vm(), vxe()
-
-### Community 30 - "Community 30"
 Cohesion: 0.33
 Nodes (6): Dne(), Fne(), nne(), Tne(), yne(), zre()
 
-### Community 31 - "Community 31"
-Cohesion: 0.4
-Nodes (5): DB(), iB(), nae(), Sse(), yse()
-
-### Community 32 - "Community 32"
+### Community 30 - "Community 30"
 Cohesion: 0.9
 Nodes (4): copyDir(), copyDirFromUrl(), copyFile(), exists()
 
-### Community 33 - "Community 33"
+### Community 31 - "Community 31"
 Cohesion: 0.6
 Nodes (4): isolate_solutions_block(), main(), Return (start, end) char span of the footer <h5>Solutions</h5> <ul>...</ul>., rewrite_block()
 
-### Community 34 - "Community 34"
+### Community 32 - "Community 32"
 Cohesion: 0.5
 Nodes (4): jme(), oA(), Sme(), zme()
 
-### Community 35 - "Community 35"
+### Community 33 - "Community 33"
 Cohesion: 0.5
 Nodes (4): Dy(), moe(), Uoe(), vF()
 
-### Community 36 - "Community 36"
-Cohesion: 0.67
-Nodes (3): Qne(), Vne(), wne()
-
-### Community 37 - "Community 37"
+### Community 34 - "Community 34"
 Cohesion: 0.67
 Nodes (1): jq
 
-### Community 38 - "Community 38"
-Cohesion: 0.67
-Nodes (3): Hge(), WA(), wge()
-
-### Community 39 - "Community 39"
-Cohesion: 1.0
-Nodes (1): Zm
-
-### Community 40 - "Community 40"
-Cohesion: 1.0
-Nodes (1): y1
-
-### Community 41 - "Community 41"
-Cohesion: 1.0
-Nodes (1): Wf
-
-### Community 42 - "Community 42"
-Cohesion: 1.0
-Nodes (1): cB()
-
-### Community 43 - "Community 43"
+### Community 35 - "Community 35"
 Cohesion: 1.0
 Nodes (1): sp()
 
-### Community 44 - "Community 44"
-Cohesion: 1.0
-Nodes (1): eP
-
-### Community 45 - "Community 45"
-Cohesion: 1.0
-Nodes (1): b1
-
-### Community 46 - "Community 46"
+### Community 36 - "Community 36"
 Cohesion: 1.0
 Nodes (1): lB()
 
-### Community 47 - "Community 47"
+### Community 37 - "Community 37"
+Cohesion: 1.0
+Nodes (1): Wf
+
+### Community 38 - "Community 38"
+Cohesion: 1.0
+Nodes (1): eP
+
+### Community 39 - "Community 39"
+Cohesion: 1.0
+Nodes (1): b1
+
+### Community 40 - "Community 40"
 Cohesion: 1.0
 Nodes (1): m1
+
+### Community 41 - "Community 41"
+Cohesion: 1.0
+Nodes (1): cB()
+
+### Community 42 - "Community 42"
+Cohesion: 1.0
+Nodes (1): y1
+
+### Community 43 - "Community 43"
+Cohesion: 1.0
+Nodes (1): Zm
 
 ## Knowledge Gaps
 - **1 isolated node(s):** `Return (start, end) char span of the footer <h5>Solutions</h5> <ul>...</ul>.`
   These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 37`** (3 nodes): `jq`, `.constructor()`, `.toJSON()`
+- **Thin community `Community 34`** (3 nodes): `jq`, `.constructor()`, `.toJSON()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 39`** (2 nodes): `Zm`, `.constructor()`
+- **Thin community `Community 35`** (2 nodes): `sp()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 40`** (2 nodes): `y1`, `.constructor()`
+- **Thin community `Community 36`** (2 nodes): `lB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 41`** (2 nodes): `Wf`, `.constructor()`
+- **Thin community `Community 37`** (2 nodes): `Wf`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 42`** (2 nodes): `cB()`, `.constructor()`
+- **Thin community `Community 38`** (2 nodes): `eP`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 43`** (2 nodes): `sp()`, `.constructor()`
+- **Thin community `Community 39`** (2 nodes): `b1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 44`** (2 nodes): `eP`, `.constructor()`
+- **Thin community `Community 40`** (2 nodes): `m1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 45`** (2 nodes): `b1`, `.constructor()`
+- **Thin community `Community 41`** (2 nodes): `cB()`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 46`** (2 nodes): `lB()`, `.constructor()`
+- **Thin community `Community 42`** (2 nodes): `y1`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 47`** (2 nodes): `m1`, `.constructor()`
+- **Thin community `Community 43`** (2 nodes): `Zm`, `.constructor()`
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `jS()` connect `Community 1` to `Community 0`, `Community 2`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 9`, `Community 10`, `Community 11`, `Community 12`, `Community 13`, `Community 14`, `Community 15`, `Community 16`, `Community 17`, `Community 18`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 24`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 30`, `Community 31`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`, `Community 44`, `Community 45`, `Community 46`, `Community 47`?**
-  _High betweenness centrality (0.918) - this node is a cross-community bridge._
-- **Why does `sq` connect `Community 3` to `Community 1`, `Community 2`, `Community 11`, `Community 13`?**
+- **Why does `jS()` connect `Community 2` to `Community 0`, `Community 1`, `Community 3`, `Community 4`, `Community 5`, `Community 6`, `Community 7`, `Community 8`, `Community 9`, `Community 10`, `Community 11`, `Community 12`, `Community 13`, `Community 14`, `Community 16`, `Community 17`, `Community 18`, `Community 19`, `Community 20`, `Community 21`, `Community 22`, `Community 23`, `Community 24`, `Community 25`, `Community 26`, `Community 27`, `Community 28`, `Community 29`, `Community 32`, `Community 33`, `Community 34`, `Community 35`, `Community 36`, `Community 37`, `Community 38`, `Community 39`, `Community 40`, `Community 41`, `Community 42`, `Community 43`?**
+  _High betweenness centrality (0.912) - this node is a cross-community bridge._
+- **Why does `sq` connect `Community 6` to `Community 10`, `Community 9`, `Community 2`, `Community 11`?**
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **Why does `g1` connect `Community 3` to `Community 1`, `Community 14`, `Community 9`?**
+- **Why does `g1` connect `Community 6` to `Community 24`, `Community 2`, `Community 7`?**
   _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **What connects `Return (start, end) char span of the footer <h5>Solutions</h5> <ul>...</ul>.` to the rest of the system?**
   _1 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.02 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.01 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.02 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.03 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.01 - nodes in this community are weakly interconnected._
