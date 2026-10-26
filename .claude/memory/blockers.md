@@ -28,3 +28,10 @@ schema: "ID | Date | Friction | Cause | Solution | Statut"
 - **Cause réelle** : `origin/main` figé à bb86edc (29/06) ; Vercel déploie `main` depuis GitHub ; la note vault indiquait IONOS → personne ne pensait que le push déployait.
 - **Solution** : push de `main` (fix vidéo + i18n + légal) ; durcissement supplémentaire du scrub (geste touchend/click, watchdog seek → lecture en boucle, poster en fond CSS, `.video-failed`).
 - **Statut** : résolu
+
+### BLK-002 — Prise de RDV du chat hors service (n8n)
+- **Date** : 2026-10-26
+- **Friction** : les fonctions de l'agent chat pointaient vers `odilonbuisson.app.n8n.cloud` (instance supprimée, 404) ; repointées vers n8n Railway, elles répondent 200 vide.
+- **Cause réelle** : logs Railway (projet `zoological-education`, service `n8n`) : « Credentials could not be decrypted… different encryptionKey » depuis au moins le 01/10 → aucun nœud Google Calendar / Gmail / Twilio / Airtable ne s'exécute (touche probablement tous les workflows migrés).
+- **Solution** : action Odilon — remettre l'ancienne `N8N_ENCRYPTION_KEY` ou recréer les credentials (OAuth Google à refaire). Garde-fou côté agent en attendant.
+- **Statut** : ouvert

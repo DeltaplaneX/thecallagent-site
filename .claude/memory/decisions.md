@@ -54,3 +54,9 @@ schema: "ID | Date | Titre | Décision | Pourquoi | Alternatives | Statut"
 - **Date** : 2026-10-08
 - **Constat** : `thecallagent.com` est servi par Vercel (`Server: Vercel`, alias `thecallagent-site-git-main-…vercel.app`), projet `thecallagent-site` (compte deltaplanex). La note vault disait IONOS (seulement le DNS/domaine). Un `git push origin main` déclenche le déploiement ; `dist/` + scripts Deno = chemin alternatif non utilisé en prod.
 - **Conséquence** : « push à la fin » = mise en prod. Vérifier après chaque push : `curl -sI https://thecallagent.com/js/main.js` (Last-Modified) et une page nouvelle.
+
+### BDR-004 — Chat du site : un seul agent Retell multilingue piloté par `{{site_language}}`
+- **Date** : 2026-10-26
+- **Décision** : l'agent chat `agent_032a66d0c88bb08e2b5bd5969c` (LLM `llm_a45837a39901a7fd8ce3a826925f`, v7 publiée) sert FR/EN/ZH. `js/main.js` envoie `data-dynamic {"site_language": "French|English|Simplified Chinese"}` (depuis `<html lang>`) ; le prompt ouvre dans cette langue puis suit la langue du visiteur ; défaut LLM `site_language = French`. Fonctions `check_slots` / `save_booking` → n8n Railway `n8n-production-57cc` (paths inchangés). L'agent ne confirme jamais un RDV sans réponse explicite du webhook.
+- **Pourquoi** : 3 agents à maintenir = 3 prompts qui divergent ; le widget ne fixe pas de version → la dernière version publiée part en prod immédiatement.
+- **Conséquence** : modifier le prompt via `retell update-retell-llm` (brouillon) → tester avec `create-chat --agent-version N` → `publish-agent-version`. Garder les paramètres de fonction en français (n8n les attend ainsi).

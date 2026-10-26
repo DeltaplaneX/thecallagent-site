@@ -132,5 +132,11 @@ Site (js/main.js) :
 - [x] Vérif navigateur (localhost, page EN) : 1 clic = conversation ouverte ; 3 clics rapides = 1 seul create-chat ; script bloqué = message + lien contact ; `node --test tests/*.test.js` 11/11
 
 Retell (accès API requis — MCP retellai en panne « Deno exited before being ready ») :
-- [ ] Prompt : règle de langue avec `{{site_language}}`, retirer le vocabulaire « appel »
-- [ ] Inventaire + test des fonctions de l'agent (prise de RDV / lead : effets réels → accord d'Odilon)
+- [x] Prompt : règle de langue avec `{{site_language}}`, retirer le vocabulaire « appel »
+- [x] Inventaire + test des fonctions de l'agent (prise de RDV / lead : effets réels → accord d'Odilon)
+
+Résultat Retell (2026-10-26, CLI `retell` authentifié avec la clé `claude_code1`) — agent v7 publié :
+- Cause du « français seulement » : le prompt imposait « Répondez toujours en français » (2 fois) et contenait le prompt EN DOUBLE (réponse d'IA collée au milieu). Prompt dédoublonné (14 893 → 9 882 car.), règle de langue `{{site_language}}` (défaut French), chat écrit ≠ appel, langues agent fr-FR/en-US/zh-CN.
+- Tests (create-chat + completion) : EN→anglais, ZH→chinois, FR→français, page EN + visiteur FR → bascule en français. Chat sans version (comme le widget) + ZH → accueil en chinois.
+- Fonctions : `check_slots` / `save_booking` pointaient vers n8n cloud supprimé (404 « No instance here ») → repointées vers n8n Railway (mêmes paths). MAIS n8n Railway ne peut plus déchiffrer ses credentials (« different encryptionKey ») → les 2 webhooks répondent 200 vide, rien n'est créé. Garde-fou ajouté : l'agent ne confirme plus un RDV sans accusé de réception et renvoie vers odilon.buisson@thecallagent.com.
+- Reste (Odilon) : restaurer `N8N_ENCRYPTION_KEY` d'origine sur Railway (projet zoological-education) ou recréer les credentials Google Calendar / Gmail / Twilio / Airtable ; corriger le SMS de « save booking call agent » (« votre menuiserie »).

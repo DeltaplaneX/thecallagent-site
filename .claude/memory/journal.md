@@ -306,7 +306,7 @@ project: thecallagent-site
 
 > Session fermée à 19:47
 
-> Session fermée à 17:32
+> Session fermée à 17:52
 
 ## 2026-06-13
 - fix: optimize 0404 video for scroll scrub
@@ -1092,3 +1092,134 @@ project: thecallagent-site
 - Vidéo : repli poster en fond, suppression `translateZ/backface-visibility`, déverrouillage touchend/click/keydown, watchdog seek → lecture en boucle, `.video-failed`. Scrub vérifié dans Chromium (currentTime suit le scroll, 0 erreur).
 - Test `node --test tests/lead-response.test.js` 6/6 (garde `typeof document` sur l'IIFE Retell). Commit + push `main` → déploiement Vercel.
 - Reste : capital social SASU (TODO en commentaire), polices auto-hébergées, Lighthouse baseline, doublons `*-brutalist` / `index-variant-*` non traduits (noindex), `Fiche-projet_*.pdf` laissé hors git.
+
+## 2026-10-10
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-11
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-12
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-13
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-14
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-15
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-16
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-17
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-17
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-18
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-19
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-20
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-21
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-22
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-22
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-23
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-25
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-26
+- docs(memory): numérotation BDR-002/003
+- docs(i18n): spec de traduction + script de vérification structurelle
+- chore: graphify update (pages en/ zh/, main.js i18n)
+- feat(i18n): site trilingue FR/EN/ZH + robustesse vidéo 0404 + pages légales
+- chore: sync memoire + graphify
+
+## 2026-10-26 — Chat Retell : clic + multilingue
+- Site (2611fdf, en prod) : « Ouvrir le chat » ouvre en 1 clic, bulle protégée contre les clics multiples, message de secours si Retell échoue, `site_language` transmis.
+- Agent Retell v7 publié via CLI : prompt dédoublonné, plus de « Répondez toujours en français », multilingue testé FR/EN/ZH + bascule de langue.
+- Fonctions de RDV cassées : n8n cloud supprimé → repointées Railway, mais credentials n8n Railway indéchiffrables (BLK-002). Garde-fou : pas de fausse confirmation.
