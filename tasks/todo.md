@@ -113,3 +113,24 @@
 - [ ] Commit + push `main` → déploiement Vercel automatique
 - [ ] Mémoire : journal, décisions, Projects/thecallagent-site.md, Daily Log, graphify update
 
+
+
+---
+
+# Chat Retell du site — clic instable + réponses en français seulement (2026-10-14)
+
+Diagnostic (prod, navigateur) :
+- « Ouvrir le chat » charge seulement la bulle : il faut un 2e clic pour ouvrir la conversation.
+- Clic sur la bulle → 3 à 7 s sans aucun retour (create-chat 1,2–3,0 s + accueil généré 2,4–4,1 s). Le widget n'a pas de garde : un 2e clic relance l'ouverture (fenêtre refermée ou chat en double). Si create-chat échoue, rien ne s'affiche (console.error seulement).
+- Langue : même agent sur FR/EN/ZH, aucune variable transmise ; l'agent répond en français à un message en anglais → prompt côté Retell. Il dit aussi « Merci de votre appel » (prompt écrit pour le téléphone).
+
+Site (js/main.js) :
+- [x] Test : `retellDynamicVars(htmlLang)` → `{ site_language }` (fr/en/zh, défaut French)
+- [x] `data-dynamic` posé au chargement du widget (variable `{{site_language}}` pour le prompt)
+- [x] Clic explicite (« Ouvrir le chat », page cookies) → `data-auto-open="true"` : un seul clic ouvre la conversation
+- [x] Bulle : état « chargement » + clics ignorés pendant l'ouverture ; si rien après 15 s ou script bloqué → message + lien contact
+- [x] Vérif navigateur (localhost, page EN) : 1 clic = conversation ouverte ; 3 clics rapides = 1 seul create-chat ; script bloqué = message + lien contact ; `node --test tests/*.test.js` 11/11
+
+Retell (accès API requis — MCP retellai en panne « Deno exited before being ready ») :
+- [ ] Prompt : règle de langue avec `{{site_language}}`, retirer le vocabulaire « appel »
+- [ ] Inventaire + test des fonctions de l'agent (prise de RDV / lead : effets réels → accord d'Odilon)

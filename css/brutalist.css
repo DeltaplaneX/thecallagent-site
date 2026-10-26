@@ -338,6 +338,8 @@ footer :focus-visible, .multicanal :focus-visible, .scroll-video-section :focus-
 .tp-launcher-ttl { font-weight:900; text-transform:uppercase; font-size:.9rem; margin-bottom:6px; }
 .tp-launcher-actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px; }
 .tp-launcher-btn--alt { background:var(--paper); }
+.tp-launcher--notice { bottom:96px; }   /* au-dessus de la bulle Retell (fixe, bas droite) */
+.tp-launcher--notice .tp-launcher-actions { grid-template-columns:1fr; }
 .tp-launcher-note { font-family:var(--mono); font-size:.7rem; line-height:1.4; color:var(--ink-soft); }
 .tp-launcher-note a, .tp-placeholder a { text-decoration:underline; }
 .tp-placeholder { position:absolute; inset:0; z-index:2; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; padding:28px; text-align:center; background:var(--paper); }

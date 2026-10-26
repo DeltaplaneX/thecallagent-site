@@ -20,6 +20,15 @@ function leadSucceeded(res, data) {
   return !!res && res.ok === true && !!data && data.success === true;
 }
 
+/* Variables dynamiques envoyees a l'agent Retell (attribut data-dynamic).
+   FR, EN et ZH partagent le meme agent : {{site_language}} lui donne la
+   langue de la page pour accueillir et repondre dans cette langue. */
+function retellDynamicVars(htmlLang) {
+  const names = { fr: 'French', en: 'English', zh: 'Simplified Chinese' };
+  const code = String(htmlLang || '').slice(0, 2).toLowerCase();
+  return { site_language: names[code] || names.fr };
+}
+
 /* ── Libellés JS par langue ─────────────────────────────────
    Les pages /en/ et /zh/ partagent ce fichier : la langue est lue sur
    <html lang>. Le texte HTML est traduit dans chaque page ; seuls les
@@ -41,7 +50,11 @@ const TCA_I18N = {
     tpAccept: 'Ouvrir le chat',
     tpRefuse: 'Non merci',
     tpActivated: 'Assistant de discussion activé pour cette session.',
-    tpRevoked: 'Consentement retiré. Le chat Retell ne sera plus chargé automatiquement. Rechargez la page pour le désactiver immédiatement.'
+    tpRevoked: 'Consentement retiré. Le chat Retell ne sera plus chargé automatiquement. Rechargez la page pour le désactiver immédiatement.',
+    tpUnavailable: 'Le chat ne répond pas pour le moment.',
+    tpContact: 'Écrivez-nous ici',
+    tpContactHref: '/contact.html',
+    tpClose: 'Fermer'
   },
   en: {
     formRequired: 'Please fill in all required fields.',
@@ -58,7 +71,11 @@ const TCA_I18N = {
     tpAccept: 'Open the chat',
     tpRefuse: 'No thanks',
     tpActivated: 'Chat assistant enabled for this session.',
-    tpRevoked: 'Consent withdrawn. The Retell chat will no longer load automatically. Reload the page to disable it immediately.'
+    tpRevoked: 'Consent withdrawn. The Retell chat will no longer load automatically. Reload the page to disable it immediately.',
+    tpUnavailable: 'The chat is not responding right now.',
+    tpContact: 'Write to us here',
+    tpContactHref: '/en/contact.html',
+    tpClose: 'Close'
   },
   zh: {
     formRequired: '请填写所有必填字段。',
@@ -75,7 +92,11 @@ const TCA_I18N = {
     tpAccept: '打开聊天',
     tpRefuse: '不用了，谢谢',
     tpActivated: '本次会话已启用聊天助手。',
-    tpRevoked: '已撤回同意。Retell 聊天将不再自动加载。请刷新页面以立即停用。'
+    tpRevoked: '已撤回同意。Retell 聊天将不再自动加载。请刷新页面以立即停用。',
+    tpUnavailable: '聊天暂时无响应。',
+    tpContact: '请在此给我们留言',
+    tpContactHref: '/zh/contact.html',
+    tpClose: '关闭'
   }
 };
 function tcaT(key) {
@@ -760,7 +781,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
 
 /* Expose pure helpers for unit tests (no-op in the browser). */
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { leadSucceeded };
+  module.exports = { leadSucceeded, retellDynamicVars };
 }
 /* ─────────────────────────────────────────────────────────
    Services tiers charges AU CLIC (CNIL, art. 82 loi I&L)
@@ -783,7 +804,9 @@ if (typeof module !== 'undefined' && module.exports) {
   }
 
   // Retell : recree une vraie <script type="module"> a partir du stub inerte.
-  function loadRetell(stub) {
+  // open = le visiteur vient de cliquer pour discuter : la conversation
+  // s'ouvre directement (sinon il fallait recliquer sur la bulle).
+  function loadRetell(stub, open) {
     if (stub.dataset.loaded) return;
     stub.dataset.loaded = '1';
     const s = document.createElement('script');
@@ -791,11 +814,86 @@ if (typeof module !== 'undefined' && module.exports) {
       if (['id', 'type', 'data-type', 'data-consent-src', 'data-loaded'].includes(name)) return;
       s.setAttribute(name, value);
     });
+    if (!s.hasAttribute('data-dynamic')) {
+      s.setAttribute('data-dynamic', JSON.stringify(retellDynamicVars(document.documentElement.lang)));
+    }
+    if (open) s.setAttribute('data-auto-open', 'true');
+    s.addEventListener('load', () => guardRetellFab(open));
+    s.addEventListener('error', showRetellUnavailable);   // script bloque (bloqueur de pubs, reseau)
     stub.removeAttribute('id');            // le widget se lit par cet id
     s.id = 'retell-widget';
     s.type = stub.dataset.type || 'module';
     s.src = stub.dataset.consentSrc;
     document.head.appendChild(s);
+  }
+
+  // Le widget met 3 a 7 s a ouvrir une conversation (creation du chat puis
+  // message d'accueil genere) sans aucun retour visuel, et chaque clic de plus
+  // relance l'ouverture : fenetre refermee aussitot ou conversation en double.
+  // Pendant l'ouverture, la bulle tourne et ignore les clics ; si rien ne
+  // s'ouvre (echec cote Retell), on oriente vers la page contact.
+  const RETELL_OPEN_TIMEOUT = 15000;
+  function guardRetellFab(openingNow) {
+    const host = Array.from(document.body.children)
+      .find(el => el.shadowRoot && el.shadowRoot.getElementById('retell-fab'));
+    if (!host) return;
+    const root = host.shadowRoot;
+    const fab = root.getElementById('retell-fab');
+    const win = root.getElementById('retell-chat');
+    const isOpen = () => !!win && win.style.display === 'flex';
+    let timer = null;
+
+    const style = document.createElement('style');
+    style.textContent =
+      '#retell-fab[aria-busy="true"]{cursor:progress}' +
+      '#retell-fab[aria-busy="true"]>*{animation:tca-spin 1s linear infinite}' +
+      '@keyframes tca-spin{to{transform:rotate(360deg)}}' +
+      '@media (prefers-reduced-motion:reduce){#retell-fab[aria-busy="true"]>*{animation:none;opacity:.5}}';
+    root.appendChild(style);
+
+    function settle() {
+      clearTimeout(timer);
+      timer = null;
+      fab.removeAttribute('aria-busy');
+    }
+    function start() {
+      fab.setAttribute('aria-busy', 'true');
+      timer = setTimeout(() => {
+        settle();
+        if (!isOpen()) showRetellUnavailable();
+      }, RETELL_OPEN_TIMEOUT);
+    }
+
+    if (win) {
+      new MutationObserver(() => { if (timer && isOpen()) settle(); })
+        .observe(win, { attributes: true, attributeFilter: ['style'] });
+    }
+    // Phase de capture sur la shadow root : passe avant le gestionnaire du widget.
+    root.addEventListener('click', e => {
+      if (!fab.contains(e.target)) return;
+      if (timer) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+      } else if (!isOpen()) {
+        start();
+      }
+    }, true);
+    if (openingNow && !isOpen()) start();
+  }
+
+  function showRetellUnavailable() {
+    if (document.querySelector('.tp-launcher')) return;
+    const box = document.createElement('div');
+    box.className = 'tp-launcher tp-launcher--notice';
+    box.setAttribute('role', 'status');
+    box.innerHTML =
+      '<p class="tp-launcher-note">' + tcaT('tpUnavailable') + ' ' +
+      '<a href="' + tcaT('tpContactHref') + '">' + tcaT('tpContact') + '</a></p>' +
+      '<div class="tp-launcher-actions">' +
+      '<button type="button" class="tp-launcher-btn tp-launcher-btn--alt">' + tcaT('tpClose') + '</button>' +
+      '</div>';
+    box.querySelector('button').addEventListener('click', () => box.remove());
+    document.body.appendChild(box);
   }
 
   function mountRetellLauncher(stub) {
@@ -817,7 +915,7 @@ if (typeof module !== 'undefined' && module.exports) {
     wrap.querySelector('[data-tp="accept"]').addEventListener('click', () => {
       remember(RETELL_KEY, true);
       wrap.remove();
-      loadRetell(stub);
+      loadRetell(stub, true);
     });
     wrap.querySelector('[data-tp="refuse"]').addEventListener('click', () => {
       remember(RETELL_DISMISS_KEY, true);   // memorise le refus pour la session
@@ -851,7 +949,7 @@ if (typeof module !== 'undefined' && module.exports) {
         remember(RETELL_KEY, true);
         const l = document.querySelector('.tp-launcher');
         if (l) l.remove();
-        loadRetell(stub);
+        loadRetell(stub, true);
         const out = document.querySelector('[data-tp-revoke-status]');
         if (out) out.textContent = tcaT('tpActivated');
       });
