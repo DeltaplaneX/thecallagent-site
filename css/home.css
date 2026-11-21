@@ -130,7 +130,9 @@
 
 @media (max-width: 780px) {
   .home-hero .hero-grid, .home-crm-grid { grid-template-columns: minmax(0, 1fr); gap: 27px; }
-  .home-photo { aspect-ratio: 16 / 10; }
+  .home-photo { aspect-ratio: auto; }
+  .home-photo > img { height: auto; aspect-ratio: 16 / 9; }
+  .home-photo figcaption { position: static; gap: 6px 9px; padding: 10px; font-size: .75rem; }
 }
 
 @media (max-width: 600px) {
