@@ -8,21 +8,21 @@
   <link rel="alternate" hreflang="en" href="https://thecallagent.com/en/" />
   <link rel="alternate" hreflang="zh-CN" href="https://thecallagent.com/zh/" />
   <link rel="alternate" hreflang="x-default" href="https://thecallagent.com/" />
-  <title>TheCallAgent — AI phone agent connected to your business tools</title>
-  <meta name="description" content="Connect an AI phone agent to your business rules, tools and data. TheCallAgent automates calls, CRM and workflows 24/7." />
+  <title>AI Phone Agent for Small Businesses | TheCallAgent</title>
+  <meta name="description" content="An AI phone receptionist that answers 24/7, qualifies inquiries and books appointments. Explore solutions for real estate agencies and restaurants." />
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://thecallagent.com/en/" />
-  <meta property="og:title" content="TheCallAgent — AI phone agent connected to your business tools" />
-  <meta property="og:description" content="Connect an AI phone agent to your business rules, tools and data. TheCallAgent automates calls, CRM and workflows 24/7." />
-  <meta property="og:image" content="https://thecallagent.com/images/og-home.jpg" />
+  <meta property="og:title" content="AI Phone Agent for Small Businesses | TheCallAgent" />
+  <meta property="og:description" content="An AI phone receptionist that answers 24/7, qualifies inquiries and books appointments. Explore solutions for real estate agencies and restaurants." />
+  <meta property="og:image" content="https://thecallagent.com/images/home/partage.jpg" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="TheCallAgent" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TheCallAgent — AI phone agent connected to your business tools" />
-  <meta name="twitter:description" content="Connect an AI phone agent to your business rules, tools and data. TheCallAgent automates calls, CRM and workflows 24/7." />
-  <meta name="twitter:image" content="https://thecallagent.com/images/og-home.jpg" />
+  <meta name="twitter:title" content="AI Phone Agent for Small Businesses | TheCallAgent" />
+  <meta name="twitter:description" content="An AI phone receptionist that answers 24/7, qualifies inquiries and books appointments. Explore solutions for real estate agencies and restaurants." />
+  <meta name="twitter:image" content="https://thecallagent.com/images/home/partage.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
@@ -31,6 +31,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="/css/brutalist.css" />
+  <link rel="stylesheet" href="/css/home.css" />
   <meta name="facebook-domain-verification" content="phigyg005fk0hei27hss1tkthmh3kc" />
   <!-- Retell Chat Widget : NE SE CHARGE PAS au chargement de la page.
        Stub inerte (type=text/plain), active au clic par js/main.js
@@ -58,7 +59,7 @@
     "alternateName": "The Call Agent",
     "url": "https://thecallagent.com/",
     "logo": "https://thecallagent.com/images/logo-trim.png",
-    "image": "https://thecallagent.com/images/og-home.jpg",
+    "image": "https://thecallagent.com/images/home/partage.jpg",
     "email": "odilon.buisson@thecallagent.com",
     "telephone": "+33664336380",
     "founder": {
@@ -98,8 +99,8 @@
     "@type": "WebPage",
     "@id": "https://thecallagent.com/en/#webpage",
     "url": "https://thecallagent.com/en/",
-    "name": "TheCallAgent - AI phone agent for SMEs",
-    "description": "Automate your inbound and outbound calls with TheCallAgent. Full CRM integration, available 24/7.",
+    "name": "AI Phone Agent for Small Businesses | TheCallAgent",
+    "description": "An AI phone receptionist that answers 24/7, qualifies inquiries and books appointments. Explore solutions for real estate agencies and restaurants.",
     "isPartOf": {
       "@id": "https://thecallagent.com/#website"
     },
@@ -121,6 +122,7 @@
     <ul class="nav-links">
       <li><a href="/en/">Home</a></li>
       <li><a href="/en/solutions.html">Solutions</a></li>
+      <li><a href="#crm-3d">3D CRM</a></li>
       <li><a href="/en/about.html">About</a></li>
       <li><a href="/en/contact.html" class="nav-cta">Contact us</a></li>
     </ul>
@@ -138,35 +140,63 @@
 <main id="contenu" tabindex="-1">
 
 <!-- ── Hero ────────────────────────────────────────────────── -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-content">
-        <span class="eyebrow reveal"><span class="dot"></span> AI agent in production</span>
-        <h1 class="reveal reveal-delay-1">An agent that <em>picks up</em>, understands <span class="line2">and <em>takes action</em>.</span></h1>
-        <p class="hero-sub reveal reveal-delay-2">TheCallAgent answers the phone, qualifies, books, generates a quote and updates your records. Phone, WhatsApp or web form — it follows the customer through to the right action.</p>
-        <div class="hero-actions reveal reveal-delay-3">
-          <a href="/en/contact.html" class="btn btn-primary">Book a demo →</a>
-          <a href="/en/solutions.html" class="btn">See our solutions</a>
-        </div>
-      </div>
-
-      <div class="call-ticket reveal reveal-delay-2">
-        <div class="ticket-top">
-          <span class="live"><i></i> Call · inbound</span>
-          <span>00:48</span>
-        </div>
-        <div class="ticket-body">
-          <div class="tk-line client"><b>Customer</b><p>Hi, I’d like to book a table for Saturday evening.</p></div>
-          <div class="tk-line agent"><b>Agent</b><p>Happy to help — for how many people?</p></div>
-        </div>
-        <div class="ticket-foot">
-          <span class="tk-chip ok">✓ Customer identified</span>
-          <span class="tk-chip ok">✓ Booking confirmed</span>
-          <span class="tk-chip send">SMS sent</span>
-        </div>
+<section class="hero home-hero" aria-labelledby="home-title">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <h1 id="home-title">An AI phone agent <span>that takes the call.</span></h1>
+      <p class="hero-sub">TheCallAgent answers calls, qualifies inquiries and books appointments or reservations according to your rules. Your team can see what happened in the tools it already uses.</p>
+      <div class="hero-actions">
+        <a href="/en/contact.html" class="btn btn-primary">Book a demo <span aria-hidden="true">→</span></a>
+        <a href="#offres" class="home-text-link">Explore the products <span aria-hidden="true">↓</span></a>
       </div>
     </div>
+    <figure class="home-photo">
+      <img src="/images/home/telephone.webp" width="960" height="720" alt="" fetchpriority="high" />
+      <figcaption><b>24/7</b> Incoming calls · Appointments · Reservations</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="home-offers" id="offres" aria-labelledby="offers-title">
+  <div class="container">
+    <h2 id="offers-title">Two voice agents for two industries</h2>
+    <div class="home-offers-grid">
+      <article class="home-offer">
+        <img src="/images/home/immobilier.webp" width="960" height="720" alt="" loading="lazy" />
+        <div class="home-offer-copy">
+          <h3>Real estate</h3>
+          <p>The agent qualifies leads against your available listings, offers viewing times and sends the contact record to your agency.</p>
+          <a class="home-text-link" href="https://immo.thecallagent.com/">Explore the real estate product <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+      <article class="home-offer">
+        <img src="/images/home/restaurant.webp" width="960" height="720" alt="" loading="lazy" />
+        <div class="home-offer-copy">
+          <h3>Restaurants</h3>
+          <p>During service, the agent answers in five languages, checks availability and confirms reservations by text.</p>
+          <a class="home-text-link" href="https://restaurant.thecallagent.com/">Explore the restaurant product <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-crm" id="crm-3d" aria-labelledby="crm-title">
+  <div class="container home-crm-grid">
+    <div>
+      <h2 id="crm-title">Interactive 3D CRMs</h2>
+      <p>Track records on a clickable map of your workplace. Check their progress in 3D or switch to the board to see them grouped by stage.</p>
+      <ul class="home-crm-demos">
+        <li><a href="https://odilonbuisson.com/demos/crm-carrosserie/en.html">Body shop <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://odilonbuisson.com/demos/crm-salle-de-sport/en.html">Gym <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://odilonbuisson.com/demos/crm-station-ski/index.html?lang=en">Ski resort <span aria-hidden="true">↗</span></a></li>
+      </ul>
+      <a class="home-text-link" href="https://odilonbuisson.com/en/projects/crm-3d-interactifs">Read the case study on Odilon Buisson’s portfolio <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="home-crm-preview">
+      <img src="/images/home/val-aurore.webp" width="960" height="720" alt="Preview of the Val d’Aurore ski resort’s 3D CRM and slopes" loading="lazy" />
+      <figcaption>Val d’Aurore ski resort demo, modelled in Blender.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -199,67 +229,6 @@
   </div>
 </section>
 
-<!-- ── Scroll Video 0404 ───────────────────────────────────── -->
-<section class="scroll-video-section" id="scroll-video">
-  <div class="scroll-video-sticky">
-    <video id="scroll-video-el" src="/videos/0404.mp4" muted playsinline autoplay loop preload="auto" poster="/videos/0404-poster.jpg" class="scroll-video-player"></video>
-    <div class="scroll-video-overlay">
-      <div class="scroll-video-caption">
-        <span class="eyebrow"><span class="dot"></span> In action</span>
-        <h2>Your AI agent <em>at work</em></h2>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── 3 cas concrets (verticales réelles) ─────────────────── -->
-<section class="section-pad">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow reveal"><span class="dot"></span> Product proof</span>
-      <h2 class="section-title reveal reveal-delay-1">Every business. <em>One agent</em> connected to the way you work.</h2>
-      <p class="section-sub reveal reveal-delay-2">Restaurant, trades, property management or a niche business: the agent plugs into your rules, tools and data to understand the request, carry out the action and keep a clear record.</p>
-    </div>
-    <div class="cards-grid cards-3 reveal">
-      <article class="cell">
-        <img class="cell-img" src="/images/usecases/restaurant.webp" alt="Restaurant dining room with set tables" loading="lazy">
-        <span class="kicker">Restaurant</span>
-        <h3>It takes bookings and knows your menu.</h3>
-        <p>The customer calls, the agent answers questions about the menu and allergens, checks availability, books and then confirms.</p>
-        <ul>
-          <li>Bookings, changes and cancellations by phone</li>
-          <li>Answers about the menu, allergens and opening hours</li>
-          <li>SMS/email confirmation + dashboard kept up to date</li>
-        </ul>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-      <article class="cell">
-        <img class="cell-img" src="/images/usecases/menuiserie.webp" alt="Joinery workshop with workbench and solid wood" loading="lazy">
-        <span class="kicker alt">Trades · joinery</span>
-        <h3>It qualifies the job and prepares the quote.</h3>
-        <p>The agent qualifies the request, sends a link for photos and measurements, then prepares the next steps in the CRM.</p>
-        <ul>
-          <li>SMS link for photos, plans and exact measurements</li>
-          <li>Job sheet pre-filled in the CRM</li>
-          <li>Site visit proposed once the details are received</li>
-        </ul>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-      <article class="cell">
-        <img class="cell-img" src="/images/usecases/villa.webp" alt="Holiday villa with terrace and sea view" loading="lazy">
-        <span class="kicker warn">Villa · property management</span>
-        <h3>It assists guests 24/7 on WhatsApp.</h3>
-        <p>The agent identifies the guest, sends practical information and escalates emergencies to the manager with a summary.</p>
-        <ul>
-          <li>Welcome pack, WiFi code and key box on request</li>
-          <li>Context-aware answers throughout the stay</li>
-          <li>Alert to the manager with a summary in case of emergency</li>
-        </ul>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-    </div>
-  </div>
-</section>
 
 <!-- ── Analyse d'appel ────────────────────────────── -->
 <section class="analyse section-pad" id="analyse">
@@ -313,37 +282,15 @@
 </section>
 
 <!-- ── Secteurs ────────────────────────────────────────────── -->
-<section class="section-pad">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow reveal"><span class="dot"></span> Industries</span>
-      <h2 class="section-title reveal reveal-delay-1">Adapts to <em>every industry</em></h2>
-    </div>
-    <div class="cards-grid cards-4 reveal">
-      <article class="cell">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span>
-        <h3>Real estate</h3>
-        <p>Automated lead qualification, appointment scheduling and follow-up.</p>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-      <article class="cell">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
-        <h3>Healthcare</h3>
-        <p>Appointment confirmations, patient reminders, no-show management.</p>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-      <article class="cell">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span>
-        <h3>B2B services</h3>
-        <p>Continuous prospecting, inbound handling 24/7.</p>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
-      <article class="cell">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></span>
-        <h3>E-commerce</h3>
-        <p>Automated customer service, order tracking, abandoned-cart follow-ups.</p>
-        <a class="more" href="/en/contact.html">Book a demo →</a>
-      </article>
+<!-- ── Scroll Video 0404 ───────────────────────────────────── -->
+<section class="scroll-video-section" id="scroll-video">
+  <div class="scroll-video-sticky">
+    <video id="scroll-video-el" data-src="/videos/0404.mp4" muted playsinline preload="none" poster="/videos/0404-poster.jpg" class="scroll-video-player"></video>
+    <div class="scroll-video-overlay">
+      <div class="scroll-video-caption">
+        <span class="eyebrow"><span class="dot"></span> In action</span>
+        <h2>Your AI agent <em>at work</em></h2>
+      </div>
     </div>
   </div>
 </section>
@@ -363,6 +310,8 @@
 
 </main>
 
+<button type="button" class="home-chat" data-tp-open hidden>AI chat</button>
+
 <!-- ── Footer ──────────────────────────────────────────────── -->
 <footer>
   <div class="container">
@@ -372,7 +321,7 @@
         <p class="footer-desc">An AI phone agent that picks up, understands and takes action in your tools — inbound and outbound, 24/7.</p>
       </div>
       <div class="footer-col">
-        <h5>Navigation</h5>
+        <h2>Navigation</h2>
         <ul>
           <li><a href="/en/">Home</a></li>
           <li><a href="/en/solutions.html">Solutions</a></li>
@@ -381,7 +330,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Solutions</h5>
+        <h2>Solutions</h2>
         <ul>
           <li><a href="/en/solutions.html#entrant-sortant">Inbound calls</a></li>
           <li><a href="/en/solutions.html#entrant-sortant">Outbound calls</a></li>
@@ -390,7 +339,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
+        <h2>Contact</h2>
         <ul>
           <li><a href="tel:+33664336380">+33 6 64 33 63 80</a></li>
           <li><a href="mailto:odilon.buisson@thecallagent.com">Email</a></li>

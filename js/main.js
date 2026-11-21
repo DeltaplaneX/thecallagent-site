@@ -199,6 +199,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('menu-open');
+        toggle.setAttribute('aria-expanded', 'false');
         toggle.querySelectorAll('span').forEach(s => {
           s.style.transform = '';
           s.style.opacity = '';
@@ -494,7 +495,8 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
   /* ── Scroll-driven Video (Apple-style) ────────────────── */
   const scrollVideoEl = document.querySelector('#scroll-video-el');
   const scrollSection = document.querySelector('#scroll-video');
-  if (scrollVideoEl && scrollSection) {
+  const deferredVideoSrc = scrollVideoEl?.dataset.src;
+  if (scrollVideoEl && scrollSection && !(deferredVideoSrc && prefersReduced)) {
     scrollVideoEl.pause();
     scrollVideoEl.muted = true;
     scrollVideoEl.playsInline = true;
@@ -636,6 +638,15 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
       scrollVideoEl.addEventListener('loadedmetadata', initScrollVideo, { once: true });
     }
 
+    if (deferredVideoSrc) {
+      const videoObserver = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        videoObserver.disconnect();
+        scrollVideoEl.src = deferredVideoSrc;
+      }, { rootMargin: '600px 0px' });
+      videoObserver.observe(scrollSection);
+    }
+
     // iOS Low Power Mode et certaines webviews bloquent l'autoplay : la vidéo
     // reste sur le poster (readyState 0) tant qu'un play() n'est pas déclenché
     // par un vrai geste. Sur WebKit, touchstart seul ne vaut pas activation :
@@ -643,6 +654,7 @@ if (typeof document !== 'undefined') document.addEventListener('DOMContentLoaded
     const unlockEvents = ['touchend', 'touchstart', 'click', 'keydown'];
     function removeUnlock() { unlockEvents.forEach(ev => window.removeEventListener(ev, unlockOnGesture)); }
     function unlockOnGesture() {
+      if (deferredVideoSrc && !scrollVideoEl.hasAttribute('src')) return;
       if (scrollVideoEl.readyState >= 2) { removeUnlock(); return; }
       const attempt = scrollVideoEl.play();
       if (attempt && typeof attempt.then === 'function') {
@@ -896,7 +908,7 @@ if (typeof module !== 'undefined' && module.exports) {
     document.body.appendChild(box);
   }
 
-  function mountRetellLauncher(stub) {
+  function mountRetellLauncher(stub, trigger) {
     // Information CNIL affichee AVANT tout chargement : identite du tiers,
     // finalite, traceurs, consequence du refus, droit de retrait.
     // Accepter et refuser ont la meme taille et le meme poids.
@@ -920,14 +932,27 @@ if (typeof module !== 'undefined' && module.exports) {
     wrap.querySelector('[data-tp="refuse"]').addEventListener('click', () => {
       remember(RETELL_DISMISS_KEY, true);   // memorise le refus pour la session
       wrap.remove();
+      if (trigger) {
+        trigger.hidden = false;
+        trigger.focus();
+      }
     });
     document.body.appendChild(wrap);
+    if (trigger) wrap.querySelector('[data-tp="accept"]').focus();
   }
 
   function init() {
     const stub = document.getElementById('retell-widget');
     if (stub && stub.dataset.consentSrc) {
+      const trigger = document.querySelector('[data-tp-open]');
       if (remembered(RETELL_KEY)) loadRetell(stub);
+      else if (trigger) {
+        trigger.hidden = false;
+        trigger.addEventListener('click', () => {
+          trigger.hidden = true;
+          mountRetellLauncher(stub, trigger);
+        });
+      }
       else if (!remembered(RETELL_DISMISS_KEY) || document.querySelector('[data-tp-activate]')) mountRetellLauncher(stub);
     }
 
