@@ -1,9 +1,10 @@
 # TheCallAgent
-> Agent telephonique IA pour PME : appels entrants, appels sortants, qualification, CRM et automatisations metier.
+> Agents IA sur mesure pour PME : telephone, WhatsApp et web. Les agents suivent les regles de chaque metier et se connectent aux outils existants.
 
 ## Pages principales
-- [Accueil](https://thecallagent.com/): presentation de TheCallAgent, cas d'usage et benefices pour PME.
-- [Nos solutions](https://thecallagent.com/nos-solutions.html): appels entrants, appels sortants, integrations CRM, SMS, email, calendrier et workflows.
+- [Accueil](https://thecallagent.com/): offres Immobilier et Restaurant, agents IA sur mesure et demonstrations CRM 3D.
+- [Agents sur mesure](https://thecallagent.com/#sur-mesure): exemple de conciergerie WhatsApp et integrations CRM, reservation et logiciels metier.
+- [Nos solutions](https://thecallagent.com/nos-solutions.html): appels entrants et sortants, WhatsApp, integrations CRM, SMS, email, calendrier et automatisations.
 - [A propos](https://thecallagent.com/a-propos.html): mission, fondateur et approche produit.
 - [Contact](https://thecallagent.com/contact.html): demande de demonstration et coordonnees.
 
