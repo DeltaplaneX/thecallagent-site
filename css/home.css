@@ -98,7 +98,7 @@
 .home-crm-demos a { display: block; padding: 5px 10px; border: 1px solid #b5c8be; font-weight: 700; font-size: .9rem; }
 .home-crm-demos a:hover { background: var(--accent); border-color: var(--accent); color: var(--ink); }
 .home-crm .home-text-link { color: #ffea72; }
-.home-crm-preview img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border: 2px solid #c7d5c9; background: #244f43; }
+.home-crm-preview img { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; border: 2px solid #c7d5c9; background: #244f43; }
 .home-crm-preview figcaption { margin-top: 8px; color: #dce9df; font-size: .84rem; }
 
 .home-chat {
