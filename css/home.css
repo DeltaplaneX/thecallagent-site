@@ -165,3 +165,22 @@
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+.outils-utilises { background: #f8f5ed; color: #193331; border-block: 1px solid #ddd7cb; padding: 1.5rem 1rem; text-align: center; }
+.outils-utilises h2 { font-size: .95rem; margin: 0 0 .65rem; }
+.outils-defilement { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 1rem 1.6rem; max-width: 54rem; margin-inline: auto; }
+.outils-defilement input { margin: 0 -.7rem 0 0; }
+.outils-defilement label { font-size: .8rem; cursor: pointer; }
+.outils-fenetre { overflow-x: auto; width: 100%; max-width: 38rem; }
+.outils-piste { display: flex; width: max-content; animation: outils-defiler 23s linear infinite; }
+.outils-piste ul { display: flex; align-items: center; gap: 2.25rem; margin: 0; padding: .65rem 1.125rem; list-style: none; }
+.outils-piste img, .outils-twilio { display: block; height: 1.45rem; width: auto; max-width: 7rem; object-fit: contain; }
+.outils-twilio { height: auto; width: 7.5rem; max-width: 100%; }
+.outils-defilement input:checked ~ .outils-fenetre .outils-piste,
+.outils-fenetre:hover .outils-piste, .outils-fenetre:focus-within .outils-piste { animation-play-state: paused; }
+.outils-marques { max-width: 52rem; margin: .7rem auto 0; color: #475569; font-size: .7rem; }
+@keyframes outils-defiler { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .outils-piste { animation: none; }
+  .outils-piste [aria-hidden], .outils-defilement > input, .outils-defilement > label { display: none; }
+}
